@@ -1,0 +1,90 @@
+{
+ "TOPSIS": [
+  {
+   "delta": 0.1,
+   "top_unchanged": 1.0,
+   "mean_spearman": 0.9957142857142859
+  },
+  {
+   "delta": 0.2,
+   "top_unchanged": 0.865,
+   "mean_spearman": 0.9666071428571431
+  },
+  {
+   "delta": 0.3,
+   "top_unchanged": 0.745,
+   "mean_spearman": 0.9426785714285715
+  },
+  {
+   "delta": 0.5,
+   "top_unchanged": 0.71,
+   "mean_spearman": 0.9007142857142858
+  }
+ ],
+ "VIKOR": [
+  {
+   "delta": 0.1,
+   "top_unchanged": 0.555,
+   "mean_spearman": 0.9367857142857148
+  },
+  {
+   "delta": 0.2,
+   "top_unchanged": 0.525,
+   "mean_spearman": 0.8698214285714287
+  },
+  {
+   "delta": 0.3,
+   "top_unchanged": 0.45,
+   "mean_spearman": 0.850357142857143
+  },
+  {
+   "delta": 0.5,
+   "top_unchanged": 0.535,
+   "mean_spearman": 0.7971428571428573
+  }
+ ],
+ "COPRAS": [
+  {
+   "delta": 0.1,
+   "top_unchanged": 1.0,
+   "mean_spearman": 0.9757142857142861
+  },
+  {
+   "delta": 0.2,
+   "top_unchanged": 1.0,
+   "mean_spearman": 0.9508928571428573
+  },
+  {
+   "delta": 0.3,
+   "top_unchanged": 1.0,
+   "mean_spearman": 0.9435714285714287
+  },
+  {
+   "delta": 0.5,
+   "top_unchanged": 0.975,
+   "mean_spearman": 0.8955357142857144
+  }
+ ],
+ "EDAS": [
+  {
+   "delta": 0.1,
+   "top_unchanged": 0.985,
+   "mean_spearman": 0.9917857142857145
+  },
+  {
+   "delta": 0.2,
+   "top_unchanged": 0.835,
+   "mean_spearman": 0.9700000000000003
+  },
+  {
+   "delta": 0.3,
+   "top_unchanged": 0.69,
+   "mean_spearman": 0.9573214285714289
+  },
+  {
+   "delta": 0.5,
+   "top_unchanged": 0.67,
+   "mean_spearman": 0.9253571428571431
+  }
+ ]
+}

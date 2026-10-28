@@ -1,0 +1,362 @@
+{
+ "TOPSIS": {
+  "rows": [
+   {
+    "removed": "Raft",
+    "reversal": true,
+    "new_rank": {
+     "SmartBFT": 4,
+     "IBFT 2.0": 3,
+     "QBFT": 1,
+     "Clique (PoA)": 6,
+     "CometBFT (Tendermint)": 2,
+     "HotStuff (2-chain)": 5
+    }
+   },
+   {
+    "removed": "SmartBFT",
+    "reversal": false,
+    "new_rank": {
+     "Raft": 4,
+     "IBFT 2.0": 2,
+     "QBFT": 1,
+     "Clique (PoA)": 6,
+     "CometBFT (Tendermint)": 3,
+     "HotStuff (2-chain)": 5
+    }
+   },
+   {
+    "removed": "IBFT 2.0",
+    "reversal": false,
+    "new_rank": {
+     "Raft": 3,
+     "SmartBFT": 4,
+     "QBFT": 1,
+     "Clique (PoA)": 6,
+     "CometBFT (Tendermint)": 2,
+     "HotStuff (2-chain)": 5
+    }
+   },
+   {
+    "removed": "QBFT",
+    "reversal": false,
+    "new_rank": {
+     "Raft": 3,
+     "SmartBFT": 4,
+     "IBFT 2.0": 1,
+     "Clique (PoA)": 6,
+     "CometBFT (Tendermint)": 2,
+     "HotStuff (2-chain)": 5
+    }
+   },
+   {
+    "removed": "Clique (PoA)",
+    "reversal": true,
+    "new_rank": {
+     "Raft": 4,
+     "SmartBFT": 6,
+     "IBFT 2.0": 2,
+     "QBFT": 1,
+     "CometBFT (Tendermint)": 3,
+     "HotStuff (2-chain)": 5
+    }
+   },
+   {
+    "removed": "CometBFT (Tendermint)",
+    "reversal": false,
+    "new_rank": {
+     "Raft": 3,
+     "SmartBFT": 4,
+     "IBFT 2.0": 2,
+     "QBFT": 1,
+     "Clique (PoA)": 6,
+     "HotStuff (2-chain)": 5
+    }
+   },
+   {
+    "removed": "HotStuff (2-chain)",
+    "reversal": true,
+    "new_rank": {
+     "Raft": 4,
+     "SmartBFT": 5,
+     "IBFT 2.0": 3,
+     "QBFT": 2,
+     "Clique (PoA)": 6,
+     "CometBFT (Tendermint)": 1
+    }
+   }
+  ],
+  "reversals": 3,
+  "share": 0.42857142857142855
+ },
+ "VIKOR": {
+  "rows": [
+   {
+    "removed": "Raft",
+    "reversal": true,
+    "new_rank": {
+     "SmartBFT": 6,
+     "IBFT 2.0": 3,
+     "QBFT": 1,
+     "Clique (PoA)": 4,
+     "CometBFT (Tendermint)": 2,
+     "HotStuff (2-chain)": 5
+    }
+   },
+   {
+    "removed": "SmartBFT",
+    "reversal": true,
+    "new_rank": {
+     "Raft": 5,
+     "IBFT 2.0": 3,
+     "QBFT": 2,
+     "Clique (PoA)": 4,
+     "CometBFT (Tendermint)": 1,
+     "HotStuff (2-chain)": 6
+    }
+   },
+   {
+    "removed": "IBFT 2.0",
+    "reversal": false,
+    "new_rank": {
+     "Raft": 4,
+     "SmartBFT": 3,
+     "QBFT": 1,
+     "Clique (PoA)": 5,
+     "CometBFT (Tendermint)": 2,
+     "HotStuff (2-chain)": 6
+    }
+   },
+   {
+    "removed": "QBFT",
+    "reversal": false,
+    "new_rank": {
+     "Raft": 4,
+     "SmartBFT": 3,
+     "IBFT 2.0": 2,
+     "Clique (PoA)": 5,
+     "CometBFT (Tendermint)": 1,
+     "HotStuff (2-chain)": 6
+    }
+   },
+   {
+    "removed": "Clique (PoA)",
+    "reversal": true,
+    "new_rank": {
+     "Raft": 5,
+     "SmartBFT": 6,
+     "IBFT 2.0": 2,
+     "QBFT": 1,
+     "CometBFT (Tendermint)": 3,
+     "HotStuff (2-chain)": 4
+    }
+   },
+   {
+    "removed": "CometBFT (Tendermint)",
+    "reversal": true,
+    "new_rank": {
+     "Raft": 5,
+     "SmartBFT": 3,
+     "IBFT 2.0": 2,
+     "QBFT": 1,
+     "Clique (PoA)": 4,
+     "HotStuff (2-chain)": 6
+    }
+   },
+   {
+    "removed": "HotStuff (2-chain)",
+    "reversal": true,
+    "new_rank": {
+     "Raft": 4,
+     "SmartBFT": 6,
+     "IBFT 2.0": 3,
+     "QBFT": 1,
+     "Clique (PoA)": 5,
+     "CometBFT (Tendermint)": 2
+    }
+   }
+  ],
+  "reversals": 5,
+  "share": 0.7142857142857143
+ },
+ "COPRAS": {
+  "rows": [
+   {
+    "removed": "Raft",
+    "reversal": false,
+    "new_rank": {
+     "SmartBFT": 5,
+     "IBFT 2.0": 2,
+     "QBFT": 1,
+     "Clique (PoA)": 4,
+     "CometBFT (Tendermint)": 3,
+     "HotStuff (2-chain)": 6
+    }
+   },
+   {
+    "removed": "SmartBFT",
+    "reversal": false,
+    "new_rank": {
+     "Raft": 4,
+     "IBFT 2.0": 2,
+     "QBFT": 1,
+     "Clique (PoA)": 5,
+     "CometBFT (Tendermint)": 3,
+     "HotStuff (2-chain)": 6
+    }
+   },
+   {
+    "removed": "IBFT 2.0",
+    "reversal": true,
+    "new_rank": {
+     "Raft": 3,
+     "SmartBFT": 6,
+     "QBFT": 1,
+     "Clique (PoA)": 4,
+     "CometBFT (Tendermint)": 2,
+     "HotStuff (2-chain)": 5
+    }
+   },
+   {
+    "removed": "QBFT",
+    "reversal": false,
+    "new_rank": {
+     "Raft": 3,
+     "SmartBFT": 5,
+     "IBFT 2.0": 1,
+     "Clique (PoA)": 4,
+     "CometBFT (Tendermint)": 2,
+     "HotStuff (2-chain)": 6
+    }
+   },
+   {
+    "removed": "Clique (PoA)",
+    "reversal": true,
+    "new_rank": {
+     "Raft": 4,
+     "SmartBFT": 6,
+     "IBFT 2.0": 2,
+     "QBFT": 1,
+     "CometBFT (Tendermint)": 3,
+     "HotStuff (2-chain)": 5
+    }
+   },
+   {
+    "removed": "CometBFT (Tendermint)",
+    "reversal": true,
+    "new_rank": {
+     "Raft": 3,
+     "SmartBFT": 6,
+     "IBFT 2.0": 2,
+     "QBFT": 1,
+     "Clique (PoA)": 4,
+     "HotStuff (2-chain)": 5
+    }
+   },
+   {
+    "removed": "HotStuff (2-chain)",
+    "reversal": false,
+    "new_rank": {
+     "Raft": 4,
+     "SmartBFT": 6,
+     "IBFT 2.0": 2,
+     "QBFT": 1,
+     "Clique (PoA)": 5,
+     "CometBFT (Tendermint)": 3
+    }
+   }
+  ],
+  "reversals": 3,
+  "share": 0.42857142857142855
+ },
+ "EDAS": {
+  "rows": [
+   {
+    "removed": "Raft",
+    "reversal": false,
+    "new_rank": {
+     "SmartBFT": 6,
+     "IBFT 2.0": 3,
+     "QBFT": 1,
+     "Clique (PoA)": 5,
+     "CometBFT (Tendermint)": 2,
+     "HotStuff (2-chain)": 4
+    }
+   },
+   {
+    "removed": "SmartBFT",
+    "reversal": false,
+    "new_rank": {
+     "Raft": 4,
+     "IBFT 2.0": 3,
+     "QBFT": 1,
+     "Clique (PoA)": 6,
+     "CometBFT (Tendermint)": 2,
+     "HotStuff (2-chain)": 5
+    }
+   },
+   {
+    "removed": "IBFT 2.0",
+    "reversal": true,
+    "new_rank": {
+     "Raft": 3,
+     "SmartBFT": 5,
+     "QBFT": 1,
+     "Clique (PoA)": 6,
+     "CometBFT (Tendermint)": 2,
+     "HotStuff (2-chain)": 4
+    }
+   },
+   {
+    "removed": "QBFT",
+    "reversal": true,
+    "new_rank": {
+     "Raft": 3,
+     "SmartBFT": 5,
+     "IBFT 2.0": 2,
+     "Clique (PoA)": 6,
+     "CometBFT (Tendermint)": 1,
+     "HotStuff (2-chain)": 4
+    }
+   },
+   {
+    "removed": "Clique (PoA)",
+    "reversal": false,
+    "new_rank": {
+     "Raft": 4,
+     "SmartBFT": 6,
+     "IBFT 2.0": 3,
+     "QBFT": 1,
+     "CometBFT (Tendermint)": 2,
+     "HotStuff (2-chain)": 5
+    }
+   },
+   {
+    "removed": "CometBFT (Tendermint)",
+    "reversal": false,
+    "new_rank": {
+     "Raft": 3,
+     "SmartBFT": 6,
+     "IBFT 2.0": 2,
+     "QBFT": 1,
+     "Clique (PoA)": 5,
+     "HotStuff (2-chain)": 4
+    }
+   },
+   {
+    "removed": "HotStuff (2-chain)",
+    "reversal": false,
+    "new_rank": {
+     "Raft": 4,
+     "SmartBFT": 6,
+     "IBFT 2.0": 3,
+     "QBFT": 1,
+     "Clique (PoA)": 5,
+     "CometBFT (Tendermint)": 2
+    }
+   }
+  ],
+  "reversals": 2,
+  "share": 0.2857142857142857
+ }
+}

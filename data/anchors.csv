@@ -1,0 +1,49 @@
+id,protocol,platform,source,licence,n_nodes,tx_bytes,network,setting,offered_tps,achieved_tps,latency_mean_s,latency_p50_s,latency_p95_s,cpu_pct_per_tps_orderer,mb_per_tx_orderer,use,notes
+A1,Raft,Fabric 3.1.4,"Information 2026 17(10) 945, batch campaign (repo summary_agg.csv)",CC BY 4.0 (article); repo without LICENSE,4,~1000,single host (i7-8559U 4C/8T),"batch=100 (MaxMessageCount), BatchTimeout 2 s, submitEvidence",50,48.32,1.350,,,0.0063,0.0830,calibrate,"5 reps; CI in file"
+A2,Raft,Fabric 3.1.4,same,same,4,~1000,single host,"batch=100",100,96.60,0.830,,,0.0052,0.0828,calibrate,
+A3,Raft,Fabric 3.1.4,same,same,4,~1000,single host,"batch=100",150,144.48,0.822,,,0.0061,0.0825,calibrate,
+A4,Raft,Fabric 3.1.4,same,same,4,~1000,single host,"batch=100",200,181.42,6.304,,,0.0058,0.0823,calibrate,"onset of saturation; CI 2.8-9.8 s"
+A5,Raft,Fabric 3.1.4,same,same,4,~1000,single host,"batch=10",50,48.30,0.246,,,0.0075,0.0842,calibrate,
+A6,Raft,Fabric 3.1.4,same,same,4,~1000,single host,"batch=10",100,82.14,8.554,,,0.0081,0.0837,calibrate,"unstable"
+A7,Raft,Fabric 3.1.4,same,same,4,~1000,single host,"batch=300",100,98.16,1.614,,,0.0042,0.0827,calibrate,
+A8,Raft,Fabric 3.1.4,same,same,4,~1000,single host,"batch=300",150,145.26,2.050,,,0.0056,0.0825,calibrate,
+A9,Raft,Fabric 3.1.4,same,same,4,~1000,single host,"batch=300",200,191.58,2.496,,,0.0052,0.0822,calibrate,
+B1,SmartBFT,Fabric 3.1.4,same,same,4,~1000,single host,"batch=100",50,49.22,1.356,,,0.0114,0.0963,calibrate,
+B2,SmartBFT,Fabric 3.1.4,same,same,4,~1000,single host,"batch=100",100,96.84,1.022,,,0.0189,0.0952,calibrate,
+B3,SmartBFT,Fabric 3.1.4,same,same,4,~1000,single host,"batch=100",150,144.06,1.268,,,0.0210,0.0947,calibrate,
+B4,SmartBFT,Fabric 3.1.4,same,same,4,~1000,single host,"batch=100",200,150.22,27.424,,,0.0207,0.0943,calibrate,"saturated"
+B5,SmartBFT,Fabric 3.1.4,same,same,4,~1000,single host,"batch=10",50,48.36,0.270,,,0.0233,0.0985,calibrate,
+B6,SmartBFT,Fabric 3.1.4,same,same,4,~1000,single host,"batch=10",100,68.78,18.530,,,0.0257,0.0981,calibrate,"unstable"
+B7,SmartBFT,Fabric 3.1.4,same,same,4,~1000,single host,"batch=300",100,97.88,2.030,,,0.0233,0.1055,calibrate,
+B8,SmartBFT,Fabric 3.1.4,same,same,4,~1000,single host,"batch=300",150,145.06,2.408,,,0.0152,0.1054,calibrate,
+B9,SmartBFT,Fabric 3.1.4,same,same,4,~1000,single host,"batch=300",200,156.58,23.524,,,0.0249,0.1112,calibrate,"saturated"
+V1,Raft,Fabric 3.1.4,"945 orderer-count campaign",same,4,~1000,single host,"batch=100",100,97.94,1.656,,,,,validate,"orderer cpu avg 0.42 %; traffic in/out 30.0/36.2 Mbps per orderer"
+V2,Raft,Fabric 3.1.4,same,same,7,~1000,single host,"batch=100",100,97.74,1.706,,,,,validate,"cpu 0.29 %; traffic 49.4/55.5 Mbps"
+V3,Raft,Fabric 3.1.4,same,same,10,~1000,single host,"batch=100",100,97.58,1.748,,,,,validate,"cpu 0.24 %; traffic 68.2/74.4 Mbps"
+V4,SmartBFT,Fabric 3.1.4,same,same,4,~1000,single host,"batch=100",100,97.26,2.008,,,,,validate,"cpu 2.26 %; traffic 48.3/36.0 Mbps"
+V5,SmartBFT,Fabric 3.1.4,same,same,7,~1000,single host,"batch=100",100,96.96,2.546,,,,,validate,"cpu 2.30 %; traffic 95.5/64.8 Mbps"
+V6,SmartBFT,Fabric 3.1.4,same,same,10,~1000,single host,"batch=100",100,95.92,3.100,,,,,validate,"cpu 2.47 %; traffic 146.8/97.6 Mbps"
+V7,Raft,Fabric 3.1.4,"945 RTT campaign",same,4,~1000,single host + injected RTT 0 ms,"batch=100",75,72.48,0.926,,,,,validate,
+V8,Raft,Fabric 3.1.4,same,same,4,~1000,RTT 50 ms,"batch=100",75,72.38,1.768,,,,,validate,
+V9,Raft,Fabric 3.1.4,same,same,4,~1000,RTT 100 ms,"batch=100",75,70.40,4.192,,,,,validate,
+V10,SmartBFT,Fabric 3.1.4,same,same,4,~1000,RTT 0 ms,"batch=100",75,73.16,1.048,,,,,validate,
+V11,SmartBFT,Fabric 3.1.4,same,same,4,~1000,RTT 50 ms,"batch=100",75,71.64,1.800,,,,,validate,
+V12,SmartBFT,Fabric 3.1.4,same,same,4,~1000,RTT 100 ms,"batch=100",75,59.52,8.370,,,,,validate,
+F1,Raft,Fabric 3.1.4,"945 fault campaign (10 orderers, k crash-stopped)",same,10,~1000,single host,"batch=100, k=0/1/2/3",100,97.52/97.62/97.66/97.74,2.364/1.926/1.792/1.790,,,,,validate,"fail rate 0 for all k"
+F2,SmartBFT,Fabric 3.1.4,same,same,10,~1000,single host,"batch=100, k=0/1/2/3",100,96.48/78.64/81.82/76.46,3.684/28.07/16.88/11.09,,,,,validate,"fail rate 0/0/0.164/0.331"
+C1,Clique,Besu 25.7.0,"Applied Sciences 2026 16(19) 9631 (Ozara et al.), text Sections 4-5, Tables 3-4",CC BY,4,EVM tx (ethsendRawTransaction),Docker on one workstation (i9-14900KS),"block period 2 s; 5000-tx burst; 10 runs",burst,211.5,,1.005,1.885,,,calibrate,"TPS = successful tx / (first submission to last inclusion); block-timestamp quantisation 1 s; energy 10.76 kJ/run (PKG)"
+C2,QBFT,Besu 25.7.0,same,CC BY,4,EVM tx,same,"block period 2 s; 5000-tx burst; 10 runs",burst,109.97,,6.742,28.444,,,calibrate,"energy 9.68 kJ/run"
+C3,IBFT 2.0,Besu 25.7.0,same,CC BY,4,EVM tx,same,"block period 2 s; 5000-tx burst; 10 runs",burst,~110 (text: 'near 110 TPS'),,7.591,28.977,,,calibrate,"energy 9.41 kJ/run"
+T1,CometBFT,CometBFT v1 (kvstore app),"CometBFT QA v1 report, 200-node saturation table (repo docs)",Apache-2.0,175 validators (+25 non-validators),1024,DigitalOcean one region,"c=1,r=200; 90 s",200,200.0,3.874,,,,,calibrate,"min 1.71 s, max 8.98 s, sd 1.80 s"
+T2,CometBFT,CometBFT v1,same,Apache-2.0,175,1024,same,"c=1,r=400",400,350.6,9.281,,,,,calibrate,"saturation point ~400 tx/s"
+T3,CometBFT,CometBFT v1,same,Apache-2.0,175,1024,same,"c=2,r=200",400,388.8,6.759,,,,,calibrate,
+T4,CometBFT,CometBFT v1,same,Apache-2.0,175,1024,same,"c=1,r=800",800,574.7,9.039,,,,,validate,"overloaded"
+T5,CometBFT,CometBFT v1,same,Apache-2.0,175,1024,same,"200-node run at 400 tx/s",400,,<=4 (most blocks),,,,,validate,"20-40 blocks/min per node; 1 round per block mostly"
+H1,HotStuff 2-chain,asonnino/hotstuff v0.3.0 (no execution layer),"benchmark/data/2-chain/results (repo)",Apache-2.0,10,512,AWS geo-replicated WAN,"faults 0; batch 500 kB / 100 ms",10000,9756,1.274,,,,,calibrate,"e2e latency; consensus latency 0.845 s; 5 runs"
+H2,HotStuff 2-chain,same,same,Apache-2.0,10,512,WAN,"faults 0",80000,77676,1.440,,,,,calibrate,
+H3,HotStuff 2-chain,same,same,Apache-2.0,10,512,WAN,"faults 0",100000,94767,1.629,,,,,calibrate,
+H4,HotStuff 2-chain,same,same,Apache-2.0,10,512,WAN,"faults 0",120000,98145,9.826,,,,,calibrate,"saturated"
+H5,HotStuff 2-chain,same,same,Apache-2.0,20,512,WAN,"faults 0",10000,9971,0.954,,,,,validate,
+H6,HotStuff 2-chain,same,same,Apache-2.0,50,512,WAN,"faults 0",10000,9973,0.817,,,,,validate,
+H7,HotStuff 2-chain,same,same,Apache-2.0,10,512,WAN,"faults 1",9000,8231,5.901,,,,,validate,"leader failures -> timeouts (5 s)"
+H8,HotStuff 2-chain,same,same,Apache-2.0,10,512,WAN,"faults 3",700,646,15.195,,,,,validate,

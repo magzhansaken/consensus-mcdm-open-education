@@ -1,0 +1,20 @@
+{
+ "fabric_fit_MAPE_latency": 0.2740241556330801,
+ "fabric_fit_MAPE_tps": 0.1055295171273692,
+ "fabric_fit_MAPE_cpu": 0.8273529678360945,
+ "fabric_fit_n_MAPE_latency": 0.31768546399252023,
+ "fabric_holdout_rtt_MAPE_latency": 0.43437589962210427,
+ "fabric_holdout_fault_MAPE_tps": 0.07239667071309448,
+ "cometbft_fit_MAPE_tps": 0.037220068119276396,
+ "cometbft_fit_MAPE_latency": 0.12716281664897353,
+ "cometbft_check_400_MAPE_tps": 0.08608522955356947,
+ "cometbft_check_400_MAPE_latency": 0.5761811389968657,
+ "cometbft_holdout_1600_MAPE_tps": 0.0795732773697095,
+ "hotstuff_fit_MAPE_tps": 0.07687082123816083,
+ "hotstuff_fit_MAPE_latency": 0.02695090733739548,
+ "hotstuff_holdout_MAPE_tps": 0.03764818808940706,
+ "hotstuff_holdout_MAPE_latency": 0.5349968554751634,
+ "besu_fit_MAPE_tps": 0.13352909091102516,
+ "besu_fit_MAPE_p50": 0.0772709484360166,
+ "cometbft_holdout_1600_MAPE_latency": 0.10053280935862903
+}

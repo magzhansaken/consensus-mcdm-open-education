@@ -1,0 +1,12 @@
+criterion,w=0.00,w=0.05,w=0.10,w=0.15,w=0.20,w=0.25,w=0.30,w=0.35,w=0.40,w=0.45,w=0.50
+C1 Throughput,QBFT,QBFT,QBFT,CometBFT (Tendermint),CometBFT (Tendermint),CometBFT (Tendermint),CometBFT (Tendermint),CometBFT (Tendermint),CometBFT (Tendermint),CometBFT (Tendermint),CometBFT (Tendermint)
+C2 Latency,CometBFT (Tendermint),CometBFT (Tendermint),QBFT,QBFT,QBFT,QBFT,HotStuff (2-chain),HotStuff (2-chain),HotStuff (2-chain),HotStuff (2-chain),HotStuff (2-chain)
+C3 Finalization,Clique (PoA),CometBFT (Tendermint),QBFT,QBFT,QBFT,QBFT,QBFT,QBFT,QBFT,QBFT,QBFT
+C4 Power,QBFT,QBFT,QBFT,QBFT,QBFT,QBFT,QBFT,QBFT,QBFT,QBFT,QBFT
+C5 Computing,QBFT,QBFT,QBFT,QBFT,QBFT,QBFT,QBFT,QBFT,QBFT,QBFT,QBFT
+C6 Storage,QBFT,QBFT,QBFT,QBFT,QBFT,QBFT,QBFT,QBFT,QBFT,QBFT,QBFT
+C7 Fault tolerance,QBFT,QBFT,QBFT,QBFT,CometBFT (Tendermint),CometBFT (Tendermint),CometBFT (Tendermint),CometBFT (Tendermint),CometBFT (Tendermint),CometBFT (Tendermint),CometBFT (Tendermint)
+C8 Attack resistance,QBFT,QBFT,QBFT,QBFT,CometBFT (Tendermint),CometBFT (Tendermint),CometBFT (Tendermint),CometBFT (Tendermint),CometBFT (Tendermint),CometBFT (Tendermint),CometBFT (Tendermint)
+C9 Decentralization,QBFT,QBFT,QBFT,QBFT,QBFT,QBFT,QBFT,QBFT,QBFT,QBFT,QBFT
+C10 Manageability,IBFT 2.0,QBFT,QBFT,QBFT,QBFT,QBFT,QBFT,QBFT,QBFT,QBFT,QBFT
+C11 Operational cost,QBFT,QBFT,QBFT,QBFT,QBFT,QBFT,QBFT,QBFT,QBFT,QBFT,QBFT

@@ -1,0 +1,841 @@
+seed,method,alternative,rank
+0,TOPSIS,Raft,4
+0,TOPSIS,SmartBFT,5
+0,TOPSIS,IBFT 2.0,2
+0,TOPSIS,QBFT,1
+0,TOPSIS,Clique (PoA),7
+0,TOPSIS,CometBFT (Tendermint),3
+0,TOPSIS,HotStuff (2-chain),6
+0,VIKOR,Raft,5
+0,VIKOR,SmartBFT,4
+0,VIKOR,IBFT 2.0,3
+0,VIKOR,QBFT,1
+0,VIKOR,Clique (PoA),6
+0,VIKOR,CometBFT (Tendermint),2
+0,VIKOR,HotStuff (2-chain),7
+0,COPRAS,Raft,4
+0,COPRAS,SmartBFT,6
+0,COPRAS,IBFT 2.0,2
+0,COPRAS,QBFT,1
+0,COPRAS,Clique (PoA),5
+0,COPRAS,CometBFT (Tendermint),3
+0,COPRAS,HotStuff (2-chain),7
+0,EDAS,Raft,4
+0,EDAS,SmartBFT,7
+0,EDAS,IBFT 2.0,3
+0,EDAS,QBFT,1
+0,EDAS,Clique (PoA),6
+0,EDAS,CometBFT (Tendermint),2
+0,EDAS,HotStuff (2-chain),5
+1,TOPSIS,Raft,4
+1,TOPSIS,SmartBFT,5
+1,TOPSIS,IBFT 2.0,2
+1,TOPSIS,QBFT,1
+1,TOPSIS,Clique (PoA),7
+1,TOPSIS,CometBFT (Tendermint),3
+1,TOPSIS,HotStuff (2-chain),6
+1,VIKOR,Raft,5
+1,VIKOR,SmartBFT,4
+1,VIKOR,IBFT 2.0,3
+1,VIKOR,QBFT,2
+1,VIKOR,Clique (PoA),6
+1,VIKOR,CometBFT (Tendermint),1
+1,VIKOR,HotStuff (2-chain),7
+1,COPRAS,Raft,4
+1,COPRAS,SmartBFT,6
+1,COPRAS,IBFT 2.0,2
+1,COPRAS,QBFT,1
+1,COPRAS,Clique (PoA),5
+1,COPRAS,CometBFT (Tendermint),3
+1,COPRAS,HotStuff (2-chain),7
+1,EDAS,Raft,4
+1,EDAS,SmartBFT,7
+1,EDAS,IBFT 2.0,3
+1,EDAS,QBFT,1
+1,EDAS,Clique (PoA),6
+1,EDAS,CometBFT (Tendermint),2
+1,EDAS,HotStuff (2-chain),5
+2,TOPSIS,Raft,4
+2,TOPSIS,SmartBFT,5
+2,TOPSIS,IBFT 2.0,2
+2,TOPSIS,QBFT,1
+2,TOPSIS,Clique (PoA),7
+2,TOPSIS,CometBFT (Tendermint),3
+2,TOPSIS,HotStuff (2-chain),6
+2,VIKOR,Raft,5
+2,VIKOR,SmartBFT,4
+2,VIKOR,IBFT 2.0,3
+2,VIKOR,QBFT,1
+2,VIKOR,Clique (PoA),6
+2,VIKOR,CometBFT (Tendermint),2
+2,VIKOR,HotStuff (2-chain),7
+2,COPRAS,Raft,4
+2,COPRAS,SmartBFT,7
+2,COPRAS,IBFT 2.0,2
+2,COPRAS,QBFT,1
+2,COPRAS,Clique (PoA),5
+2,COPRAS,CometBFT (Tendermint),3
+2,COPRAS,HotStuff (2-chain),6
+2,EDAS,Raft,4
+2,EDAS,SmartBFT,7
+2,EDAS,IBFT 2.0,3
+2,EDAS,QBFT,1
+2,EDAS,Clique (PoA),6
+2,EDAS,CometBFT (Tendermint),2
+2,EDAS,HotStuff (2-chain),5
+3,TOPSIS,Raft,4
+3,TOPSIS,SmartBFT,5
+3,TOPSIS,IBFT 2.0,2
+3,TOPSIS,QBFT,1
+3,TOPSIS,Clique (PoA),7
+3,TOPSIS,CometBFT (Tendermint),3
+3,TOPSIS,HotStuff (2-chain),6
+3,VIKOR,Raft,5
+3,VIKOR,SmartBFT,4
+3,VIKOR,IBFT 2.0,3
+3,VIKOR,QBFT,1
+3,VIKOR,Clique (PoA),6
+3,VIKOR,CometBFT (Tendermint),2
+3,VIKOR,HotStuff (2-chain),7
+3,COPRAS,Raft,4
+3,COPRAS,SmartBFT,6
+3,COPRAS,IBFT 2.0,2
+3,COPRAS,QBFT,1
+3,COPRAS,Clique (PoA),5
+3,COPRAS,CometBFT (Tendermint),3
+3,COPRAS,HotStuff (2-chain),7
+3,EDAS,Raft,4
+3,EDAS,SmartBFT,7
+3,EDAS,IBFT 2.0,3
+3,EDAS,QBFT,1
+3,EDAS,Clique (PoA),6
+3,EDAS,CometBFT (Tendermint),2
+3,EDAS,HotStuff (2-chain),5
+4,TOPSIS,Raft,4
+4,TOPSIS,SmartBFT,5
+4,TOPSIS,IBFT 2.0,2
+4,TOPSIS,QBFT,1
+4,TOPSIS,Clique (PoA),7
+4,TOPSIS,CometBFT (Tendermint),3
+4,TOPSIS,HotStuff (2-chain),6
+4,VIKOR,Raft,5
+4,VIKOR,SmartBFT,4
+4,VIKOR,IBFT 2.0,3
+4,VIKOR,QBFT,1
+4,VIKOR,Clique (PoA),6
+4,VIKOR,CometBFT (Tendermint),2
+4,VIKOR,HotStuff (2-chain),7
+4,COPRAS,Raft,4
+4,COPRAS,SmartBFT,6
+4,COPRAS,IBFT 2.0,2
+4,COPRAS,QBFT,1
+4,COPRAS,Clique (PoA),5
+4,COPRAS,CometBFT (Tendermint),3
+4,COPRAS,HotStuff (2-chain),7
+4,EDAS,Raft,4
+4,EDAS,SmartBFT,7
+4,EDAS,IBFT 2.0,3
+4,EDAS,QBFT,1
+4,EDAS,Clique (PoA),6
+4,EDAS,CometBFT (Tendermint),2
+4,EDAS,HotStuff (2-chain),5
+5,TOPSIS,Raft,4
+5,TOPSIS,SmartBFT,5
+5,TOPSIS,IBFT 2.0,2
+5,TOPSIS,QBFT,1
+5,TOPSIS,Clique (PoA),7
+5,TOPSIS,CometBFT (Tendermint),3
+5,TOPSIS,HotStuff (2-chain),6
+5,VIKOR,Raft,5
+5,VIKOR,SmartBFT,4
+5,VIKOR,IBFT 2.0,3
+5,VIKOR,QBFT,1
+5,VIKOR,Clique (PoA),6
+5,VIKOR,CometBFT (Tendermint),2
+5,VIKOR,HotStuff (2-chain),7
+5,COPRAS,Raft,4
+5,COPRAS,SmartBFT,7
+5,COPRAS,IBFT 2.0,2
+5,COPRAS,QBFT,1
+5,COPRAS,Clique (PoA),5
+5,COPRAS,CometBFT (Tendermint),3
+5,COPRAS,HotStuff (2-chain),6
+5,EDAS,Raft,4
+5,EDAS,SmartBFT,7
+5,EDAS,IBFT 2.0,3
+5,EDAS,QBFT,1
+5,EDAS,Clique (PoA),6
+5,EDAS,CometBFT (Tendermint),2
+5,EDAS,HotStuff (2-chain),5
+6,TOPSIS,Raft,4
+6,TOPSIS,SmartBFT,5
+6,TOPSIS,IBFT 2.0,2
+6,TOPSIS,QBFT,1
+6,TOPSIS,Clique (PoA),7
+6,TOPSIS,CometBFT (Tendermint),3
+6,TOPSIS,HotStuff (2-chain),6
+6,VIKOR,Raft,5
+6,VIKOR,SmartBFT,4
+6,VIKOR,IBFT 2.0,3
+6,VIKOR,QBFT,1
+6,VIKOR,Clique (PoA),6
+6,VIKOR,CometBFT (Tendermint),2
+6,VIKOR,HotStuff (2-chain),7
+6,COPRAS,Raft,4
+6,COPRAS,SmartBFT,7
+6,COPRAS,IBFT 2.0,2
+6,COPRAS,QBFT,1
+6,COPRAS,Clique (PoA),5
+6,COPRAS,CometBFT (Tendermint),3
+6,COPRAS,HotStuff (2-chain),6
+6,EDAS,Raft,4
+6,EDAS,SmartBFT,7
+6,EDAS,IBFT 2.0,3
+6,EDAS,QBFT,1
+6,EDAS,Clique (PoA),6
+6,EDAS,CometBFT (Tendermint),2
+6,EDAS,HotStuff (2-chain),5
+7,TOPSIS,Raft,4
+7,TOPSIS,SmartBFT,5
+7,TOPSIS,IBFT 2.0,2
+7,TOPSIS,QBFT,1
+7,TOPSIS,Clique (PoA),7
+7,TOPSIS,CometBFT (Tendermint),3
+7,TOPSIS,HotStuff (2-chain),6
+7,VIKOR,Raft,5
+7,VIKOR,SmartBFT,4
+7,VIKOR,IBFT 2.0,3
+7,VIKOR,QBFT,1
+7,VIKOR,Clique (PoA),6
+7,VIKOR,CometBFT (Tendermint),2
+7,VIKOR,HotStuff (2-chain),7
+7,COPRAS,Raft,4
+7,COPRAS,SmartBFT,6
+7,COPRAS,IBFT 2.0,2
+7,COPRAS,QBFT,1
+7,COPRAS,Clique (PoA),5
+7,COPRAS,CometBFT (Tendermint),3
+7,COPRAS,HotStuff (2-chain),7
+7,EDAS,Raft,4
+7,EDAS,SmartBFT,7
+7,EDAS,IBFT 2.0,3
+7,EDAS,QBFT,1
+7,EDAS,Clique (PoA),6
+7,EDAS,CometBFT (Tendermint),2
+7,EDAS,HotStuff (2-chain),5
+8,TOPSIS,Raft,4
+8,TOPSIS,SmartBFT,5
+8,TOPSIS,IBFT 2.0,2
+8,TOPSIS,QBFT,1
+8,TOPSIS,Clique (PoA),7
+8,TOPSIS,CometBFT (Tendermint),3
+8,TOPSIS,HotStuff (2-chain),6
+8,VIKOR,Raft,5
+8,VIKOR,SmartBFT,4
+8,VIKOR,IBFT 2.0,3
+8,VIKOR,QBFT,1
+8,VIKOR,Clique (PoA),6
+8,VIKOR,CometBFT (Tendermint),2
+8,VIKOR,HotStuff (2-chain),7
+8,COPRAS,Raft,4
+8,COPRAS,SmartBFT,6
+8,COPRAS,IBFT 2.0,2
+8,COPRAS,QBFT,1
+8,COPRAS,Clique (PoA),5
+8,COPRAS,CometBFT (Tendermint),3
+8,COPRAS,HotStuff (2-chain),7
+8,EDAS,Raft,4
+8,EDAS,SmartBFT,7
+8,EDAS,IBFT 2.0,3
+8,EDAS,QBFT,1
+8,EDAS,Clique (PoA),6
+8,EDAS,CometBFT (Tendermint),2
+8,EDAS,HotStuff (2-chain),5
+9,TOPSIS,Raft,4
+9,TOPSIS,SmartBFT,5
+9,TOPSIS,IBFT 2.0,2
+9,TOPSIS,QBFT,1
+9,TOPSIS,Clique (PoA),7
+9,TOPSIS,CometBFT (Tendermint),3
+9,TOPSIS,HotStuff (2-chain),6
+9,VIKOR,Raft,5
+9,VIKOR,SmartBFT,4
+9,VIKOR,IBFT 2.0,3
+9,VIKOR,QBFT,1
+9,VIKOR,Clique (PoA),6
+9,VIKOR,CometBFT (Tendermint),2
+9,VIKOR,HotStuff (2-chain),7
+9,COPRAS,Raft,4
+9,COPRAS,SmartBFT,6
+9,COPRAS,IBFT 2.0,2
+9,COPRAS,QBFT,1
+9,COPRAS,Clique (PoA),5
+9,COPRAS,CometBFT (Tendermint),3
+9,COPRAS,HotStuff (2-chain),7
+9,EDAS,Raft,4
+9,EDAS,SmartBFT,7
+9,EDAS,IBFT 2.0,3
+9,EDAS,QBFT,1
+9,EDAS,Clique (PoA),6
+9,EDAS,CometBFT (Tendermint),2
+9,EDAS,HotStuff (2-chain),5
+10,TOPSIS,Raft,4
+10,TOPSIS,SmartBFT,5
+10,TOPSIS,IBFT 2.0,2
+10,TOPSIS,QBFT,1
+10,TOPSIS,Clique (PoA),7
+10,TOPSIS,CometBFT (Tendermint),3
+10,TOPSIS,HotStuff (2-chain),6
+10,VIKOR,Raft,6
+10,VIKOR,SmartBFT,4
+10,VIKOR,IBFT 2.0,3
+10,VIKOR,QBFT,1
+10,VIKOR,Clique (PoA),5
+10,VIKOR,CometBFT (Tendermint),2
+10,VIKOR,HotStuff (2-chain),7
+10,COPRAS,Raft,4
+10,COPRAS,SmartBFT,6
+10,COPRAS,IBFT 2.0,2
+10,COPRAS,QBFT,1
+10,COPRAS,Clique (PoA),5
+10,COPRAS,CometBFT (Tendermint),3
+10,COPRAS,HotStuff (2-chain),7
+10,EDAS,Raft,4
+10,EDAS,SmartBFT,7
+10,EDAS,IBFT 2.0,3
+10,EDAS,QBFT,1
+10,EDAS,Clique (PoA),6
+10,EDAS,CometBFT (Tendermint),2
+10,EDAS,HotStuff (2-chain),5
+11,TOPSIS,Raft,4
+11,TOPSIS,SmartBFT,5
+11,TOPSIS,IBFT 2.0,2
+11,TOPSIS,QBFT,1
+11,TOPSIS,Clique (PoA),7
+11,TOPSIS,CometBFT (Tendermint),3
+11,TOPSIS,HotStuff (2-chain),6
+11,VIKOR,Raft,5
+11,VIKOR,SmartBFT,4
+11,VIKOR,IBFT 2.0,3
+11,VIKOR,QBFT,1
+11,VIKOR,Clique (PoA),6
+11,VIKOR,CometBFT (Tendermint),2
+11,VIKOR,HotStuff (2-chain),7
+11,COPRAS,Raft,4
+11,COPRAS,SmartBFT,6
+11,COPRAS,IBFT 2.0,2
+11,COPRAS,QBFT,1
+11,COPRAS,Clique (PoA),5
+11,COPRAS,CometBFT (Tendermint),3
+11,COPRAS,HotStuff (2-chain),7
+11,EDAS,Raft,4
+11,EDAS,SmartBFT,7
+11,EDAS,IBFT 2.0,3
+11,EDAS,QBFT,1
+11,EDAS,Clique (PoA),6
+11,EDAS,CometBFT (Tendermint),2
+11,EDAS,HotStuff (2-chain),5
+12,TOPSIS,Raft,4
+12,TOPSIS,SmartBFT,5
+12,TOPSIS,IBFT 2.0,2
+12,TOPSIS,QBFT,1
+12,TOPSIS,Clique (PoA),7
+12,TOPSIS,CometBFT (Tendermint),3
+12,TOPSIS,HotStuff (2-chain),6
+12,VIKOR,Raft,5
+12,VIKOR,SmartBFT,4
+12,VIKOR,IBFT 2.0,3
+12,VIKOR,QBFT,2
+12,VIKOR,Clique (PoA),6
+12,VIKOR,CometBFT (Tendermint),1
+12,VIKOR,HotStuff (2-chain),7
+12,COPRAS,Raft,4
+12,COPRAS,SmartBFT,7
+12,COPRAS,IBFT 2.0,2
+12,COPRAS,QBFT,1
+12,COPRAS,Clique (PoA),5
+12,COPRAS,CometBFT (Tendermint),3
+12,COPRAS,HotStuff (2-chain),6
+12,EDAS,Raft,4
+12,EDAS,SmartBFT,7
+12,EDAS,IBFT 2.0,3
+12,EDAS,QBFT,1
+12,EDAS,Clique (PoA),6
+12,EDAS,CometBFT (Tendermint),2
+12,EDAS,HotStuff (2-chain),5
+13,TOPSIS,Raft,4
+13,TOPSIS,SmartBFT,5
+13,TOPSIS,IBFT 2.0,2
+13,TOPSIS,QBFT,1
+13,TOPSIS,Clique (PoA),7
+13,TOPSIS,CometBFT (Tendermint),3
+13,TOPSIS,HotStuff (2-chain),6
+13,VIKOR,Raft,5
+13,VIKOR,SmartBFT,4
+13,VIKOR,IBFT 2.0,3
+13,VIKOR,QBFT,2
+13,VIKOR,Clique (PoA),6
+13,VIKOR,CometBFT (Tendermint),1
+13,VIKOR,HotStuff (2-chain),7
+13,COPRAS,Raft,4
+13,COPRAS,SmartBFT,6
+13,COPRAS,IBFT 2.0,2
+13,COPRAS,QBFT,1
+13,COPRAS,Clique (PoA),5
+13,COPRAS,CometBFT (Tendermint),3
+13,COPRAS,HotStuff (2-chain),7
+13,EDAS,Raft,4
+13,EDAS,SmartBFT,7
+13,EDAS,IBFT 2.0,3
+13,EDAS,QBFT,1
+13,EDAS,Clique (PoA),6
+13,EDAS,CometBFT (Tendermint),2
+13,EDAS,HotStuff (2-chain),5
+14,TOPSIS,Raft,4
+14,TOPSIS,SmartBFT,5
+14,TOPSIS,IBFT 2.0,3
+14,TOPSIS,QBFT,2
+14,TOPSIS,Clique (PoA),7
+14,TOPSIS,CometBFT (Tendermint),1
+14,TOPSIS,HotStuff (2-chain),6
+14,VIKOR,Raft,5
+14,VIKOR,SmartBFT,4
+14,VIKOR,IBFT 2.0,3
+14,VIKOR,QBFT,2
+14,VIKOR,Clique (PoA),6
+14,VIKOR,CometBFT (Tendermint),1
+14,VIKOR,HotStuff (2-chain),7
+14,COPRAS,Raft,4
+14,COPRAS,SmartBFT,6
+14,COPRAS,IBFT 2.0,3
+14,COPRAS,QBFT,1
+14,COPRAS,Clique (PoA),5
+14,COPRAS,CometBFT (Tendermint),2
+14,COPRAS,HotStuff (2-chain),7
+14,EDAS,Raft,4
+14,EDAS,SmartBFT,7
+14,EDAS,IBFT 2.0,3
+14,EDAS,QBFT,2
+14,EDAS,Clique (PoA),6
+14,EDAS,CometBFT (Tendermint),1
+14,EDAS,HotStuff (2-chain),5
+15,TOPSIS,Raft,4
+15,TOPSIS,SmartBFT,5
+15,TOPSIS,IBFT 2.0,2
+15,TOPSIS,QBFT,1
+15,TOPSIS,Clique (PoA),7
+15,TOPSIS,CometBFT (Tendermint),3
+15,TOPSIS,HotStuff (2-chain),6
+15,VIKOR,Raft,6
+15,VIKOR,SmartBFT,4
+15,VIKOR,IBFT 2.0,3
+15,VIKOR,QBFT,1
+15,VIKOR,Clique (PoA),5
+15,VIKOR,CometBFT (Tendermint),2
+15,VIKOR,HotStuff (2-chain),7
+15,COPRAS,Raft,4
+15,COPRAS,SmartBFT,6
+15,COPRAS,IBFT 2.0,2
+15,COPRAS,QBFT,1
+15,COPRAS,Clique (PoA),5
+15,COPRAS,CometBFT (Tendermint),3
+15,COPRAS,HotStuff (2-chain),7
+15,EDAS,Raft,4
+15,EDAS,SmartBFT,7
+15,EDAS,IBFT 2.0,3
+15,EDAS,QBFT,1
+15,EDAS,Clique (PoA),6
+15,EDAS,CometBFT (Tendermint),2
+15,EDAS,HotStuff (2-chain),5
+16,TOPSIS,Raft,4
+16,TOPSIS,SmartBFT,5
+16,TOPSIS,IBFT 2.0,2
+16,TOPSIS,QBFT,1
+16,TOPSIS,Clique (PoA),7
+16,TOPSIS,CometBFT (Tendermint),3
+16,TOPSIS,HotStuff (2-chain),6
+16,VIKOR,Raft,5
+16,VIKOR,SmartBFT,4
+16,VIKOR,IBFT 2.0,3
+16,VIKOR,QBFT,1
+16,VIKOR,Clique (PoA),6
+16,VIKOR,CometBFT (Tendermint),2
+16,VIKOR,HotStuff (2-chain),7
+16,COPRAS,Raft,4
+16,COPRAS,SmartBFT,7
+16,COPRAS,IBFT 2.0,2
+16,COPRAS,QBFT,1
+16,COPRAS,Clique (PoA),5
+16,COPRAS,CometBFT (Tendermint),3
+16,COPRAS,HotStuff (2-chain),6
+16,EDAS,Raft,4
+16,EDAS,SmartBFT,7
+16,EDAS,IBFT 2.0,3
+16,EDAS,QBFT,1
+16,EDAS,Clique (PoA),6
+16,EDAS,CometBFT (Tendermint),2
+16,EDAS,HotStuff (2-chain),5
+17,TOPSIS,Raft,4
+17,TOPSIS,SmartBFT,5
+17,TOPSIS,IBFT 2.0,2
+17,TOPSIS,QBFT,1
+17,TOPSIS,Clique (PoA),7
+17,TOPSIS,CometBFT (Tendermint),3
+17,TOPSIS,HotStuff (2-chain),6
+17,VIKOR,Raft,5
+17,VIKOR,SmartBFT,4
+17,VIKOR,IBFT 2.0,3
+17,VIKOR,QBFT,1
+17,VIKOR,Clique (PoA),6
+17,VIKOR,CometBFT (Tendermint),2
+17,VIKOR,HotStuff (2-chain),7
+17,COPRAS,Raft,4
+17,COPRAS,SmartBFT,6
+17,COPRAS,IBFT 2.0,2
+17,COPRAS,QBFT,1
+17,COPRAS,Clique (PoA),5
+17,COPRAS,CometBFT (Tendermint),3
+17,COPRAS,HotStuff (2-chain),7
+17,EDAS,Raft,4
+17,EDAS,SmartBFT,7
+17,EDAS,IBFT 2.0,3
+17,EDAS,QBFT,1
+17,EDAS,Clique (PoA),6
+17,EDAS,CometBFT (Tendermint),2
+17,EDAS,HotStuff (2-chain),5
+18,TOPSIS,Raft,4
+18,TOPSIS,SmartBFT,5
+18,TOPSIS,IBFT 2.0,2
+18,TOPSIS,QBFT,1
+18,TOPSIS,Clique (PoA),7
+18,TOPSIS,CometBFT (Tendermint),3
+18,TOPSIS,HotStuff (2-chain),6
+18,VIKOR,Raft,5
+18,VIKOR,SmartBFT,4
+18,VIKOR,IBFT 2.0,3
+18,VIKOR,QBFT,1
+18,VIKOR,Clique (PoA),6
+18,VIKOR,CometBFT (Tendermint),2
+18,VIKOR,HotStuff (2-chain),7
+18,COPRAS,Raft,4
+18,COPRAS,SmartBFT,7
+18,COPRAS,IBFT 2.0,2
+18,COPRAS,QBFT,1
+18,COPRAS,Clique (PoA),5
+18,COPRAS,CometBFT (Tendermint),3
+18,COPRAS,HotStuff (2-chain),6
+18,EDAS,Raft,4
+18,EDAS,SmartBFT,7
+18,EDAS,IBFT 2.0,3
+18,EDAS,QBFT,1
+18,EDAS,Clique (PoA),6
+18,EDAS,CometBFT (Tendermint),2
+18,EDAS,HotStuff (2-chain),5
+19,TOPSIS,Raft,4
+19,TOPSIS,SmartBFT,5
+19,TOPSIS,IBFT 2.0,2
+19,TOPSIS,QBFT,1
+19,TOPSIS,Clique (PoA),7
+19,TOPSIS,CometBFT (Tendermint),3
+19,TOPSIS,HotStuff (2-chain),6
+19,VIKOR,Raft,5
+19,VIKOR,SmartBFT,4
+19,VIKOR,IBFT 2.0,3
+19,VIKOR,QBFT,1
+19,VIKOR,Clique (PoA),6
+19,VIKOR,CometBFT (Tendermint),2
+19,VIKOR,HotStuff (2-chain),7
+19,COPRAS,Raft,4
+19,COPRAS,SmartBFT,7
+19,COPRAS,IBFT 2.0,2
+19,COPRAS,QBFT,1
+19,COPRAS,Clique (PoA),5
+19,COPRAS,CometBFT (Tendermint),3
+19,COPRAS,HotStuff (2-chain),6
+19,EDAS,Raft,4
+19,EDAS,SmartBFT,7
+19,EDAS,IBFT 2.0,3
+19,EDAS,QBFT,1
+19,EDAS,Clique (PoA),6
+19,EDAS,CometBFT (Tendermint),2
+19,EDAS,HotStuff (2-chain),5
+20,TOPSIS,Raft,4
+20,TOPSIS,SmartBFT,5
+20,TOPSIS,IBFT 2.0,2
+20,TOPSIS,QBFT,1
+20,TOPSIS,Clique (PoA),7
+20,TOPSIS,CometBFT (Tendermint),3
+20,TOPSIS,HotStuff (2-chain),6
+20,VIKOR,Raft,5
+20,VIKOR,SmartBFT,4
+20,VIKOR,IBFT 2.0,3
+20,VIKOR,QBFT,1
+20,VIKOR,Clique (PoA),6
+20,VIKOR,CometBFT (Tendermint),2
+20,VIKOR,HotStuff (2-chain),7
+20,COPRAS,Raft,4
+20,COPRAS,SmartBFT,7
+20,COPRAS,IBFT 2.0,2
+20,COPRAS,QBFT,1
+20,COPRAS,Clique (PoA),5
+20,COPRAS,CometBFT (Tendermint),3
+20,COPRAS,HotStuff (2-chain),6
+20,EDAS,Raft,4
+20,EDAS,SmartBFT,7
+20,EDAS,IBFT 2.0,3
+20,EDAS,QBFT,1
+20,EDAS,Clique (PoA),6
+20,EDAS,CometBFT (Tendermint),2
+20,EDAS,HotStuff (2-chain),5
+21,TOPSIS,Raft,4
+21,TOPSIS,SmartBFT,5
+21,TOPSIS,IBFT 2.0,2
+21,TOPSIS,QBFT,1
+21,TOPSIS,Clique (PoA),7
+21,TOPSIS,CometBFT (Tendermint),3
+21,TOPSIS,HotStuff (2-chain),6
+21,VIKOR,Raft,5
+21,VIKOR,SmartBFT,4
+21,VIKOR,IBFT 2.0,3
+21,VIKOR,QBFT,2
+21,VIKOR,Clique (PoA),6
+21,VIKOR,CometBFT (Tendermint),1
+21,VIKOR,HotStuff (2-chain),7
+21,COPRAS,Raft,4
+21,COPRAS,SmartBFT,6
+21,COPRAS,IBFT 2.0,2
+21,COPRAS,QBFT,1
+21,COPRAS,Clique (PoA),5
+21,COPRAS,CometBFT (Tendermint),3
+21,COPRAS,HotStuff (2-chain),7
+21,EDAS,Raft,4
+21,EDAS,SmartBFT,7
+21,EDAS,IBFT 2.0,3
+21,EDAS,QBFT,1
+21,EDAS,Clique (PoA),6
+21,EDAS,CometBFT (Tendermint),2
+21,EDAS,HotStuff (2-chain),5
+22,TOPSIS,Raft,4
+22,TOPSIS,SmartBFT,5
+22,TOPSIS,IBFT 2.0,2
+22,TOPSIS,QBFT,1
+22,TOPSIS,Clique (PoA),7
+22,TOPSIS,CometBFT (Tendermint),3
+22,TOPSIS,HotStuff (2-chain),6
+22,VIKOR,Raft,5
+22,VIKOR,SmartBFT,4
+22,VIKOR,IBFT 2.0,3
+22,VIKOR,QBFT,1
+22,VIKOR,Clique (PoA),6
+22,VIKOR,CometBFT (Tendermint),2
+22,VIKOR,HotStuff (2-chain),7
+22,COPRAS,Raft,4
+22,COPRAS,SmartBFT,6
+22,COPRAS,IBFT 2.0,2
+22,COPRAS,QBFT,1
+22,COPRAS,Clique (PoA),5
+22,COPRAS,CometBFT (Tendermint),3
+22,COPRAS,HotStuff (2-chain),7
+22,EDAS,Raft,4
+22,EDAS,SmartBFT,7
+22,EDAS,IBFT 2.0,3
+22,EDAS,QBFT,1
+22,EDAS,Clique (PoA),6
+22,EDAS,CometBFT (Tendermint),2
+22,EDAS,HotStuff (2-chain),5
+23,TOPSIS,Raft,4
+23,TOPSIS,SmartBFT,5
+23,TOPSIS,IBFT 2.0,2
+23,TOPSIS,QBFT,1
+23,TOPSIS,Clique (PoA),7
+23,TOPSIS,CometBFT (Tendermint),3
+23,TOPSIS,HotStuff (2-chain),6
+23,VIKOR,Raft,5
+23,VIKOR,SmartBFT,4
+23,VIKOR,IBFT 2.0,3
+23,VIKOR,QBFT,1
+23,VIKOR,Clique (PoA),6
+23,VIKOR,CometBFT (Tendermint),2
+23,VIKOR,HotStuff (2-chain),7
+23,COPRAS,Raft,4
+23,COPRAS,SmartBFT,7
+23,COPRAS,IBFT 2.0,2
+23,COPRAS,QBFT,1
+23,COPRAS,Clique (PoA),5
+23,COPRAS,CometBFT (Tendermint),3
+23,COPRAS,HotStuff (2-chain),6
+23,EDAS,Raft,4
+23,EDAS,SmartBFT,7
+23,EDAS,IBFT 2.0,3
+23,EDAS,QBFT,1
+23,EDAS,Clique (PoA),6
+23,EDAS,CometBFT (Tendermint),2
+23,EDAS,HotStuff (2-chain),5
+24,TOPSIS,Raft,4
+24,TOPSIS,SmartBFT,5
+24,TOPSIS,IBFT 2.0,2
+24,TOPSIS,QBFT,1
+24,TOPSIS,Clique (PoA),7
+24,TOPSIS,CometBFT (Tendermint),3
+24,TOPSIS,HotStuff (2-chain),6
+24,VIKOR,Raft,5
+24,VIKOR,SmartBFT,4
+24,VIKOR,IBFT 2.0,3
+24,VIKOR,QBFT,1
+24,VIKOR,Clique (PoA),6
+24,VIKOR,CometBFT (Tendermint),2
+24,VIKOR,HotStuff (2-chain),7
+24,COPRAS,Raft,4
+24,COPRAS,SmartBFT,6
+24,COPRAS,IBFT 2.0,2
+24,COPRAS,QBFT,1
+24,COPRAS,Clique (PoA),5
+24,COPRAS,CometBFT (Tendermint),3
+24,COPRAS,HotStuff (2-chain),7
+24,EDAS,Raft,4
+24,EDAS,SmartBFT,7
+24,EDAS,IBFT 2.0,3
+24,EDAS,QBFT,1
+24,EDAS,Clique (PoA),6
+24,EDAS,CometBFT (Tendermint),2
+24,EDAS,HotStuff (2-chain),5
+25,TOPSIS,Raft,4
+25,TOPSIS,SmartBFT,5
+25,TOPSIS,IBFT 2.0,2
+25,TOPSIS,QBFT,1
+25,TOPSIS,Clique (PoA),7
+25,TOPSIS,CometBFT (Tendermint),3
+25,TOPSIS,HotStuff (2-chain),6
+25,VIKOR,Raft,5
+25,VIKOR,SmartBFT,4
+25,VIKOR,IBFT 2.0,3
+25,VIKOR,QBFT,1
+25,VIKOR,Clique (PoA),6
+25,VIKOR,CometBFT (Tendermint),2
+25,VIKOR,HotStuff (2-chain),7
+25,COPRAS,Raft,4
+25,COPRAS,SmartBFT,6
+25,COPRAS,IBFT 2.0,2
+25,COPRAS,QBFT,1
+25,COPRAS,Clique (PoA),5
+25,COPRAS,CometBFT (Tendermint),3
+25,COPRAS,HotStuff (2-chain),7
+25,EDAS,Raft,4
+25,EDAS,SmartBFT,7
+25,EDAS,IBFT 2.0,3
+25,EDAS,QBFT,1
+25,EDAS,Clique (PoA),6
+25,EDAS,CometBFT (Tendermint),2
+25,EDAS,HotStuff (2-chain),5
+26,TOPSIS,Raft,4
+26,TOPSIS,SmartBFT,5
+26,TOPSIS,IBFT 2.0,2
+26,TOPSIS,QBFT,1
+26,TOPSIS,Clique (PoA),7
+26,TOPSIS,CometBFT (Tendermint),3
+26,TOPSIS,HotStuff (2-chain),6
+26,VIKOR,Raft,5
+26,VIKOR,SmartBFT,4
+26,VIKOR,IBFT 2.0,3
+26,VIKOR,QBFT,2
+26,VIKOR,Clique (PoA),6
+26,VIKOR,CometBFT (Tendermint),1
+26,VIKOR,HotStuff (2-chain),7
+26,COPRAS,Raft,4
+26,COPRAS,SmartBFT,6
+26,COPRAS,IBFT 2.0,2
+26,COPRAS,QBFT,1
+26,COPRAS,Clique (PoA),5
+26,COPRAS,CometBFT (Tendermint),3
+26,COPRAS,HotStuff (2-chain),7
+26,EDAS,Raft,4
+26,EDAS,SmartBFT,7
+26,EDAS,IBFT 2.0,3
+26,EDAS,QBFT,1
+26,EDAS,Clique (PoA),6
+26,EDAS,CometBFT (Tendermint),2
+26,EDAS,HotStuff (2-chain),5
+27,TOPSIS,Raft,4
+27,TOPSIS,SmartBFT,5
+27,TOPSIS,IBFT 2.0,2
+27,TOPSIS,QBFT,1
+27,TOPSIS,Clique (PoA),7
+27,TOPSIS,CometBFT (Tendermint),3
+27,TOPSIS,HotStuff (2-chain),6
+27,VIKOR,Raft,5
+27,VIKOR,SmartBFT,4
+27,VIKOR,IBFT 2.0,3
+27,VIKOR,QBFT,1
+27,VIKOR,Clique (PoA),6
+27,VIKOR,CometBFT (Tendermint),2
+27,VIKOR,HotStuff (2-chain),7
+27,COPRAS,Raft,4
+27,COPRAS,SmartBFT,6
+27,COPRAS,IBFT 2.0,2
+27,COPRAS,QBFT,1
+27,COPRAS,Clique (PoA),5
+27,COPRAS,CometBFT (Tendermint),3
+27,COPRAS,HotStuff (2-chain),7
+27,EDAS,Raft,4
+27,EDAS,SmartBFT,7
+27,EDAS,IBFT 2.0,3
+27,EDAS,QBFT,1
+27,EDAS,Clique (PoA),6
+27,EDAS,CometBFT (Tendermint),2
+27,EDAS,HotStuff (2-chain),5
+28,TOPSIS,Raft,4
+28,TOPSIS,SmartBFT,5
+28,TOPSIS,IBFT 2.0,2
+28,TOPSIS,QBFT,1
+28,TOPSIS,Clique (PoA),7
+28,TOPSIS,CometBFT (Tendermint),3
+28,TOPSIS,HotStuff (2-chain),6
+28,VIKOR,Raft,5
+28,VIKOR,SmartBFT,4
+28,VIKOR,IBFT 2.0,3
+28,VIKOR,QBFT,1
+28,VIKOR,Clique (PoA),6
+28,VIKOR,CometBFT (Tendermint),2
+28,VIKOR,HotStuff (2-chain),7
+28,COPRAS,Raft,4
+28,COPRAS,SmartBFT,6
+28,COPRAS,IBFT 2.0,2
+28,COPRAS,QBFT,1
+28,COPRAS,Clique (PoA),5
+28,COPRAS,CometBFT (Tendermint),3
+28,COPRAS,HotStuff (2-chain),7
+28,EDAS,Raft,4
+28,EDAS,SmartBFT,7
+28,EDAS,IBFT 2.0,3
+28,EDAS,QBFT,1
+28,EDAS,Clique (PoA),6
+28,EDAS,CometBFT (Tendermint),2
+28,EDAS,HotStuff (2-chain),5
+29,TOPSIS,Raft,4
+29,TOPSIS,SmartBFT,5
+29,TOPSIS,IBFT 2.0,2
+29,TOPSIS,QBFT,1
+29,TOPSIS,Clique (PoA),7
+29,TOPSIS,CometBFT (Tendermint),3
+29,TOPSIS,HotStuff (2-chain),6
+29,VIKOR,Raft,5
+29,VIKOR,SmartBFT,4
+29,VIKOR,IBFT 2.0,3
+29,VIKOR,QBFT,1
+29,VIKOR,Clique (PoA),6
+29,VIKOR,CometBFT (Tendermint),2
+29,VIKOR,HotStuff (2-chain),7
+29,COPRAS,Raft,4
+29,COPRAS,SmartBFT,7
+29,COPRAS,IBFT 2.0,2
+29,COPRAS,QBFT,1
+29,COPRAS,Clique (PoA),5
+29,COPRAS,CometBFT (Tendermint),3
+29,COPRAS,HotStuff (2-chain),6
+29,EDAS,Raft,4
+29,EDAS,SmartBFT,7
+29,EDAS,IBFT 2.0,3
+29,EDAS,QBFT,1
+29,EDAS,Clique (PoA),6
+29,EDAS,CometBFT (Tendermint),2
+29,EDAS,HotStuff (2-chain),5
