@@ -7,7 +7,7 @@ C2  Latency (s, cost)                   mean commit latency at the deadline-day 
 C3  Finalization (s, cost)              mean time to finality at nominal load (56 tx/s); deterministic
                                         protocols: = latency; Clique: + (n/2+1) block periods (simulation)
 C4  Power (Wh per 1000 tx, cost)        network CPU energy proxy: whole-network CPU-seconds per 1000 tx x
-                                        P_core (assumption E1: 15 W per fully loaded vCPU) / 3600 (simulation)
+                                        P_core (assumption K1: 15 W per fully loaded vCPU) / 3600 (simulation)
 C5  Computing (%, cost)                 peak per-node CPU utilisation at the stress load, 4-vCPU nodes (simulation)
 C6  Storage (bytes/tx, cost)            ledger bytes appended per tx per node at nominal load (model, from
                                         documented header/signature sizes)
@@ -15,11 +15,12 @@ C7  Fault tolerance (%, benefit)        availability (share of tx committed with
                                         leader crash at 120 s and a second node crash at 300 s of a 600-s run
                                         at peak load (simulation; both faults tolerated by every protocol at n=7)
 C8  Attack resistance (0-4, benefit)    documented properties: BFT safety (f<n/3), deterministic finality,
-                                        proposer rotation, built-in equivocation evidence (Table 2 sources)
+                                        proposer rotation, built-in equivocation evidence (Table 5 sources)
 C9  Decentralization (0-1, benefit)     1 - Herfindahl index of block-proposer shares (simulation)
-C10 Manageability (0-4, benefit)        documented: dynamic validator-set change without restart, metrics
-                                        endpoint, Caliper/benchmark adapter, production LTS release (Table 2)
-C11 Operational cost (USD/month, cost)  n x vCPU-hours priced at a public list price (assumption E2:
+C10 Manageability (0-4, benefit)        documented: validator-set change without restart, contract- or configuration-
+                                        based validator selection, metrics endpoint, maintained production release line with
+                                        load-testing tooling (property table in criteria_checks.py)
+C11 Operational cost (USD/month, cost)  n x vCPU-hours priced at a public list price (assumption K2:
                                         0.04 USD per vCPU-hour, 0.10 USD per GB-month), sized from C5 and C6
 """
 from __future__ import annotations
@@ -34,12 +35,12 @@ CRITERIA = ["C1 Throughput", "C2 Latency", "C3 Finalization", "C4 Power", "C5 Co
 TYPES = np.array([1, -1, -1, -1, -1, -1, 1, 1, 1, 1, -1])
 UNITS = ["tx/s", "s", "s", "Wh/1000 tx", "% of 4 vCPU", "bytes/tx", "% committed", "score 0-4", "1-HHI", "score 0-4", "USD/month"]
 
-P_CORE_W = 15.0          # E1
-PRICE_VCPU_H = 0.04      # E2
-PRICE_GB_MONTH = 0.10    # E2
+P_CORE_W = 15.0          # K1
+PRICE_VCPU_H = 0.04      # K2
+PRICE_GB_MONTH = 0.10    # K2
 HOURS_MONTH = 730.0
 
-# documented ordinal scores (sources in Table 2 of the paper)
+# documented ordinal scores (sources in Table 5 of the paper)
 ATTACK = {"raft": 1, "smartbft": 3, "ibft2": 3, "qbft": 3, "clique": 1, "cometbft": 4, "hotstuff": 3}
 MANAGE = {"raft": 4, "smartbft": 4, "ibft2": 3, "qbft": 4, "clique": 3, "cometbft": 3, "hotstuff": 0}
 # IBFT 2.0: validator changes only by on-chain voting; QBFT adds contract-based validator selection (Besu docs);

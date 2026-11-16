@@ -1,0 +1,7470 @@
+{
+ "factors": {
+  "hw_fabric": [
+   0.5,
+   2.0,
+   "log"
+  ],
+  "hw_besu": [
+   0.5,
+   2.0,
+   "log"
+  ],
+  "hw_cometbft": [
+   0.5,
+   2.0,
+   "log"
+  ],
+  "hw_hotstuff": [
+   0.5,
+   2.0,
+   "log"
+  ],
+  "app": [
+   0.5,
+   2.0,
+   "log"
+  ],
+  "net_cometbft": [
+   0.1,
+   1.0,
+   "log"
+  ]
+ },
+ "oat": {
+  "hw_fabric": {
+   "low": {
+    "value": 0.5,
+    "default": {
+     "feasible": [
+      "raft",
+      "smartbft",
+      "clique",
+      "cometbft"
+     ],
+     "first_screened": {
+      "TOPSIS": "cometbft",
+      "VIKOR": "cometbft",
+      "COPRAS": "cometbft",
+      "EDAS": "cometbft"
+     },
+     "first_unscreened": {
+      "TOPSIS": "qbft",
+      "VIKOR": "cometbft",
+      "COPRAS": "qbft",
+      "EDAS": "qbft"
+     },
+     "qbft": [
+      82.50796296296296,
+      1.3157914635031038,
+      1.0902276659899939,
+      0.18501121607542464,
+      17.692685833333254,
+      1207.897457597876,
+      69.48924721717184,
+      3.0,
+      0.8571428571428574,
+      4.0,
+      530.5560637258658
+     ],
+     "cometbft": [
+      183.9514814814815,
+      2.6446604741495445,
+      2.1805935070000784,
+      0.2090011044354704,
+      32.27174667576564,
+      1110.9116727129785,
+      100.0,
+      4.0,
+      0.8571406841535968,
+      3.0,
+      520.7798966094682
+     ]
+    },
+    "provisioned": {
+     "feasible": [
+      "raft",
+      "smartbft",
+      "ibft2",
+      "qbft",
+      "clique",
+      "cometbft",
+      "hotstuff"
+     ],
+     "first_screened": {
+      "TOPSIS": "qbft",
+      "VIKOR": "qbft",
+      "COPRAS": "qbft",
+      "EDAS": "qbft"
+     },
+     "first_unscreened": {
+      "TOPSIS": "qbft",
+      "VIKOR": "qbft",
+      "COPRAS": "qbft",
+      "EDAS": "qbft"
+     },
+     "qbft": [
+      184.70074074074074,
+      1.1162781713041696,
+      1.0902276659899939,
+      0.18501121607542464,
+      28.558885416666687,
+      1207.897457597876,
+      100.0,
+      3.0,
+      0.8571428571428574,
+      4.0,
+      530.5560637258658
+     ],
+     "cometbft": [
+      183.9514814814815,
+      2.6446604741495445,
+      2.1805935070000784,
+      0.2090011044354704,
+      32.27174667576564,
+      1110.9116727129785,
+      100.0,
+      4.0,
+      0.8571406841535968,
+      3.0,
+      520.7798966094682
+     ]
+    }
+   },
+   "high": {
+    "value": 2.0,
+    "default": {
+     "feasible": [
+      "raft",
+      "clique",
+      "cometbft"
+     ],
+     "first_screened": {
+      "TOPSIS": "cometbft",
+      "VIKOR": "cometbft",
+      "COPRAS": "cometbft",
+      "EDAS": "cometbft"
+     },
+     "first_unscreened": {
+      "TOPSIS": "cometbft",
+      "VIKOR": "cometbft",
+      "COPRAS": "qbft",
+      "EDAS": "cometbft"
+     },
+     "qbft": [
+      82.50796296296296,
+      1.3157914635031038,
+      1.0902276659899939,
+      0.18501121607542464,
+      17.692685833333254,
+      1207.897457597876,
+      69.48924721717184,
+      3.0,
+      0.8571428571428574,
+      4.0,
+      530.5560637258658
+     ],
+     "cometbft": [
+      183.9514814814815,
+      2.6446604741495445,
+      2.1805935070000784,
+      0.2090011044354704,
+      32.27174667576564,
+      1110.9116727129785,
+      100.0,
+      4.0,
+      0.8571406841535968,
+      3.0,
+      520.7798966094682
+     ]
+    },
+    "provisioned": {
+     "feasible": [
+      "raft",
+      "ibft2",
+      "qbft",
+      "clique",
+      "cometbft",
+      "hotstuff"
+     ],
+     "first_screened": {
+      "TOPSIS": "qbft",
+      "VIKOR": "qbft",
+      "COPRAS": "qbft",
+      "EDAS": "qbft"
+     },
+     "first_unscreened": {
+      "TOPSIS": "qbft",
+      "VIKOR": "qbft",
+      "COPRAS": "qbft",
+      "EDAS": "qbft"
+     },
+     "qbft": [
+      184.70074074074074,
+      1.1162781713041696,
+      1.0902276659899939,
+      0.18501121607542464,
+      28.558885416666687,
+      1207.897457597876,
+      100.0,
+      3.0,
+      0.8571428571428574,
+      4.0,
+      530.5560637258658
+     ],
+     "cometbft": [
+      183.9514814814815,
+      2.6446604741495445,
+      2.1805935070000784,
+      0.2090011044354704,
+      32.27174667576564,
+      1110.9116727129785,
+      100.0,
+      4.0,
+      0.8571406841535968,
+      3.0,
+      520.7798966094682
+     ]
+    }
+   }
+  },
+  "hw_besu": {
+   "low": {
+    "value": 0.5,
+    "default": {
+     "feasible": [
+      "raft",
+      "clique",
+      "cometbft"
+     ],
+     "first_screened": {
+      "TOPSIS": "cometbft",
+      "VIKOR": "cometbft",
+      "COPRAS": "cometbft",
+      "EDAS": "cometbft"
+     },
+     "first_unscreened": {
+      "TOPSIS": "qbft",
+      "VIKOR": "qbft",
+      "COPRAS": "qbft",
+      "EDAS": "qbft"
+     },
+     "qbft": [
+      82.6287037037037,
+      1.2671958643193204,
+      1.0519822684375824,
+      0.1800056080377121,
+      17.37226791666659,
+      1207.897457597876,
+      71.20411430497926,
+      3.0,
+      0.8571428571428574,
+      4.0,
+      326.1560637258659
+     ],
+     "cometbft": [
+      183.9514814814815,
+      2.6446604741495445,
+      2.1805935070000784,
+      0.2090011044354704,
+      32.27174667576564,
+      1110.9116727129785,
+      100.0,
+      4.0,
+      0.8571406841535968,
+      3.0,
+      520.7798966094682
+     ]
+    },
+    "provisioned": {
+     "feasible": [
+      "raft",
+      "smartbft",
+      "ibft2",
+      "qbft",
+      "clique",
+      "cometbft",
+      "hotstuff"
+     ],
+     "first_screened": {
+      "TOPSIS": "qbft",
+      "VIKOR": "qbft",
+      "COPRAS": "qbft",
+      "EDAS": "qbft"
+     },
+     "first_unscreened": {
+      "TOPSIS": "qbft",
+      "VIKOR": "qbft",
+      "COPRAS": "qbft",
+      "EDAS": "qbft"
+     },
+     "qbft": [
+      184.7707407407407,
+      1.0675967645320508,
+      1.0519822684375824,
+      0.1800056080377121,
+      28.15856770833335,
+      1207.897457597876,
+      100.0,
+      3.0,
+      0.8571428571428574,
+      4.0,
+      530.5560637258658
+     ],
+     "cometbft": [
+      183.9514814814815,
+      2.6446604741495445,
+      2.1805935070000784,
+      0.2090011044354704,
+      32.27174667576564,
+      1110.9116727129785,
+      100.0,
+      4.0,
+      0.8571406841535968,
+      3.0,
+      520.7798966094682
+     ]
+    }
+   },
+   "high": {
+    "value": 2.0,
+    "default": {
+     "feasible": [
+      "raft",
+      "clique",
+      "cometbft"
+     ],
+     "first_screened": {
+      "TOPSIS": "cometbft",
+      "VIKOR": "cometbft",
+      "COPRAS": "cometbft",
+      "EDAS": "cometbft"
+     },
+     "first_unscreened": {
+      "TOPSIS": "qbft",
+      "VIKOR": "qbft",
+      "COPRAS": "qbft",
+      "EDAS": "cometbft"
+     },
+     "qbft": [
+      82.1961111111111,
+      1.4129826618706711,
+      1.1667184610948165,
+      0.19502243215084974,
+      18.333521666666584,
+      1207.897457597876,
+      66.02728776836449,
+      3.0,
+      0.8571428571428574,
+      4.0,
+      530.5560637258658
+     ],
+     "cometbft": [
+      183.9514814814815,
+      2.6446604741495445,
+      2.1805935070000784,
+      0.2090011044354704,
+      32.27174667576564,
+      1110.9116727129785,
+      100.0,
+      4.0,
+      0.8571406841535968,
+      3.0,
+      520.7798966094682
+     ]
+    },
+    "provisioned": {
+     "feasible": [
+      "raft",
+      "smartbft",
+      "ibft2",
+      "qbft",
+      "clique",
+      "cometbft",
+      "hotstuff"
+     ],
+     "first_screened": {
+      "TOPSIS": "qbft",
+      "VIKOR": "qbft",
+      "COPRAS": "qbft",
+      "EDAS": "qbft"
+     },
+     "first_unscreened": {
+      "TOPSIS": "qbft",
+      "VIKOR": "qbft",
+      "COPRAS": "qbft",
+      "EDAS": "qbft"
+     },
+     "qbft": [
+      184.62888888888887,
+      1.2136409848484067,
+      1.1667184610948165,
+      0.19502243215084974,
+      29.359520833333352,
+      1207.897457597876,
+      100.0,
+      3.0,
+      0.8571428571428574,
+      4.0,
+      530.5560637258658
+     ],
+     "cometbft": [
+      183.9514814814815,
+      2.6446604741495445,
+      2.1805935070000784,
+      0.2090011044354704,
+      32.27174667576564,
+      1110.9116727129785,
+      100.0,
+      4.0,
+      0.8571406841535968,
+      3.0,
+      520.7798966094682
+     ]
+    }
+   }
+  },
+  "hw_cometbft": {
+   "low": {
+    "value": 0.5,
+    "default": {
+     "feasible": [
+      "raft",
+      "clique",
+      "cometbft"
+     ],
+     "first_screened": {
+      "TOPSIS": "cometbft",
+      "VIKOR": "cometbft",
+      "COPRAS": "cometbft",
+      "EDAS": "cometbft"
+     },
+     "first_unscreened": {
+      "TOPSIS": "qbft",
+      "VIKOR": "cometbft",
+      "COPRAS": "qbft",
+      "EDAS": "qbft"
+     },
+     "qbft": [
+      82.50796296296296,
+      1.3157914635031038,
+      1.0902276659899939,
+      0.18501121607542464,
+      17.692685833333254,
+      1207.897457597876,
+      69.48924721717184,
+      3.0,
+      0.8571428571428574,
+      4.0,
+      530.5560637258658
+     ],
+     "cometbft": [
+      183.98777777777778,
+      2.580257176338479,
+      2.126390038849558,
+      0.19206611628804063,
+      30.01872417121615,
+      1111.092873141939,
+      100.0,
+      4.0,
+      0.8571358199029564,
+      3.0,
+      520.7981616127074
+     ]
+    },
+    "provisioned": {
+     "feasible": [
+      "raft",
+      "smartbft",
+      "ibft2",
+      "qbft",
+      "clique",
+      "cometbft",
+      "hotstuff"
+     ],
+     "first_screened": {
+      "TOPSIS": "qbft",
+      "VIKOR": "qbft",
+      "COPRAS": "qbft",
+      "EDAS": "qbft"
+     },
+     "first_unscreened": {
+      "TOPSIS": "qbft",
+      "VIKOR": "qbft",
+      "COPRAS": "qbft",
+      "EDAS": "qbft"
+     },
+     "qbft": [
+      184.70074074074074,
+      1.1162781713041696,
+      1.0902276659899939,
+      0.18501121607542464,
+      28.558885416666687,
+      1207.897457597876,
+      100.0,
+      3.0,
+      0.8571428571428574,
+      4.0,
+      530.5560637258658
+     ],
+     "cometbft": [
+      183.98777777777778,
+      2.580257176338479,
+      2.126390038849558,
+      0.19206611628804063,
+      30.01872417121615,
+      1111.092873141939,
+      100.0,
+      4.0,
+      0.8571358199029564,
+      3.0,
+      520.7981616127074
+     ]
+    }
+   },
+   "high": {
+    "value": 2.0,
+    "default": {
+     "feasible": [
+      "raft",
+      "clique",
+      "cometbft"
+     ],
+     "first_screened": {
+      "TOPSIS": "cometbft",
+      "VIKOR": "cometbft",
+      "COPRAS": "cometbft",
+      "EDAS": "cometbft"
+     },
+     "first_unscreened": {
+      "TOPSIS": "qbft",
+      "VIKOR": "qbft",
+      "COPRAS": "qbft",
+      "EDAS": "qbft"
+     },
+     "qbft": [
+      82.50796296296296,
+      1.3157914635031038,
+      1.0902276659899939,
+      0.18501121607542464,
+      17.692685833333254,
+      1207.897457597876,
+      69.48924721717184,
+      3.0,
+      0.8571428571428574,
+      4.0,
+      530.5560637258658
+     ],
+     "cometbft": [
+      183.82222222222222,
+      2.7769557464757435,
+      2.2857183349993453,
+      0.2425008286794398,
+      36.756751684864604,
+      1110.565254677351,
+      100.0,
+      4.0,
+      0.8571273417061651,
+      3.0,
+      725.1449776714769
+     ]
+    },
+    "provisioned": {
+     "feasible": [
+      "raft",
+      "smartbft",
+      "ibft2",
+      "qbft",
+      "clique",
+      "cometbft",
+      "hotstuff"
+     ],
+     "first_screened": {
+      "TOPSIS": "qbft",
+      "VIKOR": "qbft",
+      "COPRAS": "qbft",
+      "EDAS": "qbft"
+     },
+     "first_unscreened": {
+      "TOPSIS": "qbft",
+      "VIKOR": "qbft",
+      "COPRAS": "qbft",
+      "EDAS": "qbft"
+     },
+     "qbft": [
+      184.70074074074074,
+      1.1162781713041696,
+      1.0902276659899939,
+      0.18501121607542464,
+      28.558885416666687,
+      1207.897457597876,
+      100.0,
+      3.0,
+      0.8571428571428574,
+      4.0,
+      530.5560637258658
+     ],
+     "cometbft": [
+      183.82222222222222,
+      2.7769557464757435,
+      2.2857183349993453,
+      0.2425008286794398,
+      36.756751684864604,
+      1110.565254677351,
+      100.0,
+      4.0,
+      0.8571273417061651,
+      3.0,
+      725.1449776714769
+     ]
+    }
+   }
+  },
+  "hw_hotstuff": {
+   "low": {
+    "value": 0.5,
+    "default": {
+     "feasible": [
+      "raft",
+      "clique",
+      "cometbft"
+     ],
+     "first_screened": {
+      "TOPSIS": "cometbft",
+      "VIKOR": "cometbft",
+      "COPRAS": "cometbft",
+      "EDAS": "cometbft"
+     },
+     "first_unscreened": {
+      "TOPSIS": "cometbft",
+      "VIKOR": "cometbft",
+      "COPRAS": "qbft",
+      "EDAS": "qbft"
+     },
+     "qbft": [
+      82.50796296296296,
+      1.3157914635031038,
+      1.0902276659899939,
+      0.18501121607542464,
+      17.692685833333254,
+      1207.897457597876,
+      69.48924721717184,
+      3.0,
+      0.8571428571428574,
+      4.0,
+      530.5560637258658
+     ],
+     "cometbft": [
+      183.9514814814815,
+      2.6446604741495445,
+      2.1805935070000784,
+      0.2090011044354704,
+      32.27174667576564,
+      1110.9116727129785,
+      100.0,
+      4.0,
+      0.8571406841535968,
+      3.0,
+      520.7798966094682
+     ]
+    },
+    "provisioned": {
+     "feasible": [
+      "raft",
+      "smartbft",
+      "ibft2",
+      "qbft",
+      "clique",
+      "cometbft",
+      "hotstuff"
+     ],
+     "first_screened": {
+      "TOPSIS": "qbft",
+      "VIKOR": "qbft",
+      "COPRAS": "qbft",
+      "EDAS": "qbft"
+     },
+     "first_unscreened": {
+      "TOPSIS": "qbft",
+      "VIKOR": "qbft",
+      "COPRAS": "qbft",
+      "EDAS": "qbft"
+     },
+     "qbft": [
+      184.70074074074074,
+      1.1162781713041696,
+      1.0902276659899939,
+      0.18501121607542464,
+      28.558885416666687,
+      1207.897457597876,
+      100.0,
+      3.0,
+      0.8571428571428574,
+      4.0,
+      530.5560637258658
+     ],
+     "cometbft": [
+      183.9514814814815,
+      2.6446604741495445,
+      2.1805935070000784,
+      0.2090011044354704,
+      32.27174667576564,
+      1110.9116727129785,
+      100.0,
+      4.0,
+      0.8571406841535968,
+      3.0,
+      520.7798966094682
+     ]
+    }
+   },
+   "high": {
+    "value": 2.0,
+    "default": {
+     "feasible": [
+      "raft",
+      "clique",
+      "cometbft"
+     ],
+     "first_screened": {
+      "TOPSIS": "cometbft",
+      "VIKOR": "cometbft",
+      "COPRAS": "cometbft",
+      "EDAS": "cometbft"
+     },
+     "first_unscreened": {
+      "TOPSIS": "cometbft",
+      "VIKOR": "cometbft",
+      "COPRAS": "qbft",
+      "EDAS": "qbft"
+     },
+     "qbft": [
+      82.50796296296296,
+      1.3157914635031038,
+      1.0902276659899939,
+      0.18501121607542464,
+      17.692685833333254,
+      1207.897457597876,
+      69.48924721717184,
+      3.0,
+      0.8571428571428574,
+      4.0,
+      530.5560637258658
+     ],
+     "cometbft": [
+      183.9514814814815,
+      2.6446604741495445,
+      2.1805935070000784,
+      0.2090011044354704,
+      32.27174667576564,
+      1110.9116727129785,
+      100.0,
+      4.0,
+      0.8571406841535968,
+      3.0,
+      520.7798966094682
+     ]
+    },
+    "provisioned": {
+     "feasible": [
+      "raft",
+      "smartbft",
+      "ibft2",
+      "qbft",
+      "clique",
+      "cometbft",
+      "hotstuff"
+     ],
+     "first_screened": {
+      "TOPSIS": "qbft",
+      "VIKOR": "qbft",
+      "COPRAS": "qbft",
+      "EDAS": "qbft"
+     },
+     "first_unscreened": {
+      "TOPSIS": "qbft",
+      "VIKOR": "qbft",
+      "COPRAS": "qbft",
+      "EDAS": "qbft"
+     },
+     "qbft": [
+      184.70074074074074,
+      1.1162781713041696,
+      1.0902276659899939,
+      0.18501121607542464,
+      28.558885416666687,
+      1207.897457597876,
+      100.0,
+      3.0,
+      0.8571428571428574,
+      4.0,
+      530.5560637258658
+     ],
+     "cometbft": [
+      183.9514814814815,
+      2.6446604741495445,
+      2.1805935070000784,
+      0.2090011044354704,
+      32.27174667576564,
+      1110.9116727129785,
+      100.0,
+      4.0,
+      0.8571406841535968,
+      3.0,
+      520.7798966094682
+     ]
+    }
+   }
+  },
+  "app": {
+   "low": {
+    "value": 0.5,
+    "default": {
+     "feasible": [
+      "raft",
+      "clique",
+      "cometbft",
+      "hotstuff"
+     ],
+     "first_screened": {
+      "TOPSIS": "cometbft",
+      "VIKOR": "cometbft",
+      "COPRAS": "cometbft",
+      "EDAS": "cometbft"
+     },
+     "first_unscreened": {
+      "TOPSIS": "qbft",
+      "VIKOR": "cometbft",
+      "COPRAS": "qbft",
+      "EDAS": "qbft"
+     },
+     "qbft": [
+      82.50796296296296,
+      1.3157914635031038,
+      1.0902276659899939,
+      0.09751121607542487,
+      9.166760833333292,
+      1207.897457597876,
+      69.48924721717184,
+      3.0,
+      0.8571428571428574,
+      4.0,
+      326.1560637258659
+     ],
+     "cometbft": [
+      184.07962962962964,
+      2.1432698946123514,
+      1.907315870728977,
+      0.12150110443547073,
+      18.39262167576563,
+      1110.9116727129785,
+      100.0,
+      4.0,
+      0.8571406841535968,
+      3.0,
+      520.7798966094682
+     ]
+    },
+    "provisioned": {
+     "feasible": [
+      "raft",
+      "smartbft",
+      "ibft2",
+      "qbft",
+      "clique",
+      "cometbft",
+      "hotstuff"
+     ],
+     "first_screened": {
+      "TOPSIS": "qbft",
+      "VIKOR": "qbft",
+      "COPRAS": "qbft",
+      "EDAS": "qbft"
+     },
+     "first_unscreened": {
+      "TOPSIS": "qbft",
+      "VIKOR": "qbft",
+      "COPRAS": "qbft",
+      "EDAS": "qbft"
+     },
+     "qbft": [
+      184.70074074074074,
+      1.1162781713041696,
+      1.0902276659899939,
+      0.09751121607542487,
+      14.679760416666676,
+      1207.897457597876,
+      100.0,
+      3.0,
+      0.8571428571428574,
+      4.0,
+      326.1560637258659
+     ],
+     "cometbft": [
+      184.07962962962964,
+      2.1432698946123514,
+      1.907315870728977,
+      0.12150110443547073,
+      18.39262167576563,
+      1110.9116727129785,
+      100.0,
+      4.0,
+      0.8571406841535968,
+      3.0,
+      520.7798966094682
+     ]
+    }
+   },
+   "high": {
+    "value": 2.0,
+    "default": {
+     "feasible": [
+      "clique"
+     ],
+     "first_screened": {
+      "TOPSIS": "clique",
+      "VIKOR": "clique",
+      "COPRAS": "clique",
+      "EDAS": "clique"
+     },
+     "first_unscreened": {
+      "TOPSIS": "raft",
+      "VIKOR": "raft",
+      "COPRAS": "raft",
+      "EDAS": "raft"
+     },
+     "qbft": [
+      82.50796296296296,
+      1.3157914635031038,
+      1.0902276659899939,
+      0.3600112160754242,
+      34.74453583333318,
+      1207.897457597876,
+      69.48924721717184,
+      3.0,
+      0.8571428571428574,
+      4.0,
+      530.5560637258658
+     ],
+     "cometbft": [
+      0.0,
+      20.670509317898773,
+      2.7271487795422806,
+      0.38400110443546964,
+      60.029996675765645,
+      1110.9116727129785,
+      26.487420089428564,
+      4.0,
+      0.8571406841535968,
+      3.0,
+      929.5798966094683
+     ]
+    },
+    "provisioned": {
+     "feasible": [
+      "ibft2",
+      "qbft",
+      "clique"
+     ],
+     "first_screened": {
+      "TOPSIS": "qbft",
+      "VIKOR": "qbft",
+      "COPRAS": "qbft",
+      "EDAS": "qbft"
+     },
+     "first_unscreened": {
+      "TOPSIS": "qbft",
+      "VIKOR": "qbft",
+      "COPRAS": "qbft",
+      "EDAS": "qbft"
+     },
+     "qbft": [
+      184.70074074074074,
+      1.1162781713041696,
+      1.0902276659899939,
+      0.3600112160754242,
+      56.3171354166667,
+      1207.897457597876,
+      100.0,
+      3.0,
+      0.8571428571428574,
+      4.0,
+      939.3560637258659
+     ],
+     "cometbft": [
+      0.0,
+      20.670509317898773,
+      2.7271487795422806,
+      0.38400110443546964,
+      60.029996675765645,
+      1110.9116727129785,
+      26.487420089428564,
+      4.0,
+      0.8571406841535968,
+      3.0,
+      929.5798966094683
+     ]
+    }
+   }
+  },
+  "net_cometbft": {
+   "low": {
+    "value": 0.1,
+    "default": {
+     "feasible": [
+      "raft",
+      "clique",
+      "cometbft"
+     ],
+     "first_screened": {
+      "TOPSIS": "cometbft",
+      "VIKOR": "cometbft",
+      "COPRAS": "cometbft",
+      "EDAS": "cometbft"
+     },
+     "first_unscreened": {
+      "TOPSIS": "cometbft",
+      "VIKOR": "cometbft",
+      "COPRAS": "cometbft",
+      "EDAS": "cometbft"
+     },
+     "qbft": [
+      82.50796296296296,
+      1.3157914635031038,
+      1.0902276659899939,
+      0.18501121607542464,
+      17.692685833333254,
+      1207.897457597876,
+      69.48924721717184,
+      3.0,
+      0.8571428571428574,
+      4.0,
+      530.5560637258658
+     ],
+     "cometbft": [
+      184.39203703703703,
+      1.3762195078650312,
+      1.074289465930693,
+      0.2133253910078527,
+      32.47601000909898,
+      1116.8872213496645,
+      100.0,
+      4.0,
+      0.8571407291889912,
+      3.0,
+      521.3822319120461
+     ]
+    },
+    "provisioned": {
+     "feasible": [
+      "raft",
+      "smartbft",
+      "ibft2",
+      "qbft",
+      "clique",
+      "cometbft",
+      "hotstuff"
+     ],
+     "first_screened": {
+      "TOPSIS": "qbft",
+      "VIKOR": "qbft",
+      "COPRAS": "qbft",
+      "EDAS": "qbft"
+     },
+     "first_unscreened": {
+      "TOPSIS": "qbft",
+      "VIKOR": "qbft",
+      "COPRAS": "qbft",
+      "EDAS": "qbft"
+     },
+     "qbft": [
+      184.70074074074074,
+      1.1162781713041696,
+      1.0902276659899939,
+      0.18501121607542464,
+      28.558885416666687,
+      1207.897457597876,
+      100.0,
+      3.0,
+      0.8571428571428574,
+      4.0,
+      530.5560637258658
+     ],
+     "cometbft": [
+      184.39203703703703,
+      1.3762195078650312,
+      1.074289465930693,
+      0.2133253910078527,
+      32.47601000909898,
+      1116.8872213496645,
+      100.0,
+      4.0,
+      0.8571407291889912,
+      3.0,
+      521.3822319120461
+     ]
+    }
+   },
+   "high": {
+    "value": 1.0,
+    "default": {
+     "feasible": [
+      "raft",
+      "clique",
+      "cometbft"
+     ],
+     "first_screened": {
+      "TOPSIS": "cometbft",
+      "VIKOR": "cometbft",
+      "COPRAS": "cometbft",
+      "EDAS": "cometbft"
+     },
+     "first_unscreened": {
+      "TOPSIS": "qbft",
+      "VIKOR": "qbft",
+      "COPRAS": "qbft",
+      "EDAS": "qbft"
+     },
+     "qbft": [
+      82.50796296296296,
+      1.3157914635031038,
+      1.0902276659899939,
+      0.18501121607542464,
+      17.692685833333254,
+      1207.897457597876,
+      69.48924721717184,
+      3.0,
+      0.8571428571428574,
+      4.0,
+      530.5560637258658
+     ],
+     "cometbft": [
+      183.9514814814815,
+      2.6446604741495445,
+      2.1805935070000784,
+      0.2090011044354704,
+      32.27174667576564,
+      1110.9116727129785,
+      100.0,
+      4.0,
+      0.8571406841535968,
+      3.0,
+      520.7798966094682
+     ]
+    },
+    "provisioned": {
+     "feasible": [
+      "raft",
+      "smartbft",
+      "ibft2",
+      "qbft",
+      "clique",
+      "cometbft",
+      "hotstuff"
+     ],
+     "first_screened": {
+      "TOPSIS": "qbft",
+      "VIKOR": "qbft",
+      "COPRAS": "qbft",
+      "EDAS": "qbft"
+     },
+     "first_unscreened": {
+      "TOPSIS": "qbft",
+      "VIKOR": "qbft",
+      "COPRAS": "qbft",
+      "EDAS": "qbft"
+     },
+     "qbft": [
+      184.70074074074074,
+      1.1162781713041696,
+      1.0902276659899939,
+      0.18501121607542464,
+      28.558885416666687,
+      1207.897457597876,
+      100.0,
+      3.0,
+      0.8571428571428574,
+      4.0,
+      530.5560637258658
+     ],
+     "cometbft": [
+      183.9514814814815,
+      2.6446604741495445,
+      2.1805935070000784,
+      0.2090011044354704,
+      32.27174667576564,
+      1110.9116727129785,
+      100.0,
+      4.0,
+      0.8571406841535968,
+      3.0,
+      520.7798966094682
+     ]
+    }
+   }
+  }
+ },
+ "harmonised_besu_x2": {
+  "default": {
+   "feasible": [
+    "raft",
+    "clique",
+    "cometbft"
+   ],
+   "first_screened": {
+    "TOPSIS": "cometbft",
+    "VIKOR": "cometbft",
+    "COPRAS": "cometbft",
+    "EDAS": "cometbft"
+   },
+   "first_unscreened": {
+    "TOPSIS": "qbft",
+    "VIKOR": "qbft",
+    "COPRAS": "qbft",
+    "EDAS": "cometbft"
+   },
+   "smaa_b1": {
+    "TOPSIS": {
+     "raft": 0.0852,
+     "clique": 0.1639,
+     "cometbft": 0.7509
+    },
+    "VIKOR": {
+     "raft": 0.1823,
+     "clique": 0.5195,
+     "cometbft": 0.2982
+    },
+    "COPRAS": {
+     "raft": 0.0637,
+     "clique": 0.1302,
+     "cometbft": 0.8061
+    },
+    "EDAS": {
+     "raft": 0.0561,
+     "clique": 0.1167,
+     "cometbft": 0.8272
+    }
+   },
+   "matrix": {
+    "raft": [
+     180.1724074074074,
+     1.1638927554748915,
+     1.5899950647137424,
+     0.1895713516037671,
+     31.345319293800376,
+     3509.0717900097093,
+     100.0,
+     1.0,
+     0.0,
+     4.0,
+     762.5144364329789
+    ],
+    "smartbft": [
+     64.99617283950619,
+     1.6116455243867303,
+     2.03518465303769,
+     0.27496977324121175,
+     43.58972262474787,
+     3521.1675100226566,
+     16.6830564364344,
+     3.0,
+     0.8571250736276196,
+     4.0,
+     968.1336850102838
+    ],
+    "ibft2": [
+     82.14296296296294,
+     1.4588393202693333,
+     1.1659953834037209,
+     0.1950334645177834,
+     18.333697222222142,
+     1207.9035980618464,
+     66.81614637058097,
+     3.0,
+     0.8571428571428575,
+     3.0,
+     530.556682684634
+    ],
+    "qbft": [
+     82.14296296296294,
+     1.4588393202693333,
+     1.1659953834037209,
+     0.1950334645177834,
+     18.333697222222142,
+     1207.9035980618464,
+     66.81614637058097,
+     3.0,
+     0.8571428571428575,
+     4.0,
+     530.556682684634
+    ],
+    "clique": [
+     184.65351851851852,
+     1.2001847472145502,
+     9.152750071931044,
+     0.19408503275036185,
+     29.312967222222237,
+     1205.5551003520407,
+     100.0,
+     1.0,
+     0.8571428571428575,
+     3.0,
+     530.3199541154856
+    ],
+    "cometbft": [
+     183.9114197530864,
+     2.645219882843239,
+     2.1782240458321436,
+     0.2090034178021109,
+     32.27029530337689,
+     1110.9148694564515,
+     100.0,
+     4.0,
+     0.8571418913698529,
+     3.0,
+     520.7802188412104
+    ],
+    "hotstuff": [
+     25.278024691358027,
+     0.6650267447033725,
+     0.599997417607533,
+     0.6912101176730235,
+     52.33056022865492,
+     1167.3335962961937,
+     100.0,
+     3.0,
+     0.8571427531950435,
+     0.0,
+     730.8672265066563
+    ]
+   }
+  },
+  "provisioned": {
+   "feasible": [
+    "raft",
+    "smartbft",
+    "ibft2",
+    "qbft",
+    "clique",
+    "cometbft",
+    "hotstuff"
+   ],
+   "first_screened": {
+    "TOPSIS": "qbft",
+    "VIKOR": "qbft",
+    "COPRAS": "qbft",
+    "EDAS": "qbft"
+   },
+   "first_unscreened": {
+    "TOPSIS": "qbft",
+    "VIKOR": "qbft",
+    "COPRAS": "qbft",
+    "EDAS": "qbft"
+   },
+   "smaa_b1": {
+    "TOPSIS": {
+     "raft": 0.0,
+     "smartbft": 0.0,
+     "ibft2": 0.0,
+     "qbft": 0.8395,
+     "clique": 0.0,
+     "cometbft": 0.1593,
+     "hotstuff": 0.0012
+    },
+    "VIKOR": {
+     "raft": 0.0,
+     "smartbft": 0.0,
+     "ibft2": 0.0,
+     "qbft": 0.9333,
+     "clique": 0.0005,
+     "cometbft": 0.0653,
+     "hotstuff": 0.0009
+    },
+    "COPRAS": {
+     "raft": 0.0,
+     "smartbft": 0.0,
+     "ibft2": 0.0,
+     "qbft": 0.9514,
+     "clique": 0.0,
+     "cometbft": 0.0479,
+     "hotstuff": 0.0007
+    },
+    "EDAS": {
+     "raft": 0.0,
+     "smartbft": 0.0,
+     "ibft2": 0.0,
+     "qbft": 0.9091,
+     "clique": 0.0,
+     "cometbft": 0.0904,
+     "hotstuff": 0.0005
+    }
+   },
+   "matrix": {
+    "raft": [
+     184.1353086419753,
+     2.316349437821535,
+     1.7808419257087826,
+     0.18793304802275065,
+     28.95902001757906,
+     3508.0483910780717,
+     100.0,
+     1.0,
+     0.0,
+     4.0,
+     762.4112778206696
+    ],
+    "smartbft": [
+     183.5241975308642,
+     3.315303799720162,
+     2.289860641676805,
+     0.27274676880798604,
+     41.52239895642331,
+     3518.779579182168,
+     36.98337273137362,
+     3.0,
+     0.8570559884689881,
+     4.0,
+     967.8929815815626
+    ],
+    "ibft2": [
+     184.65351851851852,
+     1.2133761730416526,
+     1.1659953834037209,
+     0.1950334645177834,
+     29.35811722222223,
+     1207.9035980618464,
+     100.0,
+     3.0,
+     0.8571428571428575,
+     3.0,
+     530.556682684634
+    ],
+    "qbft": [
+     184.65351851851852,
+     1.2133761730416526,
+     1.1659953834037209,
+     0.1950334645177834,
+     29.35811722222223,
+     1207.9035980618464,
+     100.0,
+     3.0,
+     0.8571428571428575,
+     4.0,
+     530.556682684634
+    ],
+    "clique": [
+     184.65351851851852,
+     1.2001847472145502,
+     9.152750071931044,
+     0.19408503275036185,
+     29.312967222222237,
+     1205.5551003520407,
+     100.0,
+     1.0,
+     0.8571428571428575,
+     3.0,
+     530.3199541154856
+    ],
+    "cometbft": [
+     183.9114197530864,
+     2.645219882843239,
+     2.1782240458321436,
+     0.2090034178021109,
+     32.27029530337689,
+     1110.9148694564515,
+     100.0,
+     4.0,
+     0.8571418913698529,
+     3.0,
+     520.7802188412104
+    ],
+    "hotstuff": [
+     184.3696913580247,
+     1.494421110073009,
+     1.2373959319309356,
+     0.2727491387442274,
+     32.472350831248356,
+     1112.7448950949172,
+     100.0,
+     3.0,
+     0.8571390538978766,
+     0.0,
+     520.9646854255676
+    ]
+   }
+  }
+ },
+ "lhs": [
+  {
+   "factors": {
+    "hw_fabric": 0.9002959185853632,
+    "hw_besu": 1.2925121634178147,
+    "hw_cometbft": 1.4470839435883267,
+    "hw_hotstuff": 0.6615497477040232,
+    "app": 0.5189006993247371,
+    "net_cometbft": 0.4727654787979546
+   },
+   "default": {
+    "feasible": [
+     "raft",
+     "smartbft",
+     "clique",
+     "cometbft",
+     "hotstuff"
+    ],
+    "first_screened": {
+     "TOPSIS": "cometbft",
+     "VIKOR": "cometbft",
+     "COPRAS": "cometbft",
+     "EDAS": "cometbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   },
+   "provisioned": {
+    "feasible": [
+     "raft",
+     "smartbft",
+     "ibft2",
+     "qbft",
+     "clique",
+     "cometbft",
+     "hotstuff"
+    ],
+    "first_screened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   }
+  },
+  {
+   "factors": {
+    "hw_fabric": 1.0913120368704263,
+    "hw_besu": 1.1055736155525273,
+    "hw_cometbft": 1.5375414954027948,
+    "hw_hotstuff": 0.5146993244872765,
+    "app": 0.599348530072476,
+    "net_cometbft": 0.9895521540802202
+   },
+   "default": {
+    "feasible": [
+     "raft",
+     "clique",
+     "cometbft",
+     "hotstuff"
+    ],
+    "first_screened": {
+     "TOPSIS": "cometbft",
+     "VIKOR": "cometbft",
+     "COPRAS": "cometbft",
+     "EDAS": "cometbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   },
+   "provisioned": {
+    "feasible": [
+     "raft",
+     "ibft2",
+     "qbft",
+     "clique",
+     "cometbft",
+     "hotstuff"
+    ],
+    "first_screened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   }
+  },
+  {
+   "factors": {
+    "hw_fabric": 1.2566301727833025,
+    "hw_besu": 1.0398241065052272,
+    "hw_cometbft": 1.088334590249998,
+    "hw_hotstuff": 0.7577046954713849,
+    "app": 0.9003095167498081,
+    "net_cometbft": 0.15879053673963686
+   },
+   "default": {
+    "feasible": [
+     "raft",
+     "clique",
+     "cometbft"
+    ],
+    "first_screened": {
+     "TOPSIS": "cometbft",
+     "VIKOR": "cometbft",
+     "COPRAS": "cometbft",
+     "EDAS": "cometbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "cometbft",
+     "VIKOR": "cometbft",
+     "COPRAS": "cometbft",
+     "EDAS": "cometbft"
+    }
+   },
+   "provisioned": {
+    "feasible": [
+     "raft",
+     "ibft2",
+     "qbft",
+     "clique",
+     "cometbft",
+     "hotstuff"
+    ],
+    "first_screened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   }
+  },
+  {
+   "factors": {
+    "hw_fabric": 1.8694591435435421,
+    "hw_besu": 0.697134722429981,
+    "hw_cometbft": 1.689977093029413,
+    "hw_hotstuff": 1.3111564711984522,
+    "app": 1.8085618182778902,
+    "net_cometbft": 0.6561585719200198
+   },
+   "default": {
+    "feasible": [
+     "clique"
+    ],
+    "first_screened": {
+     "TOPSIS": "clique",
+     "VIKOR": "clique",
+     "COPRAS": "clique",
+     "EDAS": "clique"
+    },
+    "first_unscreened": {
+     "TOPSIS": "clique",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   },
+   "provisioned": {
+    "feasible": [
+     "ibft2",
+     "qbft",
+     "clique"
+    ],
+    "first_screened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   }
+  },
+  {
+   "factors": {
+    "hw_fabric": 1.1048042934495526,
+    "hw_besu": 1.6282701565500208,
+    "hw_cometbft": 0.6343478209279841,
+    "hw_hotstuff": 1.233043692908254,
+    "app": 1.4108320014810485,
+    "net_cometbft": 0.36658498938731826
+   },
+   "default": {
+    "feasible": [
+     "clique"
+    ],
+    "first_screened": {
+     "TOPSIS": "clique",
+     "VIKOR": "clique",
+     "COPRAS": "clique",
+     "EDAS": "clique"
+    },
+    "first_unscreened": {
+     "TOPSIS": "clique",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "clique"
+    }
+   },
+   "provisioned": {
+    "feasible": [
+     "ibft2",
+     "qbft",
+     "clique"
+    ],
+    "first_screened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   }
+  },
+  {
+   "factors": {
+    "hw_fabric": 1.7471260470988548,
+    "hw_besu": 0.5935200838897506,
+    "hw_cometbft": 1.5847740394905623,
+    "hw_hotstuff": 0.5906507399882921,
+    "app": 1.6674376736024885,
+    "net_cometbft": 0.14885725844662845
+   },
+   "default": {
+    "feasible": [
+     "clique"
+    ],
+    "first_screened": {
+     "TOPSIS": "clique",
+     "VIKOR": "clique",
+     "COPRAS": "clique",
+     "EDAS": "clique"
+    },
+    "first_unscreened": {
+     "TOPSIS": "raft",
+     "VIKOR": "raft",
+     "COPRAS": "raft",
+     "EDAS": "raft"
+    }
+   },
+   "provisioned": {
+    "feasible": [
+     "ibft2",
+     "qbft",
+     "clique"
+    ],
+    "first_screened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   }
+  },
+  {
+   "factors": {
+    "hw_fabric": 1.7231239457128797,
+    "hw_besu": 0.8495282302451187,
+    "hw_cometbft": 1.8422702403175704,
+    "hw_hotstuff": 1.0712767503844411,
+    "app": 0.5312450001294553,
+    "net_cometbft": 0.28327707256816903
+   },
+   "default": {
+    "feasible": [
+     "raft",
+     "clique",
+     "cometbft",
+     "hotstuff"
+    ],
+    "first_screened": {
+     "TOPSIS": "cometbft",
+     "VIKOR": "cometbft",
+     "COPRAS": "cometbft",
+     "EDAS": "cometbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "cometbft",
+     "VIKOR": "cometbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   },
+   "provisioned": {
+    "feasible": [
+     "raft",
+     "ibft2",
+     "qbft",
+     "clique",
+     "cometbft",
+     "hotstuff"
+    ],
+    "first_screened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   }
+  },
+  {
+   "factors": {
+    "hw_fabric": 1.865795751165885,
+    "hw_besu": 1.0829181966519037,
+    "hw_cometbft": 0.9437670317185122,
+    "hw_hotstuff": 0.8761288417010458,
+    "app": 0.6173615500541053,
+    "net_cometbft": 0.15085278773110203
+   },
+   "default": {
+    "feasible": [
+     "raft",
+     "clique",
+     "cometbft",
+     "hotstuff"
+    ],
+    "first_screened": {
+     "TOPSIS": "cometbft",
+     "VIKOR": "cometbft",
+     "COPRAS": "cometbft",
+     "EDAS": "cometbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "cometbft",
+     "VIKOR": "cometbft",
+     "COPRAS": "qbft",
+     "EDAS": "cometbft"
+    }
+   },
+   "provisioned": {
+    "feasible": [
+     "raft",
+     "ibft2",
+     "qbft",
+     "clique",
+     "cometbft",
+     "hotstuff"
+    ],
+    "first_screened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   }
+  },
+  {
+   "factors": {
+    "hw_fabric": 1.0766171610744764,
+    "hw_besu": 1.9737584346353962,
+    "hw_cometbft": 0.9966561997412732,
+    "hw_hotstuff": 1.2068413629404815,
+    "app": 0.5498322636280862,
+    "net_cometbft": 0.2700352482925571
+   },
+   "default": {
+    "feasible": [
+     "raft",
+     "clique",
+     "cometbft",
+     "hotstuff"
+    ],
+    "first_screened": {
+     "TOPSIS": "cometbft",
+     "VIKOR": "cometbft",
+     "COPRAS": "cometbft",
+     "EDAS": "cometbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "cometbft",
+     "VIKOR": "cometbft",
+     "COPRAS": "cometbft",
+     "EDAS": "cometbft"
+    }
+   },
+   "provisioned": {
+    "feasible": [
+     "raft",
+     "ibft2",
+     "qbft",
+     "clique",
+     "cometbft",
+     "hotstuff"
+    ],
+    "first_screened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   }
+  },
+  {
+   "factors": {
+    "hw_fabric": 0.812624104566475,
+    "hw_besu": 0.7494049459576487,
+    "hw_cometbft": 1.7253195936176673,
+    "hw_hotstuff": 0.7003452326554168,
+    "app": 0.9685354224064654,
+    "net_cometbft": 0.6996139905821749
+   },
+   "default": {
+    "feasible": [
+     "raft",
+     "smartbft",
+     "clique",
+     "cometbft"
+    ],
+    "first_screened": {
+     "TOPSIS": "cometbft",
+     "VIKOR": "cometbft",
+     "COPRAS": "cometbft",
+     "EDAS": "cometbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   },
+   "provisioned": {
+    "feasible": [
+     "raft",
+     "smartbft",
+     "ibft2",
+     "qbft",
+     "clique",
+     "cometbft",
+     "hotstuff"
+    ],
+    "first_screened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   }
+  },
+  {
+   "factors": {
+    "hw_fabric": 0.554811880012545,
+    "hw_besu": 0.8988310052030136,
+    "hw_cometbft": 1.082726397104221,
+    "hw_hotstuff": 1.0057498039343926,
+    "app": 1.302264190248998,
+    "net_cometbft": 0.10541196171854653
+   },
+   "default": {
+    "feasible": [
+     "clique"
+    ],
+    "first_screened": {
+     "TOPSIS": "clique",
+     "VIKOR": "clique",
+     "COPRAS": "clique",
+     "EDAS": "clique"
+    },
+    "first_unscreened": {
+     "TOPSIS": "clique",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   },
+   "provisioned": {
+    "feasible": [
+     "ibft2",
+     "qbft",
+     "clique"
+    ],
+    "first_screened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   }
+  },
+  {
+   "factors": {
+    "hw_fabric": 0.6652725277244752,
+    "hw_besu": 1.3348697227579465,
+    "hw_cometbft": 0.6049717813942946,
+    "hw_hotstuff": 0.8550594114702115,
+    "app": 1.204988916693698,
+    "net_cometbft": 0.4381146789344685
+   },
+   "default": {
+    "feasible": [
+     "clique"
+    ],
+    "first_screened": {
+     "TOPSIS": "clique",
+     "VIKOR": "clique",
+     "COPRAS": "clique",
+     "EDAS": "clique"
+    },
+    "first_unscreened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   },
+   "provisioned": {
+    "feasible": [
+     "ibft2",
+     "qbft",
+     "clique"
+    ],
+    "first_screened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   }
+  },
+  {
+   "factors": {
+    "hw_fabric": 0.5071865420210194,
+    "hw_besu": 0.5191149107835519,
+    "hw_cometbft": 0.7090922603035172,
+    "hw_hotstuff": 1.578087823714908,
+    "app": 0.6762945394366535,
+    "net_cometbft": 0.10628010234152085
+   },
+   "default": {
+    "feasible": [
+     "raft",
+     "smartbft",
+     "clique",
+     "cometbft",
+     "hotstuff"
+    ],
+    "first_screened": {
+     "TOPSIS": "cometbft",
+     "VIKOR": "cometbft",
+     "COPRAS": "cometbft",
+     "EDAS": "cometbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "cometbft",
+     "VIKOR": "cometbft",
+     "COPRAS": "qbft",
+     "EDAS": "cometbft"
+    }
+   },
+   "provisioned": {
+    "feasible": [
+     "raft",
+     "smartbft",
+     "ibft2",
+     "qbft",
+     "clique",
+     "cometbft",
+     "hotstuff"
+    ],
+    "first_screened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   }
+  },
+  {
+   "factors": {
+    "hw_fabric": 1.5825064996950966,
+    "hw_besu": 1.2476665575189636,
+    "hw_cometbft": 1.1710036933960841,
+    "hw_hotstuff": 0.831968467803293,
+    "app": 1.1802131857838567,
+    "net_cometbft": 0.10104912494612169
+   },
+   "default": {
+    "feasible": [
+     "clique"
+    ],
+    "first_screened": {
+     "TOPSIS": "clique",
+     "VIKOR": "clique",
+     "COPRAS": "clique",
+     "EDAS": "clique"
+    },
+    "first_unscreened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   },
+   "provisioned": {
+    "feasible": [
+     "ibft2",
+     "qbft",
+     "clique"
+    ],
+    "first_screened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   }
+  },
+  {
+   "factors": {
+    "hw_fabric": 1.4327402464215389,
+    "hw_besu": 1.0902206436054025,
+    "hw_cometbft": 1.294820879948976,
+    "hw_hotstuff": 0.8131810995384162,
+    "app": 1.245808819671962,
+    "net_cometbft": 0.2406932325879584
+   },
+   "default": {
+    "feasible": [
+     "clique"
+    ],
+    "first_screened": {
+     "TOPSIS": "clique",
+     "VIKOR": "clique",
+     "COPRAS": "clique",
+     "EDAS": "clique"
+    },
+    "first_unscreened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   },
+   "provisioned": {
+    "feasible": [
+     "ibft2",
+     "qbft",
+     "clique"
+    ],
+    "first_screened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   }
+  },
+  {
+   "factors": {
+    "hw_fabric": 1.9973396821363631,
+    "hw_besu": 0.7634601120082563,
+    "hw_cometbft": 0.8523379874435877,
+    "hw_hotstuff": 0.6587775307578148,
+    "app": 0.7156320365568626,
+    "net_cometbft": 0.40422419272702204
+   },
+   "default": {
+    "feasible": [
+     "raft",
+     "clique",
+     "cometbft",
+     "hotstuff"
+    ],
+    "first_screened": {
+     "TOPSIS": "cometbft",
+     "VIKOR": "cometbft",
+     "COPRAS": "cometbft",
+     "EDAS": "cometbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "cometbft",
+     "VIKOR": "cometbft",
+     "COPRAS": "qbft",
+     "EDAS": "cometbft"
+    }
+   },
+   "provisioned": {
+    "feasible": [
+     "raft",
+     "ibft2",
+     "qbft",
+     "clique",
+     "cometbft",
+     "hotstuff"
+    ],
+    "first_screened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   }
+  },
+  {
+   "factors": {
+    "hw_fabric": 1.4566107999562041,
+    "hw_besu": 1.2030501537613916,
+    "hw_cometbft": 0.5360176525016807,
+    "hw_hotstuff": 1.0996509540304875,
+    "app": 0.6051954904717372,
+    "net_cometbft": 0.12163510736448031
+   },
+   "default": {
+    "feasible": [
+     "raft",
+     "clique",
+     "cometbft",
+     "hotstuff"
+    ],
+    "first_screened": {
+     "TOPSIS": "cometbft",
+     "VIKOR": "cometbft",
+     "COPRAS": "cometbft",
+     "EDAS": "cometbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "cometbft",
+     "VIKOR": "cometbft",
+     "COPRAS": "cometbft",
+     "EDAS": "cometbft"
+    }
+   },
+   "provisioned": {
+    "feasible": [
+     "raft",
+     "ibft2",
+     "qbft",
+     "clique",
+     "cometbft",
+     "hotstuff"
+    ],
+    "first_screened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "cometbft",
+     "EDAS": "cometbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "cometbft",
+     "EDAS": "qbft"
+    }
+   }
+  },
+  {
+   "factors": {
+    "hw_fabric": 0.8618208738449141,
+    "hw_besu": 1.8630904122775769,
+    "hw_cometbft": 0.7262439513811658,
+    "hw_hotstuff": 0.506841510128848,
+    "app": 1.6128635396099846,
+    "net_cometbft": 0.5273416380641046
+   },
+   "default": {
+    "feasible": [
+     "clique"
+    ],
+    "first_screened": {
+     "TOPSIS": "clique",
+     "VIKOR": "clique",
+     "COPRAS": "clique",
+     "EDAS": "clique"
+    },
+    "first_unscreened": {
+     "TOPSIS": "raft",
+     "VIKOR": "raft",
+     "COPRAS": "raft",
+     "EDAS": "raft"
+    }
+   },
+   "provisioned": {
+    "feasible": [
+     "ibft2",
+     "qbft",
+     "clique"
+    ],
+    "first_screened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   }
+  },
+  {
+   "factors": {
+    "hw_fabric": 0.8467553055406258,
+    "hw_besu": 1.067220881833099,
+    "hw_cometbft": 1.909711183084487,
+    "hw_hotstuff": 1.6873540843287478,
+    "app": 0.8221541820980175,
+    "net_cometbft": 0.1790392720864695
+   },
+   "default": {
+    "feasible": [
+     "raft",
+     "smartbft",
+     "clique",
+     "cometbft",
+     "hotstuff"
+    ],
+    "first_screened": {
+     "TOPSIS": "cometbft",
+     "VIKOR": "cometbft",
+     "COPRAS": "cometbft",
+     "EDAS": "cometbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "cometbft",
+     "VIKOR": "cometbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   },
+   "provisioned": {
+    "feasible": [
+     "raft",
+     "smartbft",
+     "ibft2",
+     "qbft",
+     "clique",
+     "cometbft",
+     "hotstuff"
+    ],
+    "first_screened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   }
+  },
+  {
+   "factors": {
+    "hw_fabric": 0.5615663033373268,
+    "hw_besu": 0.5991104232296866,
+    "hw_cometbft": 1.2131497959672626,
+    "hw_hotstuff": 1.5467817450501298,
+    "app": 1.2361545283538402,
+    "net_cometbft": 0.9653994666360662
+   },
+   "default": {
+    "feasible": [
+     "clique"
+    ],
+    "first_screened": {
+     "TOPSIS": "clique",
+     "VIKOR": "clique",
+     "COPRAS": "clique",
+     "EDAS": "clique"
+    },
+    "first_unscreened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   },
+   "provisioned": {
+    "feasible": [
+     "ibft2",
+     "qbft",
+     "clique"
+    ],
+    "first_screened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   }
+  },
+  {
+   "factors": {
+    "hw_fabric": 1.3693620441249967,
+    "hw_besu": 0.8029701282985682,
+    "hw_cometbft": 1.5922096160812738,
+    "hw_hotstuff": 0.6947301738220526,
+    "app": 1.4861072814427487,
+    "net_cometbft": 0.9265484759431193
+   },
+   "default": {
+    "feasible": [
+     "clique"
+    ],
+    "first_screened": {
+     "TOPSIS": "clique",
+     "VIKOR": "clique",
+     "COPRAS": "clique",
+     "EDAS": "clique"
+    },
+    "first_unscreened": {
+     "TOPSIS": "clique",
+     "VIKOR": "clique",
+     "COPRAS": "clique",
+     "EDAS": "clique"
+    }
+   },
+   "provisioned": {
+    "feasible": [
+     "ibft2",
+     "qbft",
+     "clique"
+    ],
+    "first_screened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   }
+  },
+  {
+   "factors": {
+    "hw_fabric": 1.157320384238248,
+    "hw_besu": 1.5201632871033024,
+    "hw_cometbft": 1.6350172438296005,
+    "hw_hotstuff": 1.9128919174593306,
+    "app": 1.321827509276941,
+    "net_cometbft": 0.6267812334186733
+   },
+   "default": {
+    "feasible": [
+     "clique"
+    ],
+    "first_screened": {
+     "TOPSIS": "clique",
+     "VIKOR": "clique",
+     "COPRAS": "clique",
+     "EDAS": "clique"
+    },
+    "first_unscreened": {
+     "TOPSIS": "clique",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   },
+   "provisioned": {
+    "feasible": [
+     "ibft2",
+     "qbft",
+     "clique"
+    ],
+    "first_screened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   }
+  },
+  {
+   "factors": {
+    "hw_fabric": 1.5265806227097856,
+    "hw_besu": 1.1099986749275441,
+    "hw_cometbft": 1.0642733554611452,
+    "hw_hotstuff": 0.6376572912502504,
+    "app": 1.73752358020155,
+    "net_cometbft": 0.2004382604071572
+   },
+   "default": {
+    "feasible": [
+     "clique"
+    ],
+    "first_screened": {
+     "TOPSIS": "clique",
+     "VIKOR": "clique",
+     "COPRAS": "clique",
+     "EDAS": "clique"
+    },
+    "first_unscreened": {
+     "TOPSIS": "raft",
+     "VIKOR": "raft",
+     "COPRAS": "raft",
+     "EDAS": "raft"
+    }
+   },
+   "provisioned": {
+    "feasible": [
+     "ibft2",
+     "qbft",
+     "clique"
+    ],
+    "first_screened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   }
+  },
+  {
+   "factors": {
+    "hw_fabric": 1.3126608893451677,
+    "hw_besu": 1.0119752245948652,
+    "hw_cometbft": 0.792951475962973,
+    "hw_hotstuff": 1.2552009226471004,
+    "app": 1.1530947104559526,
+    "net_cometbft": 0.2798528588820736
+   },
+   "default": {
+    "feasible": [
+     "clique"
+    ],
+    "first_screened": {
+     "TOPSIS": "clique",
+     "VIKOR": "clique",
+     "COPRAS": "clique",
+     "EDAS": "clique"
+    },
+    "first_unscreened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   },
+   "provisioned": {
+    "feasible": [
+     "ibft2",
+     "qbft",
+     "clique"
+    ],
+    "first_screened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   }
+  },
+  {
+   "factors": {
+    "hw_fabric": 1.9351405781234126,
+    "hw_besu": 1.4448086269187708,
+    "hw_cometbft": 0.6463321339982895,
+    "hw_hotstuff": 1.6558304399682697,
+    "app": 0.7458417105713911,
+    "net_cometbft": 0.4912239847464776
+   },
+   "default": {
+    "feasible": [
+     "raft",
+     "clique",
+     "cometbft",
+     "hotstuff"
+    ],
+    "first_screened": {
+     "TOPSIS": "cometbft",
+     "VIKOR": "cometbft",
+     "COPRAS": "cometbft",
+     "EDAS": "cometbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "cometbft",
+     "VIKOR": "cometbft",
+     "COPRAS": "qbft",
+     "EDAS": "cometbft"
+    }
+   },
+   "provisioned": {
+    "feasible": [
+     "raft",
+     "ibft2",
+     "qbft",
+     "clique",
+     "cometbft",
+     "hotstuff"
+    ],
+    "first_screened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   }
+  },
+  {
+   "factors": {
+    "hw_fabric": 1.5996909281924279,
+    "hw_besu": 1.3054256110691782,
+    "hw_cometbft": 0.921324295855203,
+    "hw_hotstuff": 0.5211440748056351,
+    "app": 1.445394979055632,
+    "net_cometbft": 0.1639403984109449
+   },
+   "default": {
+    "feasible": [
+     "clique"
+    ],
+    "first_screened": {
+     "TOPSIS": "clique",
+     "VIKOR": "clique",
+     "COPRAS": "clique",
+     "EDAS": "clique"
+    },
+    "first_unscreened": {
+     "TOPSIS": "raft",
+     "VIKOR": "raft",
+     "COPRAS": "raft",
+     "EDAS": "raft"
+    }
+   },
+   "provisioned": {
+    "feasible": [
+     "ibft2",
+     "qbft",
+     "clique"
+    ],
+    "first_screened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   }
+  },
+  {
+   "factors": {
+    "hw_fabric": 1.0381511271561947,
+    "hw_besu": 1.2717048072195338,
+    "hw_cometbft": 1.2316400771159628,
+    "hw_hotstuff": 1.3754742010759293,
+    "app": 0.5739355875526743,
+    "net_cometbft": 0.5856242179588969
+   },
+   "default": {
+    "feasible": [
+     "raft",
+     "clique",
+     "cometbft",
+     "hotstuff"
+    ],
+    "first_screened": {
+     "TOPSIS": "cometbft",
+     "VIKOR": "cometbft",
+     "COPRAS": "cometbft",
+     "EDAS": "cometbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "cometbft",
+     "VIKOR": "cometbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   },
+   "provisioned": {
+    "feasible": [
+     "raft",
+     "smartbft",
+     "ibft2",
+     "qbft",
+     "clique",
+     "cometbft",
+     "hotstuff"
+    ],
+    "first_screened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   }
+  },
+  {
+   "factors": {
+    "hw_fabric": 1.4070084571494765,
+    "hw_besu": 1.3237257412002679,
+    "hw_cometbft": 0.8411209224880242,
+    "hw_hotstuff": 1.0838398001918115,
+    "app": 1.5404320825353706,
+    "net_cometbft": 0.17215748240804754
+   },
+   "default": {
+    "feasible": [
+     "clique"
+    ],
+    "first_screened": {
+     "TOPSIS": "clique",
+     "VIKOR": "clique",
+     "COPRAS": "clique",
+     "EDAS": "clique"
+    },
+    "first_unscreened": {
+     "TOPSIS": "clique",
+     "VIKOR": "clique",
+     "COPRAS": "clique",
+     "EDAS": "clique"
+    }
+   },
+   "provisioned": {
+    "feasible": [
+     "ibft2",
+     "qbft",
+     "clique"
+    ],
+    "first_screened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   }
+  },
+  {
+   "factors": {
+    "hw_fabric": 1.242040743186249,
+    "hw_besu": 0.6226265443612635,
+    "hw_cometbft": 0.6143250371539511,
+    "hw_hotstuff": 1.798314006901969,
+    "app": 1.8902215565879543,
+    "net_cometbft": 0.8620503571494093
+   },
+   "default": {
+    "feasible": [
+     "clique"
+    ],
+    "first_screened": {
+     "TOPSIS": "clique",
+     "VIKOR": "clique",
+     "COPRAS": "clique",
+     "EDAS": "clique"
+    },
+    "first_unscreened": {
+     "TOPSIS": "clique",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   },
+   "provisioned": {
+    "feasible": [
+     "ibft2",
+     "qbft",
+     "clique"
+    ],
+    "first_screened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   }
+  },
+  {
+   "factors": {
+    "hw_fabric": 0.7440518731338488,
+    "hw_besu": 0.7952594931869613,
+    "hw_cometbft": 0.5571895577787681,
+    "hw_hotstuff": 1.1933656357256146,
+    "app": 1.2274244647798656,
+    "net_cometbft": 0.22289468591064932
+   },
+   "default": {
+    "feasible": [
+     "clique"
+    ],
+    "first_screened": {
+     "TOPSIS": "clique",
+     "VIKOR": "clique",
+     "COPRAS": "clique",
+     "EDAS": "clique"
+    },
+    "first_unscreened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   },
+   "provisioned": {
+    "feasible": [
+     "ibft2",
+     "qbft",
+     "clique"
+    ],
+    "first_screened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   }
+  },
+  {
+   "factors": {
+    "hw_fabric": 0.9304748791481763,
+    "hw_besu": 0.9382152216523204,
+    "hw_cometbft": 1.8730187641031693,
+    "hw_hotstuff": 0.5432554822251239,
+    "app": 1.0817334344661997,
+    "net_cometbft": 0.46138188405070985
+   },
+   "default": {
+    "feasible": [
+     "clique",
+     "cometbft"
+    ],
+    "first_screened": {
+     "TOPSIS": "cometbft",
+     "VIKOR": "cometbft",
+     "COPRAS": "cometbft",
+     "EDAS": "cometbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "cometbft",
+     "VIKOR": "cometbft",
+     "COPRAS": "qbft",
+     "EDAS": "cometbft"
+    }
+   },
+   "provisioned": {
+    "feasible": [
+     "raft",
+     "smartbft",
+     "ibft2",
+     "qbft",
+     "clique",
+     "cometbft"
+    ],
+    "first_screened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   }
+  },
+  {
+   "factors": {
+    "hw_fabric": 1.0173218338505792,
+    "hw_besu": 1.001543894701275,
+    "hw_cometbft": 1.4792592549724506,
+    "hw_hotstuff": 1.8045748137241313,
+    "app": 1.1311647867506265,
+    "net_cometbft": 0.10351441139804586
+   },
+   "default": {
+    "feasible": [
+     "clique"
+    ],
+    "first_screened": {
+     "TOPSIS": "clique",
+     "VIKOR": "clique",
+     "COPRAS": "clique",
+     "EDAS": "clique"
+    },
+    "first_unscreened": {
+     "TOPSIS": "cometbft",
+     "VIKOR": "cometbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   },
+   "provisioned": {
+    "feasible": [
+     "ibft2",
+     "qbft",
+     "clique"
+    ],
+    "first_screened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   }
+  },
+  {
+   "factors": {
+    "hw_fabric": 0.6857424722445097,
+    "hw_besu": 0.8717979320866952,
+    "hw_cometbft": 0.5674439297400845,
+    "hw_hotstuff": 0.5400369364057042,
+    "app": 0.5018978971434612,
+    "net_cometbft": 0.13781875394481205
+   },
+   "default": {
+    "feasible": [
+     "raft",
+     "smartbft",
+     "clique",
+     "cometbft",
+     "hotstuff"
+    ],
+    "first_screened": {
+     "TOPSIS": "cometbft",
+     "VIKOR": "cometbft",
+     "COPRAS": "cometbft",
+     "EDAS": "cometbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "cometbft",
+     "VIKOR": "cometbft",
+     "COPRAS": "cometbft",
+     "EDAS": "cometbft"
+    }
+   },
+   "provisioned": {
+    "feasible": [
+     "raft",
+     "smartbft",
+     "ibft2",
+     "qbft",
+     "clique",
+     "cometbft",
+     "hotstuff"
+    ],
+    "first_screened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "cometbft",
+     "EDAS": "qbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "cometbft",
+     "EDAS": "qbft"
+    }
+   }
+  },
+  {
+   "factors": {
+    "hw_fabric": 0.5521893010477698,
+    "hw_besu": 1.6731375357097342,
+    "hw_cometbft": 1.1485028799293628,
+    "hw_hotstuff": 0.8090602141328332,
+    "app": 0.7744314228863779,
+    "net_cometbft": 0.4806363893751705
+   },
+   "default": {
+    "feasible": [
+     "raft",
+     "smartbft",
+     "clique",
+     "cometbft",
+     "hotstuff"
+    ],
+    "first_screened": {
+     "TOPSIS": "cometbft",
+     "VIKOR": "cometbft",
+     "COPRAS": "cometbft",
+     "EDAS": "cometbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "cometbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   },
+   "provisioned": {
+    "feasible": [
+     "raft",
+     "smartbft",
+     "ibft2",
+     "qbft",
+     "clique",
+     "cometbft",
+     "hotstuff"
+    ],
+    "first_screened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   }
+  },
+  {
+   "factors": {
+    "hw_fabric": 0.6269451421698455,
+    "hw_besu": 0.8216319534493431,
+    "hw_cometbft": 1.200271525825191,
+    "hw_hotstuff": 1.0879802428025465,
+    "app": 1.7850238335324458,
+    "net_cometbft": 0.1580216090798303
+   },
+   "default": {
+    "feasible": [
+     "clique"
+    ],
+    "first_screened": {
+     "TOPSIS": "clique",
+     "VIKOR": "clique",
+     "COPRAS": "clique",
+     "EDAS": "clique"
+    },
+    "first_unscreened": {
+     "TOPSIS": "clique",
+     "VIKOR": "clique",
+     "COPRAS": "qbft",
+     "EDAS": "clique"
+    }
+   },
+   "provisioned": {
+    "feasible": [
+     "ibft2",
+     "qbft",
+     "clique"
+    ],
+    "first_screened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   }
+  },
+  {
+   "factors": {
+    "hw_fabric": 1.3513945324734173,
+    "hw_besu": 1.5429056422801926,
+    "hw_cometbft": 0.8793861795453471,
+    "hw_hotstuff": 0.7941013218106554,
+    "app": 1.748358125806447,
+    "net_cometbft": 0.41147384553894784
+   },
+   "default": {
+    "feasible": [
+     "clique"
+    ],
+    "first_screened": {
+     "TOPSIS": "clique",
+     "VIKOR": "clique",
+     "COPRAS": "clique",
+     "EDAS": "clique"
+    },
+    "first_unscreened": {
+     "TOPSIS": "raft",
+     "VIKOR": "raft",
+     "COPRAS": "raft",
+     "EDAS": "raft"
+    }
+   },
+   "provisioned": {
+    "feasible": [
+     "ibft2",
+     "qbft",
+     "clique"
+    ],
+    "first_screened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   }
+  },
+  {
+   "factors": {
+    "hw_fabric": 1.183977005847836,
+    "hw_besu": 1.9774193860165157,
+    "hw_cometbft": 0.8006231832366348,
+    "hw_hotstuff": 1.8529977020456663,
+    "app": 1.3113851701430044,
+    "net_cometbft": 0.3292693846181117
+   },
+   "default": {
+    "feasible": [
+     "clique"
+    ],
+    "first_screened": {
+     "TOPSIS": "clique",
+     "VIKOR": "clique",
+     "COPRAS": "clique",
+     "EDAS": "clique"
+    },
+    "first_unscreened": {
+     "TOPSIS": "clique",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   },
+   "provisioned": {
+    "feasible": [
+     "ibft2",
+     "qbft",
+     "clique"
+    ],
+    "first_screened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   }
+  },
+  {
+   "factors": {
+    "hw_fabric": 1.4246600928245094,
+    "hw_besu": 1.2302450156283573,
+    "hw_cometbft": 0.690420520261922,
+    "hw_hotstuff": 0.7636917439153835,
+    "app": 0.5174302426356661,
+    "net_cometbft": 0.3172828663057159
+   },
+   "default": {
+    "feasible": [
+     "raft",
+     "clique",
+     "cometbft",
+     "hotstuff"
+    ],
+    "first_screened": {
+     "TOPSIS": "cometbft",
+     "VIKOR": "cometbft",
+     "COPRAS": "cometbft",
+     "EDAS": "cometbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "cometbft",
+     "VIKOR": "cometbft",
+     "COPRAS": "cometbft",
+     "EDAS": "cometbft"
+    }
+   },
+   "provisioned": {
+    "feasible": [
+     "raft",
+     "ibft2",
+     "qbft",
+     "clique",
+     "cometbft",
+     "hotstuff"
+    ],
+    "first_screened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   }
+  },
+  {
+   "factors": {
+    "hw_fabric": 1.0489063683334299,
+    "hw_besu": 0.6798208660861425,
+    "hw_cometbft": 0.9024121238987164,
+    "hw_hotstuff": 0.983215384286232,
+    "app": 0.6627401877137783,
+    "net_cometbft": 0.27275994025154043
+   },
+   "default": {
+    "feasible": [
+     "raft",
+     "clique",
+     "cometbft",
+     "hotstuff"
+    ],
+    "first_screened": {
+     "TOPSIS": "cometbft",
+     "VIKOR": "cometbft",
+     "COPRAS": "cometbft",
+     "EDAS": "cometbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "cometbft",
+     "VIKOR": "cometbft",
+     "COPRAS": "qbft",
+     "EDAS": "cometbft"
+    }
+   },
+   "provisioned": {
+    "feasible": [
+     "raft",
+     "smartbft",
+     "ibft2",
+     "qbft",
+     "clique",
+     "cometbft",
+     "hotstuff"
+    ],
+    "first_screened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   }
+  },
+  {
+   "factors": {
+    "hw_fabric": 0.5008956605936029,
+    "hw_besu": 0.911334072775009,
+    "hw_cometbft": 0.5147506830081241,
+    "hw_hotstuff": 1.116567437182551,
+    "app": 1.5810476460592746,
+    "net_cometbft": 0.5717940464884351
+   },
+   "default": {
+    "feasible": [
+     "clique"
+    ],
+    "first_screened": {
+     "TOPSIS": "clique",
+     "VIKOR": "clique",
+     "COPRAS": "clique",
+     "EDAS": "clique"
+    },
+    "first_unscreened": {
+     "TOPSIS": "clique",
+     "VIKOR": "clique",
+     "COPRAS": "clique",
+     "EDAS": "clique"
+    }
+   },
+   "provisioned": {
+    "feasible": [
+     "ibft2",
+     "qbft",
+     "clique"
+    ],
+    "first_screened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   }
+  },
+  {
+   "factors": {
+    "hw_fabric": 1.1953361918720087,
+    "hw_besu": 1.2786726993098472,
+    "hw_cometbft": 1.854989220441371,
+    "hw_hotstuff": 0.5870138843451823,
+    "app": 1.9403537033815528,
+    "net_cometbft": 0.3477494177953652
+   },
+   "default": {
+    "feasible": [
+     "clique"
+    ],
+    "first_screened": {
+     "TOPSIS": "clique",
+     "VIKOR": "clique",
+     "COPRAS": "clique",
+     "EDAS": "clique"
+    },
+    "first_unscreened": {
+     "TOPSIS": "raft",
+     "VIKOR": "raft",
+     "COPRAS": "raft",
+     "EDAS": "raft"
+    }
+   },
+   "provisioned": {
+    "feasible": [
+     "ibft2",
+     "qbft",
+     "clique"
+    ],
+    "first_screened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   }
+  },
+  {
+   "factors": {
+    "hw_fabric": 1.2884844985580057,
+    "hw_besu": 0.8527278704570298,
+    "hw_cometbft": 1.3326155578392107,
+    "hw_hotstuff": 0.6011480963873145,
+    "app": 0.9167129553662565,
+    "net_cometbft": 0.6806074471946097
+   },
+   "default": {
+    "feasible": [
+     "raft",
+     "clique",
+     "cometbft"
+    ],
+    "first_screened": {
+     "TOPSIS": "cometbft",
+     "VIKOR": "cometbft",
+     "COPRAS": "cometbft",
+     "EDAS": "cometbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "cometbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "cometbft"
+    }
+   },
+   "provisioned": {
+    "feasible": [
+     "raft",
+     "ibft2",
+     "qbft",
+     "clique",
+     "cometbft",
+     "hotstuff"
+    ],
+    "first_screened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   }
+  },
+  {
+   "factors": {
+    "hw_fabric": 0.5389967550218443,
+    "hw_besu": 1.3767702479807236,
+    "hw_cometbft": 0.6716925442429302,
+    "hw_hotstuff": 0.6286537052178898,
+    "app": 0.9539148719922214,
+    "net_cometbft": 0.13030195019328314
+   },
+   "default": {
+    "feasible": [
+     "raft",
+     "smartbft",
+     "clique",
+     "cometbft"
+    ],
+    "first_screened": {
+     "TOPSIS": "cometbft",
+     "VIKOR": "cometbft",
+     "COPRAS": "cometbft",
+     "EDAS": "cometbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "cometbft",
+     "VIKOR": "cometbft",
+     "COPRAS": "cometbft",
+     "EDAS": "cometbft"
+    }
+   },
+   "provisioned": {
+    "feasible": [
+     "raft",
+     "smartbft",
+     "ibft2",
+     "qbft",
+     "clique",
+     "cometbft",
+     "hotstuff"
+    ],
+    "first_screened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   }
+  },
+  {
+   "factors": {
+    "hw_fabric": 0.8275505192486148,
+    "hw_besu": 0.5573781864986395,
+    "hw_cometbft": 1.782671472967122,
+    "hw_hotstuff": 0.9040663015509048,
+    "app": 1.5181908302308242,
+    "net_cometbft": 0.9071188178370324
+   },
+   "default": {
+    "feasible": [
+     "clique"
+    ],
+    "first_screened": {
+     "TOPSIS": "clique",
+     "VIKOR": "clique",
+     "COPRAS": "clique",
+     "EDAS": "clique"
+    },
+    "first_unscreened": {
+     "TOPSIS": "clique",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "clique"
+    }
+   },
+   "provisioned": {
+    "feasible": [
+     "ibft2",
+     "qbft",
+     "clique"
+    ],
+    "first_screened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   }
+  },
+  {
+   "factors": {
+    "hw_fabric": 1.3402884957129586,
+    "hw_besu": 1.8097115269815147,
+    "hw_cometbft": 1.051587796100231,
+    "hw_hotstuff": 1.561039266581964,
+    "app": 0.7766477765803258,
+    "net_cometbft": 0.3364848370370883
+   },
+   "default": {
+    "feasible": [
+     "raft",
+     "clique",
+     "cometbft",
+     "hotstuff"
+    ],
+    "first_screened": {
+     "TOPSIS": "cometbft",
+     "VIKOR": "cometbft",
+     "COPRAS": "cometbft",
+     "EDAS": "cometbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "cometbft",
+     "VIKOR": "cometbft",
+     "COPRAS": "cometbft",
+     "EDAS": "cometbft"
+    }
+   },
+   "provisioned": {
+    "feasible": [
+     "raft",
+     "ibft2",
+     "qbft",
+     "clique",
+     "cometbft",
+     "hotstuff"
+    ],
+    "first_screened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   }
+  },
+  {
+   "factors": {
+    "hw_fabric": 0.651428551196818,
+    "hw_besu": 1.3527057801397475,
+    "hw_cometbft": 0.547541747873834,
+    "hw_hotstuff": 1.7362672432747062,
+    "app": 1.092745517455737,
+    "net_cometbft": 0.11526781557381684
+   },
+   "default": {
+    "feasible": [
+     "clique"
+    ],
+    "first_screened": {
+     "TOPSIS": "clique",
+     "VIKOR": "clique",
+     "COPRAS": "clique",
+     "EDAS": "clique"
+    },
+    "first_unscreened": {
+     "TOPSIS": "cometbft",
+     "VIKOR": "cometbft",
+     "COPRAS": "cometbft",
+     "EDAS": "cometbft"
+    }
+   },
+   "provisioned": {
+    "feasible": [
+     "ibft2",
+     "qbft",
+     "clique"
+    ],
+    "first_screened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   }
+  },
+  {
+   "factors": {
+    "hw_fabric": 1.920641776628489,
+    "hw_besu": 1.5564177594277513,
+    "hw_cometbft": 1.2778412585585677,
+    "hw_hotstuff": 0.9208671458339276,
+    "app": 1.279076344948589,
+    "net_cometbft": 0.7259682103437822
+   },
+   "default": {
+    "feasible": [
+     "clique"
+    ],
+    "first_screened": {
+     "TOPSIS": "clique",
+     "VIKOR": "clique",
+     "COPRAS": "clique",
+     "EDAS": "clique"
+    },
+    "first_unscreened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   },
+   "provisioned": {
+    "feasible": [
+     "ibft2",
+     "qbft",
+     "clique"
+    ],
+    "first_screened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   }
+  },
+  {
+   "factors": {
+    "hw_fabric": 0.6971008347914288,
+    "hw_besu": 1.921695875201563,
+    "hw_cometbft": 1.451757408535413,
+    "hw_hotstuff": 1.4741147557472996,
+    "app": 1.0147267006114853,
+    "net_cometbft": 0.15298324765851107
+   },
+   "default": {
+    "feasible": [
+     "raft",
+     "smartbft",
+     "clique",
+     "cometbft"
+    ],
+    "first_screened": {
+     "TOPSIS": "cometbft",
+     "VIKOR": "cometbft",
+     "COPRAS": "cometbft",
+     "EDAS": "cometbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "cometbft",
+     "VIKOR": "cometbft",
+     "COPRAS": "cometbft",
+     "EDAS": "cometbft"
+    }
+   },
+   "provisioned": {
+    "feasible": [
+     "raft",
+     "smartbft",
+     "ibft2",
+     "qbft",
+     "clique",
+     "cometbft",
+     "hotstuff"
+    ],
+    "first_screened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   }
+  },
+  {
+   "factors": {
+    "hw_fabric": 1.117635244432229,
+    "hw_besu": 1.6138061669854065,
+    "hw_cometbft": 0.9305626692785752,
+    "hw_hotstuff": 0.9982273474757303,
+    "app": 1.559091503001929,
+    "net_cometbft": 0.8475106619015367
+   },
+   "default": {
+    "feasible": [
+     "clique"
+    ],
+    "first_screened": {
+     "TOPSIS": "clique",
+     "VIKOR": "clique",
+     "COPRAS": "clique",
+     "EDAS": "clique"
+    },
+    "first_unscreened": {
+     "TOPSIS": "clique",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "clique"
+    }
+   },
+   "provisioned": {
+    "feasible": [
+     "ibft2",
+     "qbft",
+     "clique"
+    ],
+    "first_screened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   }
+  },
+  {
+   "factors": {
+    "hw_fabric": 0.5459053450293763,
+    "hw_besu": 1.4101344811859682,
+    "hw_cometbft": 1.033752828739493,
+    "hw_hotstuff": 1.701806635757462,
+    "app": 0.5888074100310035,
+    "net_cometbft": 0.42492337027737853
+   },
+   "default": {
+    "feasible": [
+     "raft",
+     "smartbft",
+     "clique",
+     "cometbft",
+     "hotstuff"
+    ],
+    "first_screened": {
+     "TOPSIS": "cometbft",
+     "VIKOR": "cometbft",
+     "COPRAS": "cometbft",
+     "EDAS": "cometbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "cometbft",
+     "VIKOR": "cometbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   },
+   "provisioned": {
+    "feasible": [
+     "raft",
+     "smartbft",
+     "ibft2",
+     "qbft",
+     "clique",
+     "cometbft",
+     "hotstuff"
+    ],
+    "first_screened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   }
+  },
+  {
+   "factors": {
+    "hw_fabric": 0.7958225591635608,
+    "hw_besu": 0.9166924786524806,
+    "hw_cometbft": 0.5815390072297437,
+    "hw_hotstuff": 0.9652770045969258,
+    "app": 0.9045836934749738,
+    "net_cometbft": 0.7813883801467685
+   },
+   "default": {
+    "feasible": [
+     "raft",
+     "smartbft",
+     "clique",
+     "cometbft"
+    ],
+    "first_screened": {
+     "TOPSIS": "cometbft",
+     "VIKOR": "cometbft",
+     "COPRAS": "cometbft",
+     "EDAS": "cometbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "cometbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   },
+   "provisioned": {
+    "feasible": [
+     "raft",
+     "smartbft",
+     "ibft2",
+     "qbft",
+     "clique",
+     "cometbft",
+     "hotstuff"
+    ],
+    "first_screened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   }
+  },
+  {
+   "factors": {
+    "hw_fabric": 1.1367917771760572,
+    "hw_besu": 0.9896845456473873,
+    "hw_cometbft": 1.379200113919218,
+    "hw_hotstuff": 0.523835668141082,
+    "app": 0.6117705764666973,
+    "net_cometbft": 0.35426164952275097
+   },
+   "default": {
+    "feasible": [
+     "raft",
+     "clique",
+     "cometbft",
+     "hotstuff"
+    ],
+    "first_screened": {
+     "TOPSIS": "cometbft",
+     "VIKOR": "cometbft",
+     "COPRAS": "cometbft",
+     "EDAS": "cometbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "cometbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   },
+   "provisioned": {
+    "feasible": [
+     "raft",
+     "ibft2",
+     "qbft",
+     "clique",
+     "cometbft",
+     "hotstuff"
+    ],
+    "first_screened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   }
+  },
+  {
+   "factors": {
+    "hw_fabric": 1.620846343411231,
+    "hw_besu": 1.7009793425160054,
+    "hw_cometbft": 1.8154976586908282,
+    "hw_hotstuff": 0.6862229865323083,
+    "app": 0.6286423424123921,
+    "net_cometbft": 0.12102697229211062
+   },
+   "default": {
+    "feasible": [
+     "raft",
+     "clique",
+     "cometbft",
+     "hotstuff"
+    ],
+    "first_screened": {
+     "TOPSIS": "cometbft",
+     "VIKOR": "cometbft",
+     "COPRAS": "cometbft",
+     "EDAS": "cometbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "cometbft",
+     "VIKOR": "cometbft",
+     "COPRAS": "qbft",
+     "EDAS": "cometbft"
+    }
+   },
+   "provisioned": {
+    "feasible": [
+     "raft",
+     "ibft2",
+     "qbft",
+     "clique",
+     "cometbft",
+     "hotstuff"
+    ],
+    "first_screened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   }
+  },
+  {
+   "factors": {
+    "hw_fabric": 1.5579091531873954,
+    "hw_besu": 0.8279807407639478,
+    "hw_cometbft": 1.253471523712719,
+    "hw_hotstuff": 0.7484311150315206,
+    "app": 1.6868442901928,
+    "net_cometbft": 0.2959751827311254
+   },
+   "default": {
+    "feasible": [
+     "clique"
+    ],
+    "first_screened": {
+     "TOPSIS": "clique",
+     "VIKOR": "clique",
+     "COPRAS": "clique",
+     "EDAS": "clique"
+    },
+    "first_unscreened": {
+     "TOPSIS": "raft",
+     "VIKOR": "raft",
+     "COPRAS": "raft",
+     "EDAS": "raft"
+    }
+   },
+   "provisioned": {
+    "feasible": [
+     "ibft2",
+     "qbft",
+     "clique"
+    ],
+    "first_screened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   }
+  },
+  {
+   "factors": {
+    "hw_fabric": 0.9519756909663502,
+    "hw_besu": 1.051966308349679,
+    "hw_cometbft": 0.7760931739749457,
+    "hw_hotstuff": 1.4353702477179693,
+    "app": 1.8364824375212194,
+    "net_cometbft": 0.2123316055129445
+   },
+   "default": {
+    "feasible": [
+     "clique"
+    ],
+    "first_screened": {
+     "TOPSIS": "clique",
+     "VIKOR": "clique",
+     "COPRAS": "clique",
+     "EDAS": "clique"
+    },
+    "first_unscreened": {
+     "TOPSIS": "clique",
+     "VIKOR": "clique",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   },
+   "provisioned": {
+    "feasible": [
+     "ibft2",
+     "qbft",
+     "clique"
+    ],
+    "first_screened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   }
+  },
+  {
+   "factors": {
+    "hw_fabric": 0.5123081227623624,
+    "hw_besu": 1.1481876276664653,
+    "hw_cometbft": 1.906082153507634,
+    "hw_hotstuff": 0.790983051284007,
+    "app": 0.9561968830267479,
+    "net_cometbft": 0.2517303314127452
+   },
+   "default": {
+    "feasible": [
+     "raft",
+     "smartbft",
+     "clique",
+     "cometbft"
+    ],
+    "first_screened": {
+     "TOPSIS": "cometbft",
+     "VIKOR": "cometbft",
+     "COPRAS": "cometbft",
+     "EDAS": "cometbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "cometbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   },
+   "provisioned": {
+    "feasible": [
+     "raft",
+     "smartbft",
+     "ibft2",
+     "qbft",
+     "clique",
+     "cometbft",
+     "hotstuff"
+    ],
+    "first_screened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   }
+  },
+  {
+   "factors": {
+    "hw_fabric": 1.024217304157275,
+    "hw_besu": 0.5461363026423591,
+    "hw_cometbft": 1.5659139743213424,
+    "hw_hotstuff": 1.5183496064056927,
+    "app": 1.3564891321263937,
+    "net_cometbft": 0.8291005292357059
+   },
+   "default": {
+    "feasible": [
+     "clique"
+    ],
+    "first_screened": {
+     "TOPSIS": "clique",
+     "VIKOR": "clique",
+     "COPRAS": "clique",
+     "EDAS": "clique"
+    },
+    "first_unscreened": {
+     "TOPSIS": "clique",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   },
+   "provisioned": {
+    "feasible": [
+     "ibft2",
+     "qbft",
+     "clique"
+    ],
+    "first_screened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   }
+  },
+  {
+   "factors": {
+    "hw_fabric": 1.2150260509164847,
+    "hw_besu": 0.703843339136815,
+    "hw_cometbft": 1.2305198306577365,
+    "hw_hotstuff": 1.4479539815007552,
+    "app": 1.6623435662609787,
+    "net_cometbft": 0.7387932399090215
+   },
+   "default": {
+    "feasible": [
+     "clique"
+    ],
+    "first_screened": {
+     "TOPSIS": "clique",
+     "VIKOR": "clique",
+     "COPRAS": "clique",
+     "EDAS": "clique"
+    },
+    "first_unscreened": {
+     "TOPSIS": "clique",
+     "VIKOR": "clique",
+     "COPRAS": "qbft",
+     "EDAS": "clique"
+    }
+   },
+   "provisioned": {
+    "feasible": [
+     "ibft2",
+     "qbft",
+     "clique"
+    ],
+    "first_screened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   }
+  },
+  {
+   "factors": {
+    "hw_fabric": 1.668820290121881,
+    "hw_besu": 0.6378571351155725,
+    "hw_cometbft": 1.5041160756411698,
+    "hw_hotstuff": 0.559989955985972,
+    "app": 0.5620000857417503,
+    "net_cometbft": 0.5580950118364505
+   },
+   "default": {
+    "feasible": [
+     "raft",
+     "clique",
+     "cometbft",
+     "hotstuff"
+    ],
+    "first_screened": {
+     "TOPSIS": "cometbft",
+     "VIKOR": "cometbft",
+     "COPRAS": "cometbft",
+     "EDAS": "cometbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "cometbft",
+     "VIKOR": "cometbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   },
+   "provisioned": {
+    "feasible": [
+     "raft",
+     "ibft2",
+     "qbft",
+     "clique",
+     "cometbft",
+     "hotstuff"
+    ],
+    "first_screened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   }
+  },
+  {
+   "factors": {
+    "hw_fabric": 0.7096495197549167,
+    "hw_besu": 0.7844407118971218,
+    "hw_cometbft": 0.743146209347025,
+    "hw_hotstuff": 0.5667340490558064,
+    "app": 0.8004293973823817,
+    "net_cometbft": 0.21616670301755372
+   },
+   "default": {
+    "feasible": [
+     "raft",
+     "smartbft",
+     "clique",
+     "cometbft"
+    ],
+    "first_screened": {
+     "TOPSIS": "cometbft",
+     "VIKOR": "cometbft",
+     "COPRAS": "cometbft",
+     "EDAS": "cometbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "cometbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "cometbft"
+    }
+   },
+   "provisioned": {
+    "feasible": [
+     "raft",
+     "smartbft",
+     "ibft2",
+     "qbft",
+     "clique",
+     "cometbft",
+     "hotstuff"
+    ],
+    "first_screened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   }
+  },
+  {
+   "factors": {
+    "hw_fabric": 0.5707480804148757,
+    "hw_besu": 0.6541925795644603,
+    "hw_cometbft": 1.1133864058775338,
+    "hw_hotstuff": 0.8477326638281227,
+    "app": 0.6904638598100726,
+    "net_cometbft": 0.2589324065607479
+   },
+   "default": {
+    "feasible": [
+     "raft",
+     "smartbft",
+     "clique",
+     "cometbft",
+     "hotstuff"
+    ],
+    "first_screened": {
+     "TOPSIS": "cometbft",
+     "VIKOR": "cometbft",
+     "COPRAS": "cometbft",
+     "EDAS": "cometbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "cometbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   },
+   "provisioned": {
+    "feasible": [
+     "raft",
+     "smartbft",
+     "ibft2",
+     "qbft",
+     "clique",
+     "cometbft",
+     "hotstuff"
+    ],
+    "first_screened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   }
+  },
+  {
+   "factors": {
+    "hw_fabric": 0.995120207443325,
+    "hw_besu": 0.5171271572402384,
+    "hw_cometbft": 1.3609568157023852,
+    "hw_hotstuff": 1.776404770897787,
+    "app": 0.7287856289281438,
+    "net_cometbft": 0.32528014938209127
+   },
+   "default": {
+    "feasible": [
+     "raft",
+     "clique",
+     "cometbft",
+     "hotstuff"
+    ],
+    "first_screened": {
+     "TOPSIS": "cometbft",
+     "VIKOR": "cometbft",
+     "COPRAS": "cometbft",
+     "EDAS": "cometbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "cometbft",
+     "VIKOR": "cometbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   },
+   "provisioned": {
+    "feasible": [
+     "raft",
+     "smartbft",
+     "ibft2",
+     "qbft",
+     "clique",
+     "cometbft",
+     "hotstuff"
+    ],
+    "first_screened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   }
+  },
+  {
+   "factors": {
+    "hw_fabric": 1.4948635963661896,
+    "hw_besu": 1.0332701582246338,
+    "hw_cometbft": 0.5215577974999478,
+    "hw_hotstuff": 1.226865199486142,
+    "app": 0.8761221252899904,
+    "net_cometbft": 0.30568765028619
+   },
+   "default": {
+    "feasible": [
+     "raft",
+     "clique",
+     "cometbft",
+     "hotstuff"
+    ],
+    "first_screened": {
+     "TOPSIS": "cometbft",
+     "VIKOR": "cometbft",
+     "COPRAS": "cometbft",
+     "EDAS": "cometbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "cometbft",
+     "VIKOR": "cometbft",
+     "COPRAS": "cometbft",
+     "EDAS": "cometbft"
+    }
+   },
+   "provisioned": {
+    "feasible": [
+     "raft",
+     "ibft2",
+     "qbft",
+     "clique",
+     "cometbft",
+     "hotstuff"
+    ],
+    "first_screened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   }
+  },
+  {
+   "factors": {
+    "hw_fabric": 0.5833694718677432,
+    "hw_besu": 1.1587947204387523,
+    "hw_cometbft": 1.4164467052270866,
+    "hw_hotstuff": 0.7122851532947196,
+    "app": 1.0639368390448039,
+    "net_cometbft": 0.9609998699658404
+   },
+   "default": {
+    "feasible": [
+     "clique",
+     "cometbft"
+    ],
+    "first_screened": {
+     "TOPSIS": "cometbft",
+     "VIKOR": "cometbft",
+     "COPRAS": "cometbft",
+     "EDAS": "cometbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "cometbft",
+     "VIKOR": "cometbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   },
+   "provisioned": {
+    "feasible": [
+     "raft",
+     "smartbft",
+     "ibft2",
+     "qbft",
+     "clique",
+     "cometbft",
+     "hotstuff"
+    ],
+    "first_screened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   }
+  },
+  {
+   "factors": {
+    "hw_fabric": 0.7217042038438755,
+    "hw_besu": 0.6124902321118758,
+    "hw_cometbft": 1.6195294125849584,
+    "hw_hotstuff": 1.4212251050567486,
+    "app": 0.8184646056133914,
+    "net_cometbft": 0.21041263550002068
+   },
+   "default": {
+    "feasible": [
+     "raft",
+     "smartbft",
+     "clique",
+     "cometbft",
+     "hotstuff"
+    ],
+    "first_screened": {
+     "TOPSIS": "cometbft",
+     "VIKOR": "cometbft",
+     "COPRAS": "cometbft",
+     "EDAS": "cometbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "cometbft",
+     "VIKOR": "cometbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   },
+   "provisioned": {
+    "feasible": [
+     "raft",
+     "smartbft",
+     "ibft2",
+     "qbft",
+     "clique",
+     "cometbft",
+     "hotstuff"
+    ],
+    "first_screened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   }
+  },
+  {
+   "factors": {
+    "hw_fabric": 0.6324322033528054,
+    "hw_besu": 1.1661433744528384,
+    "hw_cometbft": 1.5168881036015087,
+    "hw_hotstuff": 1.908681423957073,
+    "app": 1.0371694396116178,
+    "net_cometbft": 0.5041372165861571
+   },
+   "default": {
+    "feasible": [
+     "clique",
+     "cometbft"
+    ],
+    "first_screened": {
+     "TOPSIS": "cometbft",
+     "VIKOR": "cometbft",
+     "COPRAS": "cometbft",
+     "EDAS": "cometbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "cometbft",
+     "VIKOR": "cometbft",
+     "COPRAS": "qbft",
+     "EDAS": "cometbft"
+    }
+   },
+   "provisioned": {
+    "feasible": [
+     "raft",
+     "smartbft",
+     "ibft2",
+     "qbft",
+     "clique",
+     "cometbft",
+     "hotstuff"
+    ],
+    "first_screened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   }
+  },
+  {
+   "factors": {
+    "hw_fabric": 0.780106554530249,
+    "hw_besu": 0.5686413256151533,
+    "hw_cometbft": 0.5809727694029927,
+    "hw_hotstuff": 1.67616908974011,
+    "app": 1.9972135120658578,
+    "net_cometbft": 0.5134189535766879
+   },
+   "default": {
+    "feasible": [
+     "clique"
+    ],
+    "first_screened": {
+     "TOPSIS": "clique",
+     "VIKOR": "clique",
+     "COPRAS": "clique",
+     "EDAS": "clique"
+    },
+    "first_unscreened": {
+     "TOPSIS": "clique",
+     "VIKOR": "clique",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   },
+   "provisioned": {
+    "feasible": [
+     "ibft2",
+     "qbft",
+     "clique"
+    ],
+    "first_screened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   }
+  },
+  {
+   "factors": {
+    "hw_fabric": 0.7552510482350766,
+    "hw_besu": 1.4957948678707988,
+    "hw_cometbft": 0.9826226485860552,
+    "hw_hotstuff": 1.6294755138204535,
+    "app": 1.0104194818651722,
+    "net_cometbft": 0.13933314947992403
+   },
+   "default": {
+    "feasible": [
+     "raft",
+     "smartbft",
+     "clique",
+     "cometbft"
+    ],
+    "first_screened": {
+     "TOPSIS": "cometbft",
+     "VIKOR": "cometbft",
+     "COPRAS": "cometbft",
+     "EDAS": "cometbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "cometbft",
+     "VIKOR": "cometbft",
+     "COPRAS": "cometbft",
+     "EDAS": "cometbft"
+    }
+   },
+   "provisioned": {
+    "feasible": [
+     "raft",
+     "smartbft",
+     "ibft2",
+     "qbft",
+     "clique",
+     "cometbft",
+     "hotstuff"
+    ],
+    "first_screened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   }
+  },
+  {
+   "factors": {
+    "hw_fabric": 1.2227477900450925,
+    "hw_besu": 0.578319711526581,
+    "hw_cometbft": 1.6570526188845007,
+    "hw_hotstuff": 1.3330173890179782,
+    "app": 1.1708957237717235,
+    "net_cometbft": 0.41968147175258225
+   },
+   "default": {
+    "feasible": [
+     "clique"
+    ],
+    "first_screened": {
+     "TOPSIS": "clique",
+     "VIKOR": "clique",
+     "COPRAS": "clique",
+     "EDAS": "clique"
+    },
+    "first_unscreened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   },
+   "provisioned": {
+    "feasible": [
+     "ibft2",
+     "qbft",
+     "clique"
+    ],
+    "first_screened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   }
+  },
+  {
+   "factors": {
+    "hw_fabric": 1.9751378758098301,
+    "hw_besu": 0.9454866523567623,
+    "hw_cometbft": 1.4977420849111662,
+    "hw_hotstuff": 0.9671231747459548,
+    "app": 1.5939708759305484,
+    "net_cometbft": 0.2883198729996349
+   },
+   "default": {
+    "feasible": [
+     "clique"
+    ],
+    "first_screened": {
+     "TOPSIS": "clique",
+     "VIKOR": "clique",
+     "COPRAS": "clique",
+     "EDAS": "clique"
+    },
+    "first_unscreened": {
+     "TOPSIS": "clique",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   },
+   "provisioned": {
+    "feasible": [
+     "ibft2",
+     "qbft",
+     "clique"
+    ],
+    "first_screened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   }
+  },
+  {
+   "factors": {
+    "hw_fabric": 1.7191982243700112,
+    "hw_besu": 1.4277408709844834,
+    "hw_cometbft": 1.2723729639633161,
+    "hw_hotstuff": 0.7386081010810791,
+    "app": 1.420910172725178,
+    "net_cometbft": 0.19286297887247356
+   },
+   "default": {
+    "feasible": [
+     "clique"
+    ],
+    "first_screened": {
+     "TOPSIS": "clique",
+     "VIKOR": "clique",
+     "COPRAS": "clique",
+     "EDAS": "clique"
+    },
+    "first_unscreened": {
+     "TOPSIS": "clique",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   },
+   "provisioned": {
+    "feasible": [
+     "ibft2",
+     "qbft",
+     "clique"
+    ],
+    "first_screened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   }
+  },
+  {
+   "factors": {
+    "hw_fabric": 0.764652708613461,
+    "hw_besu": 1.7757080407950863,
+    "hw_cometbft": 0.8846129985252175,
+    "hw_hotstuff": 0.8944394462797266,
+    "app": 0.9845712762261837,
+    "net_cometbft": 0.3010427816581402
+   },
+   "default": {
+    "feasible": [
+     "raft",
+     "smartbft",
+     "clique",
+     "cometbft"
+    ],
+    "first_screened": {
+     "TOPSIS": "cometbft",
+     "VIKOR": "cometbft",
+     "COPRAS": "cometbft",
+     "EDAS": "cometbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "cometbft",
+     "VIKOR": "cometbft",
+     "COPRAS": "cometbft",
+     "EDAS": "cometbft"
+    }
+   },
+   "provisioned": {
+    "feasible": [
+     "raft",
+     "smartbft",
+     "ibft2",
+     "qbft",
+     "clique",
+     "cometbft",
+     "hotstuff"
+    ],
+    "first_screened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   }
+  },
+  {
+   "factors": {
+    "hw_fabric": 1.0027827123664892,
+    "hw_besu": 0.5875984014189408,
+    "hw_cometbft": 1.409856628065742,
+    "hw_hotstuff": 1.5874156724640474,
+    "app": 0.6301656376260082,
+    "net_cometbft": 0.14642646479786625
+   },
+   "default": {
+    "feasible": [
+     "raft",
+     "clique",
+     "cometbft",
+     "hotstuff"
+    ],
+    "first_screened": {
+     "TOPSIS": "cometbft",
+     "VIKOR": "cometbft",
+     "COPRAS": "cometbft",
+     "EDAS": "cometbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "cometbft",
+     "VIKOR": "cometbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   },
+   "provisioned": {
+    "feasible": [
+     "raft",
+     "smartbft",
+     "ibft2",
+     "qbft",
+     "clique",
+     "cometbft",
+     "hotstuff"
+    ],
+    "first_screened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   }
+  },
+  {
+   "factors": {
+    "hw_fabric": 1.7883416232257667,
+    "hw_besu": 1.5074003194517194,
+    "hw_cometbft": 0.5699643412936967,
+    "hw_hotstuff": 1.4857311797232924,
+    "app": 0.8619442542418484,
+    "net_cometbft": 0.3836624967283291
+   },
+   "default": {
+    "feasible": [
+     "raft",
+     "clique",
+     "cometbft",
+     "hotstuff"
+    ],
+    "first_screened": {
+     "TOPSIS": "cometbft",
+     "VIKOR": "cometbft",
+     "COPRAS": "cometbft",
+     "EDAS": "cometbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "cometbft",
+     "VIKOR": "cometbft",
+     "COPRAS": "qbft",
+     "EDAS": "cometbft"
+    }
+   },
+   "provisioned": {
+    "feasible": [
+     "raft",
+     "ibft2",
+     "qbft",
+     "clique",
+     "cometbft",
+     "hotstuff"
+    ],
+    "first_screened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   }
+  },
+  {
+   "factors": {
+    "hw_fabric": 1.7786111174355477,
+    "hw_besu": 1.8271022659918352,
+    "hw_cometbft": 1.1272127502651557,
+    "hw_hotstuff": 0.7177045838658161,
+    "app": 1.5061729888831075,
+    "net_cometbft": 0.16876528622307135
+   },
+   "default": {
+    "feasible": [
+     "clique"
+    ],
+    "first_screened": {
+     "TOPSIS": "clique",
+     "VIKOR": "clique",
+     "COPRAS": "clique",
+     "EDAS": "clique"
+    },
+    "first_unscreened": {
+     "TOPSIS": "clique",
+     "VIKOR": "clique",
+     "COPRAS": "clique",
+     "EDAS": "clique"
+    }
+   },
+   "provisioned": {
+    "feasible": [
+     "ibft2",
+     "qbft",
+     "clique"
+    ],
+    "first_screened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   }
+  },
+  {
+   "factors": {
+    "hw_fabric": 1.0667061326359677,
+    "hw_besu": 0.7244645438324463,
+    "hw_cometbft": 0.7184703057485344,
+    "hw_hotstuff": 1.8752961465890152,
+    "app": 0.5468888916821772,
+    "net_cometbft": 0.4444966634132045
+   },
+   "default": {
+    "feasible": [
+     "raft",
+     "clique",
+     "cometbft",
+     "hotstuff"
+    ],
+    "first_screened": {
+     "TOPSIS": "cometbft",
+     "VIKOR": "cometbft",
+     "COPRAS": "cometbft",
+     "EDAS": "cometbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "cometbft",
+     "VIKOR": "cometbft",
+     "COPRAS": "qbft",
+     "EDAS": "cometbft"
+    }
+   },
+   "provisioned": {
+    "feasible": [
+     "raft",
+     "smartbft",
+     "ibft2",
+     "qbft",
+     "clique",
+     "cometbft",
+     "hotstuff"
+    ],
+    "first_screened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   }
+  },
+  {
+   "factors": {
+    "hw_fabric": 1.660866500923553,
+    "hw_besu": 1.727494793050922,
+    "hw_cometbft": 1.9484801137485643,
+    "hw_hotstuff": 0.682700436078029,
+    "app": 0.7126833763949857,
+    "net_cometbft": 0.355354937240955
+   },
+   "default": {
+    "feasible": [
+     "raft",
+     "clique",
+     "cometbft",
+     "hotstuff"
+    ],
+    "first_screened": {
+     "TOPSIS": "cometbft",
+     "VIKOR": "cometbft",
+     "COPRAS": "cometbft",
+     "EDAS": "cometbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "cometbft",
+     "VIKOR": "cometbft",
+     "COPRAS": "qbft",
+     "EDAS": "cometbft"
+    }
+   },
+   "provisioned": {
+    "feasible": [
+     "raft",
+     "ibft2",
+     "qbft",
+     "clique",
+     "cometbft",
+     "hotstuff"
+    ],
+    "first_screened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   }
+  },
+  {
+   "factors": {
+    "hw_fabric": 0.534791699995102,
+    "hw_besu": 1.7463066905271392,
+    "hw_cometbft": 0.6760885968672972,
+    "hw_hotstuff": 1.187986963950889,
+    "app": 0.929927111535839,
+    "net_cometbft": 0.4997897213719811
+   },
+   "default": {
+    "feasible": [
+     "raft",
+     "smartbft",
+     "clique",
+     "cometbft"
+    ],
+    "first_screened": {
+     "TOPSIS": "cometbft",
+     "VIKOR": "cometbft",
+     "COPRAS": "cometbft",
+     "EDAS": "cometbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "cometbft",
+     "VIKOR": "cometbft",
+     "COPRAS": "qbft",
+     "EDAS": "cometbft"
+    }
+   },
+   "provisioned": {
+    "feasible": [
+     "raft",
+     "smartbft",
+     "ibft2",
+     "qbft",
+     "clique",
+     "cometbft",
+     "hotstuff"
+    ],
+    "first_screened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   }
+  },
+  {
+   "factors": {
+    "hw_fabric": 1.5350595637763071,
+    "hw_besu": 0.553601765643157,
+    "hw_cometbft": 0.618381357077587,
+    "hw_hotstuff": 1.027591647065073,
+    "app": 0.934401773113123,
+    "net_cometbft": 0.37728784096897794
+   },
+   "default": {
+    "feasible": [
+     "raft",
+     "clique",
+     "cometbft"
+    ],
+    "first_screened": {
+     "TOPSIS": "cometbft",
+     "VIKOR": "cometbft",
+     "COPRAS": "cometbft",
+     "EDAS": "cometbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "cometbft",
+     "VIKOR": "cometbft",
+     "COPRAS": "qbft",
+     "EDAS": "cometbft"
+    }
+   },
+   "provisioned": {
+    "feasible": [
+     "raft",
+     "ibft2",
+     "qbft",
+     "clique",
+     "cometbft",
+     "hotstuff"
+    ],
+    "first_screened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   }
+  },
+  {
+   "factors": {
+    "hw_fabric": 0.6396601178463297,
+    "hw_besu": 0.786330590747178,
+    "hw_cometbft": 0.8233624299882114,
+    "hw_hotstuff": 0.931378669600981,
+    "app": 0.697629034400154,
+    "net_cometbft": 0.3918472299035051
+   },
+   "default": {
+    "feasible": [
+     "raft",
+     "smartbft",
+     "clique",
+     "cometbft",
+     "hotstuff"
+    ],
+    "first_screened": {
+     "TOPSIS": "cometbft",
+     "VIKOR": "cometbft",
+     "COPRAS": "cometbft",
+     "EDAS": "cometbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "cometbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   },
+   "provisioned": {
+    "feasible": [
+     "raft",
+     "smartbft",
+     "ibft2",
+     "qbft",
+     "clique",
+     "cometbft",
+     "hotstuff"
+    ],
+    "first_screened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   }
+  },
+  {
+   "factors": {
+    "hw_fabric": 0.8061614857329756,
+    "hw_besu": 1.240121260341697,
+    "hw_cometbft": 0.9544265170431006,
+    "hw_hotstuff": 0.5026652864804748,
+    "app": 0.6404217789616837,
+    "net_cometbft": 0.20705219612466744
+   },
+   "default": {
+    "feasible": [
+     "raft",
+     "smartbft",
+     "clique",
+     "cometbft",
+     "hotstuff"
+    ],
+    "first_screened": {
+     "TOPSIS": "cometbft",
+     "VIKOR": "cometbft",
+     "COPRAS": "cometbft",
+     "EDAS": "cometbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "cometbft",
+     "VIKOR": "cometbft",
+     "COPRAS": "qbft",
+     "EDAS": "cometbft"
+    }
+   },
+   "provisioned": {
+    "feasible": [
+     "raft",
+     "smartbft",
+     "ibft2",
+     "qbft",
+     "clique",
+     "cometbft",
+     "hotstuff"
+    ],
+    "first_screened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   }
+  },
+  {
+   "factors": {
+    "hw_fabric": 0.9347902018160378,
+    "hw_besu": 0.7347545947505781,
+    "hw_cometbft": 1.0033395243687402,
+    "hw_hotstuff": 0.9475556504923486,
+    "app": 1.4647886612877274,
+    "net_cometbft": 0.31170503353578277
+   },
+   "default": {
+    "feasible": [
+     "clique"
+    ],
+    "first_screened": {
+     "TOPSIS": "clique",
+     "VIKOR": "clique",
+     "COPRAS": "clique",
+     "EDAS": "clique"
+    },
+    "first_unscreened": {
+     "TOPSIS": "clique",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "clique"
+    }
+   },
+   "provisioned": {
+    "feasible": [
+     "ibft2",
+     "qbft",
+     "clique"
+    ],
+    "first_screened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   }
+  },
+  {
+   "factors": {
+    "hw_fabric": 0.8532461043659836,
+    "hw_besu": 1.8802483887627284,
+    "hw_cometbft": 0.549671436714289,
+    "hw_hotstuff": 0.6055769651284533,
+    "app": 1.845979932641758,
+    "net_cometbft": 0.1348158390066003
+   },
+   "default": {
+    "feasible": [
+     "clique"
+    ],
+    "first_screened": {
+     "TOPSIS": "clique",
+     "VIKOR": "clique",
+     "COPRAS": "clique",
+     "EDAS": "clique"
+    },
+    "first_unscreened": {
+     "TOPSIS": "raft",
+     "VIKOR": "raft",
+     "COPRAS": "raft",
+     "EDAS": "raft"
+    }
+   },
+   "provisioned": {
+    "feasible": [
+     "ibft2",
+     "qbft",
+     "clique"
+    ],
+    "first_screened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   }
+  },
+  {
+   "factors": {
+    "hw_fabric": 0.6522200142392084,
+    "hw_besu": 0.9605704070496858,
+    "hw_cometbft": 0.8965678301376381,
+    "hw_hotstuff": 1.4109569545499219,
+    "app": 0.831956273526093,
+    "net_cometbft": 0.63095967143414
+   },
+   "default": {
+    "feasible": [
+     "raft",
+     "smartbft",
+     "clique",
+     "cometbft",
+     "hotstuff"
+    ],
+    "first_screened": {
+     "TOPSIS": "cometbft",
+     "VIKOR": "cometbft",
+     "COPRAS": "cometbft",
+     "EDAS": "cometbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "cometbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   },
+   "provisioned": {
+    "feasible": [
+     "raft",
+     "smartbft",
+     "ibft2",
+     "qbft",
+     "clique",
+     "cometbft",
+     "hotstuff"
+    ],
+    "first_screened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   }
+  },
+  {
+   "factors": {
+    "hw_fabric": 0.8884107203856292,
+    "hw_besu": 0.5109844710464955,
+    "hw_cometbft": 1.3358044020006097,
+    "hw_hotstuff": 1.7579165369432133,
+    "app": 0.6568612291460122,
+    "net_cometbft": 0.713795997383964
+   },
+   "default": {
+    "feasible": [
+     "raft",
+     "smartbft",
+     "clique",
+     "cometbft",
+     "hotstuff"
+    ],
+    "first_screened": {
+     "TOPSIS": "cometbft",
+     "VIKOR": "cometbft",
+     "COPRAS": "cometbft",
+     "EDAS": "cometbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "cometbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   },
+   "provisioned": {
+    "feasible": [
+     "raft",
+     "smartbft",
+     "ibft2",
+     "qbft",
+     "clique",
+     "cometbft",
+     "hotstuff"
+    ],
+    "first_screened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   }
+  },
+  {
+   "factors": {
+    "hw_fabric": 1.1694493227782508,
+    "hw_besu": 1.469806770152244,
+    "hw_cometbft": 0.5932396005007492,
+    "hw_hotstuff": 0.7683401319504229,
+    "app": 1.2634250592622374,
+    "net_cometbft": 0.8025513587110507
+   },
+   "default": {
+    "feasible": [
+     "clique"
+    ],
+    "first_screened": {
+     "TOPSIS": "clique",
+     "VIKOR": "clique",
+     "COPRAS": "clique",
+     "EDAS": "clique"
+    },
+    "first_unscreened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   },
+   "provisioned": {
+    "feasible": [
+     "ibft2",
+     "qbft",
+     "clique"
+    ],
+    "first_screened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   }
+  },
+  {
+   "factors": {
+    "hw_fabric": 1.3307334828450668,
+    "hw_besu": 0.6869885442627772,
+    "hw_cometbft": 1.100431548379224,
+    "hw_hotstuff": 1.3032856300162061,
+    "app": 1.7200908125130754,
+    "net_cometbft": 0.5473053866354958
+   },
+   "default": {
+    "feasible": [
+     "clique"
+    ],
+    "first_screened": {
+     "TOPSIS": "clique",
+     "VIKOR": "clique",
+     "COPRAS": "clique",
+     "EDAS": "clique"
+    },
+    "first_unscreened": {
+     "TOPSIS": "clique",
+     "VIKOR": "clique",
+     "COPRAS": "qbft",
+     "EDAS": "clique"
+    }
+   },
+   "provisioned": {
+    "feasible": [
+     "ibft2",
+     "qbft",
+     "clique"
+    ],
+    "first_screened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   }
+  },
+  {
+   "factors": {
+    "hw_fabric": 1.8350667374805558,
+    "hw_besu": 0.9677315738923523,
+    "hw_cometbft": 1.9805981477482153,
+    "hw_hotstuff": 0.8687810584497657,
+    "app": 0.6480470303468621,
+    "net_cometbft": 0.6895983690894587
+   },
+   "default": {
+    "feasible": [
+     "raft",
+     "clique",
+     "cometbft",
+     "hotstuff"
+    ],
+    "first_screened": {
+     "TOPSIS": "cometbft",
+     "VIKOR": "cometbft",
+     "COPRAS": "cometbft",
+     "EDAS": "cometbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "cometbft",
+     "VIKOR": "cometbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   },
+   "provisioned": {
+    "feasible": [
+     "raft",
+     "ibft2",
+     "qbft",
+     "clique",
+     "cometbft",
+     "hotstuff"
+    ],
+    "first_screened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   }
+  },
+  {
+   "factors": {
+    "hw_fabric": 0.6034442266358594,
+    "hw_besu": 0.7491028545661916,
+    "hw_cometbft": 1.1817781933381597,
+    "hw_hotstuff": 0.726050182290223,
+    "app": 0.5249931294600543,
+    "net_cometbft": 0.17712310373624765
+   },
+   "default": {
+    "feasible": [
+     "raft",
+     "smartbft",
+     "clique",
+     "cometbft",
+     "hotstuff"
+    ],
+    "first_screened": {
+     "TOPSIS": "cometbft",
+     "VIKOR": "cometbft",
+     "COPRAS": "cometbft",
+     "EDAS": "cometbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "cometbft",
+     "VIKOR": "cometbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   },
+   "provisioned": {
+    "feasible": [
+     "raft",
+     "smartbft",
+     "ibft2",
+     "qbft",
+     "clique",
+     "cometbft",
+     "hotstuff"
+    ],
+    "first_screened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   }
+  },
+  {
+   "factors": {
+    "hw_fabric": 1.6872984025743598,
+    "hw_besu": 0.7720804989893643,
+    "hw_cometbft": 0.5061959809126869,
+    "hw_hotstuff": 0.7785996813356051,
+    "app": 1.7690794479454857,
+    "net_cometbft": 0.12777734406723923
+   },
+   "default": {
+    "feasible": [
+     "clique"
+    ],
+    "first_screened": {
+     "TOPSIS": "clique",
+     "VIKOR": "clique",
+     "COPRAS": "clique",
+     "EDAS": "clique"
+    },
+    "first_unscreened": {
+     "TOPSIS": "raft",
+     "VIKOR": "raft",
+     "COPRAS": "raft",
+     "EDAS": "raft"
+    }
+   },
+   "provisioned": {
+    "feasible": [
+     "ibft2",
+     "qbft",
+     "clique"
+    ],
+    "first_screened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   }
+  },
+  {
+   "factors": {
+    "hw_fabric": 0.9699272020115054,
+    "hw_besu": 0.5040086413975213,
+    "hw_cometbft": 1.6731702111277085,
+    "hw_hotstuff": 1.0142551510719602,
+    "app": 1.1002241419334968,
+    "net_cometbft": 0.19791864349216734
+   },
+   "default": {
+    "feasible": [
+     "clique"
+    ],
+    "first_screened": {
+     "TOPSIS": "clique",
+     "VIKOR": "clique",
+     "COPRAS": "clique",
+     "EDAS": "clique"
+    },
+    "first_unscreened": {
+     "TOPSIS": "cometbft",
+     "VIKOR": "cometbft",
+     "COPRAS": "qbft",
+     "EDAS": "cometbft"
+    }
+   },
+   "provisioned": {
+    "feasible": [
+     "ibft2",
+     "qbft",
+     "clique"
+    ],
+    "first_screened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   }
+  },
+  {
+   "factors": {
+    "hw_fabric": 0.7744893429986773,
+    "hw_besu": 0.5322798378490312,
+    "hw_cometbft": 1.0414079172804749,
+    "hw_hotstuff": 0.6487257501922793,
+    "app": 0.6676630767871032,
+    "net_cometbft": 0.23640860948562253
+   },
+   "default": {
+    "feasible": [
+     "raft",
+     "smartbft",
+     "clique",
+     "cometbft",
+     "hotstuff"
+    ],
+    "first_screened": {
+     "TOPSIS": "cometbft",
+     "VIKOR": "cometbft",
+     "COPRAS": "cometbft",
+     "EDAS": "cometbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "cometbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   },
+   "provisioned": {
+    "feasible": [
+     "raft",
+     "smartbft",
+     "ibft2",
+     "qbft",
+     "clique",
+     "cometbft",
+     "hotstuff"
+    ],
+    "first_screened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   }
+  },
+  {
+   "factors": {
+    "hw_fabric": 0.7277605603798257,
+    "hw_besu": 0.9305646435148447,
+    "hw_cometbft": 0.832923031340905,
+    "hw_hotstuff": 0.5731936628007287,
+    "app": 1.6254583481717304,
+    "net_cometbft": 0.1097838964460083
+   },
+   "default": {
+    "feasible": [
+     "clique"
+    ],
+    "first_screened": {
+     "TOPSIS": "clique",
+     "VIKOR": "clique",
+     "COPRAS": "clique",
+     "EDAS": "clique"
+    },
+    "first_unscreened": {
+     "TOPSIS": "raft",
+     "VIKOR": "raft",
+     "COPRAS": "raft",
+     "EDAS": "raft"
+    }
+   },
+   "provisioned": {
+    "feasible": [
+     "ibft2",
+     "qbft",
+     "clique"
+    ],
+    "first_screened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   }
+  },
+  {
+   "factors": {
+    "hw_fabric": 1.4663673611676147,
+    "hw_besu": 1.9526047493623153,
+    "hw_cometbft": 1.016333489078402,
+    "hw_hotstuff": 1.1546989952824114,
+    "app": 0.5777004146597979,
+    "net_cometbft": 0.11816131035965147
+   },
+   "default": {
+    "feasible": [
+     "raft",
+     "clique",
+     "cometbft",
+     "hotstuff"
+    ],
+    "first_screened": {
+     "TOPSIS": "cometbft",
+     "VIKOR": "cometbft",
+     "COPRAS": "cometbft",
+     "EDAS": "cometbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "cometbft",
+     "VIKOR": "cometbft",
+     "COPRAS": "cometbft",
+     "EDAS": "cometbft"
+    }
+   },
+   "provisioned": {
+    "feasible": [
+     "raft",
+     "ibft2",
+     "qbft",
+     "clique",
+     "cometbft",
+     "hotstuff"
+    ],
+    "first_screened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "cometbft",
+     "EDAS": "qbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "cometbft",
+     "EDAS": "qbft"
+    }
+   }
+  },
+  {
+   "factors": {
+    "hw_fabric": 1.264731255923113,
+    "hw_besu": 1.6582130379440128,
+    "hw_cometbft": 0.7586037621063279,
+    "hw_hotstuff": 1.1393360108833457,
+    "app": 1.200405013639068,
+    "net_cometbft": 0.16553638577263513
+   },
+   "default": {
+    "feasible": [
+     "clique"
+    ],
+    "first_screened": {
+     "TOPSIS": "clique",
+     "VIKOR": "clique",
+     "COPRAS": "clique",
+     "EDAS": "clique"
+    },
+    "first_unscreened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   },
+   "provisioned": {
+    "feasible": [
+     "ibft2",
+     "qbft",
+     "clique"
+    ],
+    "first_screened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   }
+  },
+  {
+   "factors": {
+    "hw_fabric": 1.821384439962299,
+    "hw_besu": 1.5919795134840207,
+    "hw_cometbft": 0.8701876360192837,
+    "hw_hotstuff": 1.397488719683364,
+    "app": 0.739114995251379,
+    "net_cometbft": 0.9119764324606819
+   },
+   "default": {
+    "feasible": [
+     "raft",
+     "clique",
+     "cometbft",
+     "hotstuff"
+    ],
+    "first_screened": {
+     "TOPSIS": "cometbft",
+     "VIKOR": "cometbft",
+     "COPRAS": "cometbft",
+     "EDAS": "cometbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "cometbft",
+     "VIKOR": "cometbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   },
+   "provisioned": {
+    "feasible": [
+     "raft",
+     "ibft2",
+     "qbft",
+     "clique",
+     "cometbft",
+     "hotstuff"
+    ],
+    "first_screened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   }
+  },
+  {
+   "factors": {
+    "hw_fabric": 0.5908376343502073,
+    "hw_besu": 1.583400597226654,
+    "hw_cometbft": 1.9756459590842104,
+    "hw_hotstuff": 1.9647813732837849,
+    "app": 0.5598830320397152,
+    "net_cometbft": 0.1842777636607242
+   },
+   "default": {
+    "feasible": [
+     "raft",
+     "smartbft",
+     "clique",
+     "cometbft",
+     "hotstuff"
+    ],
+    "first_screened": {
+     "TOPSIS": "cometbft",
+     "VIKOR": "cometbft",
+     "COPRAS": "cometbft",
+     "EDAS": "cometbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "cometbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   },
+   "provisioned": {
+    "feasible": [
+     "raft",
+     "smartbft",
+     "ibft2",
+     "qbft",
+     "clique",
+     "cometbft",
+     "hotstuff"
+    ],
+    "first_screened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   }
+  },
+  {
+   "factors": {
+    "hw_fabric": 0.6153727215032694,
+    "hw_besu": 0.5374589682000557,
+    "hw_cometbft": 0.6957674860181229,
+    "hw_hotstuff": 1.0496951260541902,
+    "app": 0.6991152921917739,
+    "net_cometbft": 0.1915031822979552
+   },
+   "default": {
+    "feasible": [
+     "raft",
+     "smartbft",
+     "clique",
+     "cometbft",
+     "hotstuff"
+    ],
+    "first_screened": {
+     "TOPSIS": "cometbft",
+     "VIKOR": "cometbft",
+     "COPRAS": "cometbft",
+     "EDAS": "cometbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "cometbft",
+     "VIKOR": "cometbft",
+     "COPRAS": "qbft",
+     "EDAS": "cometbft"
+    }
+   },
+   "provisioned": {
+    "feasible": [
+     "raft",
+     "smartbft",
+     "ibft2",
+     "qbft",
+     "clique",
+     "cometbft",
+     "hotstuff"
+    ],
+    "first_screened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   }
+  },
+  {
+   "factors": {
+    "hw_fabric": 0.9171852141871776,
+    "hw_besu": 0.9795477172957939,
+    "hw_cometbft": 0.9691161509647538,
+    "hw_hotstuff": 0.6092971556675549,
+    "app": 1.9201587763962733,
+    "net_cometbft": 0.2285602443851728
+   },
+   "default": {
+    "feasible": [
+     "clique"
+    ],
+    "first_screened": {
+     "TOPSIS": "clique",
+     "VIKOR": "clique",
+     "COPRAS": "clique",
+     "EDAS": "clique"
+    },
+    "first_unscreened": {
+     "TOPSIS": "raft",
+     "VIKOR": "raft",
+     "COPRAS": "raft",
+     "EDAS": "raft"
+    }
+   },
+   "provisioned": {
+    "feasible": [
+     "ibft2",
+     "qbft",
+     "clique"
+    ],
+    "first_screened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   }
+  },
+  {
+   "factors": {
+    "hw_fabric": 0.6011884082575405,
+    "hw_besu": 0.7172372188315965,
+    "hw_cometbft": 0.6265034609330934,
+    "hw_hotstuff": 0.5354721746038433,
+    "app": 0.8587981512062326,
+    "net_cometbft": 0.22789358006460825
+   },
+   "default": {
+    "feasible": [
+     "raft",
+     "smartbft",
+     "clique",
+     "cometbft"
+    ],
+    "first_screened": {
+     "TOPSIS": "cometbft",
+     "VIKOR": "cometbft",
+     "COPRAS": "cometbft",
+     "EDAS": "cometbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "cometbft",
+     "VIKOR": "qbft",
+     "COPRAS": "cometbft",
+     "EDAS": "cometbft"
+    }
+   },
+   "provisioned": {
+    "feasible": [
+     "raft",
+     "smartbft",
+     "ibft2",
+     "qbft",
+     "clique",
+     "cometbft",
+     "hotstuff"
+    ],
+    "first_screened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   }
+  },
+  {
+   "factors": {
+    "hw_fabric": 0.7928832416476781,
+    "hw_besu": 0.6314842897372769,
+    "hw_cometbft": 0.7502219229445486,
+    "hw_hotstuff": 0.6201983913588816,
+    "app": 1.9585281253383378,
+    "net_cometbft": 0.1430899047952196
+   },
+   "default": {
+    "feasible": [
+     "clique"
+    ],
+    "first_screened": {
+     "TOPSIS": "clique",
+     "VIKOR": "clique",
+     "COPRAS": "clique",
+     "EDAS": "clique"
+    },
+    "first_unscreened": {
+     "TOPSIS": "raft",
+     "VIKOR": "raft",
+     "COPRAS": "raft",
+     "EDAS": "raft"
+    }
+   },
+   "provisioned": {
+    "feasible": [
+     "ibft2",
+     "qbft",
+     "clique"
+    ],
+    "first_screened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   }
+  },
+  {
+   "factors": {
+    "hw_fabric": 1.5005662892609077,
+    "hw_besu": 1.1885944828081918,
+    "hw_cometbft": 0.9607705276191911,
+    "hw_hotstuff": 1.5048114213315753,
+    "app": 0.8905904883775669,
+    "net_cometbft": 0.6005744828196723
+   },
+   "default": {
+    "feasible": [
+     "raft",
+     "clique",
+     "cometbft",
+     "hotstuff"
+    ],
+    "first_screened": {
+     "TOPSIS": "cometbft",
+     "VIKOR": "cometbft",
+     "COPRAS": "cometbft",
+     "EDAS": "cometbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "cometbft",
+     "VIKOR": "cometbft",
+     "COPRAS": "qbft",
+     "EDAS": "cometbft"
+    }
+   },
+   "provisioned": {
+    "feasible": [
+     "raft",
+     "ibft2",
+     "qbft",
+     "clique",
+     "cometbft",
+     "hotstuff"
+    ],
+    "first_screened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   }
+  },
+  {
+   "factors": {
+    "hw_fabric": 0.621427655151319,
+    "hw_besu": 1.792315413758127,
+    "hw_cometbft": 1.389893656032971,
+    "hw_hotstuff": 1.2644105117453606,
+    "app": 1.1416850975150246,
+    "net_cometbft": 0.8249085893437837
+   },
+   "default": {
+    "feasible": [
+     "clique"
+    ],
+    "first_screened": {
+     "TOPSIS": "clique",
+     "VIKOR": "clique",
+     "COPRAS": "clique",
+     "EDAS": "clique"
+    },
+    "first_unscreened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   },
+   "provisioned": {
+    "feasible": [
+     "ibft2",
+     "qbft",
+     "clique"
+    ],
+    "first_screened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   }
+  },
+  {
+   "factors": {
+    "hw_fabric": 0.7320644471819497,
+    "hw_besu": 0.6238803240183142,
+    "hw_cometbft": 0.5323468910370202,
+    "hw_hotstuff": 1.3626022664687527,
+    "app": 1.3397317012826697,
+    "net_cometbft": 0.7649099268664931
+   },
+   "default": {
+    "feasible": [
+     "clique"
+    ],
+    "first_screened": {
+     "TOPSIS": "clique",
+     "VIKOR": "clique",
+     "COPRAS": "clique",
+     "EDAS": "clique"
+    },
+    "first_unscreened": {
+     "TOPSIS": "clique",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   },
+   "provisioned": {
+    "feasible": [
+     "ibft2",
+     "qbft",
+     "clique"
+    ],
+    "first_screened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   }
+  },
+  {
+   "factors": {
+    "hw_fabric": 0.52062960628879,
+    "hw_besu": 0.7131453746017791,
+    "hw_cometbft": 0.7679128916909692,
+    "hw_hotstuff": 1.039875059253557,
+    "app": 0.5097410479962888,
+    "net_cometbft": 0.6463044925401039
+   },
+   "default": {
+    "feasible": [
+     "raft",
+     "smartbft",
+     "clique",
+     "cometbft",
+     "hotstuff"
+    ],
+    "first_screened": {
+     "TOPSIS": "cometbft",
+     "VIKOR": "cometbft",
+     "COPRAS": "cometbft",
+     "EDAS": "cometbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "cometbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   },
+   "provisioned": {
+    "feasible": [
+     "raft",
+     "smartbft",
+     "ibft2",
+     "qbft",
+     "clique",
+     "cometbft",
+     "hotstuff"
+    ],
+    "first_screened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   }
+  },
+  {
+   "factors": {
+    "hw_fabric": 0.6992305927379946,
+    "hw_besu": 0.6664393888096973,
+    "hw_cometbft": 1.3099821169035413,
+    "hw_hotstuff": 1.124076093156626,
+    "app": 1.3945944337244311,
+    "net_cometbft": 0.5370296188612562
+   },
+   "default": {
+    "feasible": [
+     "clique"
+    ],
+    "first_screened": {
+     "TOPSIS": "clique",
+     "VIKOR": "clique",
+     "COPRAS": "clique",
+     "EDAS": "clique"
+    },
+    "first_unscreened": {
+     "TOPSIS": "clique",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   },
+   "provisioned": {
+    "feasible": [
+     "ibft2",
+     "qbft",
+     "clique"
+    ],
+    "first_screened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   }
+  },
+  {
+   "factors": {
+    "hw_fabric": 1.387504386191626,
+    "hw_besu": 1.132842531403403,
+    "hw_cometbft": 0.6601504310782421,
+    "hw_hotstuff": 0.9405702583515037,
+    "app": 1.3781326003274958,
+    "net_cometbft": 0.262952780816332
+   },
+   "default": {
+    "feasible": [
+     "clique"
+    ],
+    "first_screened": {
+     "TOPSIS": "clique",
+     "VIKOR": "clique",
+     "COPRAS": "clique",
+     "EDAS": "clique"
+    },
+    "first_unscreened": {
+     "TOPSIS": "clique",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   },
+   "provisioned": {
+    "feasible": [
+     "ibft2",
+     "qbft",
+     "clique"
+    ],
+    "first_screened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   }
+  },
+  {
+   "factors": {
+    "hw_fabric": 1.2997565225151155,
+    "hw_besu": 0.8857853741199271,
+    "hw_cometbft": 0.601161445517757,
+    "hw_hotstuff": 1.2844965338074612,
+    "app": 1.870861587287912,
+    "net_cometbft": 0.5792978939262409
+   },
+   "default": {
+    "feasible": [
+     "clique"
+    ],
+    "first_screened": {
+     "TOPSIS": "clique",
+     "VIKOR": "clique",
+     "COPRAS": "clique",
+     "EDAS": "clique"
+    },
+    "first_unscreened": {
+     "TOPSIS": "clique",
+     "VIKOR": "clique",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   },
+   "provisioned": {
+    "feasible": [
+     "ibft2",
+     "qbft",
+     "clique"
+    ],
+    "first_screened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   }
+  },
+  {
+   "factors": {
+    "hw_fabric": 0.8773925174873886,
+    "hw_besu": 1.4514164149221978,
+    "hw_cometbft": 1.1501794295543943,
+    "hw_hotstuff": 0.5530699718128554,
+    "app": 0.5843225293410602,
+    "net_cometbft": 0.12361203777317196
+   },
+   "default": {
+    "feasible": [
+     "raft",
+     "smartbft",
+     "clique",
+     "cometbft",
+     "hotstuff"
+    ],
+    "first_screened": {
+     "TOPSIS": "cometbft",
+     "VIKOR": "cometbft",
+     "COPRAS": "cometbft",
+     "EDAS": "cometbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "cometbft",
+     "VIKOR": "cometbft",
+     "COPRAS": "cometbft",
+     "EDAS": "cometbft"
+    }
+   },
+   "provisioned": {
+    "feasible": [
+     "raft",
+     "smartbft",
+     "ibft2",
+     "qbft",
+     "clique",
+     "cometbft",
+     "hotstuff"
+    ],
+    "first_screened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   }
+  },
+  {
+   "factors": {
+    "hw_fabric": 0.6807595361668387,
+    "hw_besu": 0.674810946909252,
+    "hw_cometbft": 1.7681979387430913,
+    "hw_hotstuff": 0.8288119692657284,
+    "app": 0.7537183272299375,
+    "net_cometbft": 0.18691008498205816
+   },
+   "default": {
+    "feasible": [
+     "raft",
+     "smartbft",
+     "clique",
+     "cometbft",
+     "hotstuff"
+    ],
+    "first_screened": {
+     "TOPSIS": "cometbft",
+     "VIKOR": "cometbft",
+     "COPRAS": "cometbft",
+     "EDAS": "cometbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "cometbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   },
+   "provisioned": {
+    "feasible": [
+     "raft",
+     "smartbft",
+     "ibft2",
+     "qbft",
+     "clique",
+     "cometbft",
+     "hotstuff"
+    ],
+    "first_screened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   }
+  },
+  {
+   "factors": {
+    "hw_fabric": 1.6344119774299892,
+    "hw_besu": 0.5285701484182121,
+    "hw_cometbft": 1.7052365161872585,
+    "hw_hotstuff": 0.8834256238283639,
+    "app": 0.7891480731124054,
+    "net_cometbft": 0.8834382145232246
+   },
+   "default": {
+    "feasible": [
+     "raft",
+     "clique",
+     "cometbft",
+     "hotstuff"
+    ],
+    "first_screened": {
+     "TOPSIS": "cometbft",
+     "VIKOR": "cometbft",
+     "COPRAS": "cometbft",
+     "EDAS": "cometbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "cometbft",
+     "VIKOR": "cometbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   },
+   "provisioned": {
+    "feasible": [
+     "raft",
+     "ibft2",
+     "qbft",
+     "clique",
+     "cometbft",
+     "hotstuff"
+    ],
+    "first_screened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   }
+  },
+  {
+   "factors": {
+    "hw_fabric": 1.1305088481955112,
+    "hw_besu": 1.7038770893573727,
+    "hw_cometbft": 0.8160414623238094,
+    "hw_hotstuff": 1.610216110609158,
+    "app": 1.1188416895342357,
+    "net_cometbft": 0.7633533688369812
+   },
+   "default": {
+    "feasible": [
+     "clique"
+    ],
+    "first_screened": {
+     "TOPSIS": "clique",
+     "VIKOR": "clique",
+     "COPRAS": "clique",
+     "EDAS": "clique"
+    },
+    "first_unscreened": {
+     "TOPSIS": "cometbft",
+     "VIKOR": "cometbft",
+     "COPRAS": "qbft",
+     "EDAS": "cometbft"
+    }
+   },
+   "provisioned": {
+    "feasible": [
+     "ibft2",
+     "qbft",
+     "clique"
+    ],
+    "first_screened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   }
+  },
+  {
+   "factors": {
+    "hw_fabric": 0.5240437508195371,
+    "hw_besu": 1.3974241637139133,
+    "hw_cometbft": 0.5239767228762214,
+    "hw_hotstuff": 0.6372289901112023,
+    "app": 1.053659557203878,
+    "net_cometbft": 0.45222107088247554
+   },
+   "default": {
+    "feasible": [
+     "clique",
+     "cometbft"
+    ],
+    "first_screened": {
+     "TOPSIS": "cometbft",
+     "VIKOR": "cometbft",
+     "COPRAS": "cometbft",
+     "EDAS": "cometbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "cometbft",
+     "VIKOR": "cometbft",
+     "COPRAS": "cometbft",
+     "EDAS": "cometbft"
+    }
+   },
+   "provisioned": {
+    "feasible": [
+     "raft",
+     "smartbft",
+     "ibft2",
+     "qbft",
+     "clique",
+     "cometbft",
+     "hotstuff"
+    ],
+    "first_screened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   }
+  },
+  {
+   "factors": {
+    "hw_fabric": 1.9020861260771151,
+    "hw_besu": 0.645528787790046,
+    "hw_cometbft": 0.7392888811226103,
+    "hw_hotstuff": 1.9388996726627723,
+    "app": 0.7628311135876027,
+    "net_cometbft": 0.24244488251677174
+   },
+   "default": {
+    "feasible": [
+     "raft",
+     "clique",
+     "cometbft",
+     "hotstuff"
+    ],
+    "first_screened": {
+     "TOPSIS": "cometbft",
+     "VIKOR": "cometbft",
+     "COPRAS": "cometbft",
+     "EDAS": "cometbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "cometbft",
+     "VIKOR": "cometbft",
+     "COPRAS": "qbft",
+     "EDAS": "cometbft"
+    }
+   },
+   "provisioned": {
+    "feasible": [
+     "raft",
+     "ibft2",
+     "qbft",
+     "clique",
+     "cometbft",
+     "hotstuff"
+    ],
+    "first_screened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   }
+  },
+  {
+   "factors": {
+    "hw_fabric": 0.9562706782807412,
+    "hw_besu": 0.5618954897211125,
+    "hw_cometbft": 0.7054571884925894,
+    "hw_hotstuff": 0.5798103885633992,
+    "app": 1.4565937131761661,
+    "net_cometbft": 0.11346188234942658
+   },
+   "default": {
+    "feasible": [
+     "clique"
+    ],
+    "first_screened": {
+     "TOPSIS": "clique",
+     "VIKOR": "clique",
+     "COPRAS": "clique",
+     "EDAS": "clique"
+    },
+    "first_unscreened": {
+     "TOPSIS": "raft",
+     "VIKOR": "raft",
+     "COPRAS": "raft",
+     "EDAS": "raft"
+    }
+   },
+   "provisioned": {
+    "feasible": [
+     "ibft2",
+     "qbft",
+     "clique"
+    ],
+    "first_screened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   }
+  },
+  {
+   "factors": {
+    "hw_fabric": 0.9866396454937852,
+    "hw_besu": 1.9047840031448702,
+    "hw_cometbft": 1.7610985231896523,
+    "hw_hotstuff": 1.1751341250729317,
+    "app": 0.8073375623311928,
+    "net_cometbft": 0.6140487569577938
+   },
+   "default": {
+    "feasible": [
+     "raft",
+     "clique",
+     "cometbft",
+     "hotstuff"
+    ],
+    "first_screened": {
+     "TOPSIS": "cometbft",
+     "VIKOR": "cometbft",
+     "COPRAS": "cometbft",
+     "EDAS": "cometbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "cometbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   },
+   "provisioned": {
+    "feasible": [
+     "raft",
+     "smartbft",
+     "ibft2",
+     "qbft",
+     "clique",
+     "cometbft",
+     "hotstuff"
+    ],
+    "first_screened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   }
+  },
+  {
+   "factors": {
+    "hw_fabric": 0.5767681801670519,
+    "hw_besu": 0.8673769279189308,
+    "hw_cometbft": 0.6446130007516852,
+    "hw_hotstuff": 1.839233781263507,
+    "app": 0.5411419161381308,
+    "net_cometbft": 0.11199299548232379
+   },
+   "default": {
+    "feasible": [
+     "raft",
+     "smartbft",
+     "clique",
+     "cometbft",
+     "hotstuff"
+    ],
+    "first_screened": {
+     "TOPSIS": "cometbft",
+     "VIKOR": "cometbft",
+     "COPRAS": "cometbft",
+     "EDAS": "cometbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "cometbft",
+     "VIKOR": "cometbft",
+     "COPRAS": "qbft",
+     "EDAS": "cometbft"
+    }
+   },
+   "provisioned": {
+    "feasible": [
+     "raft",
+     "smartbft",
+     "ibft2",
+     "qbft",
+     "clique",
+     "cometbft",
+     "hotstuff"
+    ],
+    "first_screened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   }
+  },
+  {
+   "factors": {
+    "hw_fabric": 0.9113120308187473,
+    "hw_besu": 0.8373950844195572,
+    "hw_cometbft": 0.8046428123288116,
+    "hw_hotstuff": 1.977591043671367,
+    "app": 0.9954518804136134,
+    "net_cometbft": 0.1328433907908264
+   },
+   "default": {
+    "feasible": [
+     "raft",
+     "smartbft",
+     "clique",
+     "cometbft"
+    ],
+    "first_screened": {
+     "TOPSIS": "cometbft",
+     "VIKOR": "cometbft",
+     "COPRAS": "cometbft",
+     "EDAS": "cometbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "cometbft",
+     "VIKOR": "cometbft",
+     "COPRAS": "qbft",
+     "EDAS": "cometbft"
+    }
+   },
+   "provisioned": {
+    "feasible": [
+     "raft",
+     "smartbft",
+     "ibft2",
+     "qbft",
+     "clique",
+     "cometbft",
+     "hotstuff"
+    ],
+    "first_screened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   }
+  },
+  {
+   "factors": {
+    "hw_fabric": 0.6699216140582073,
+    "hw_besu": 1.2005182564853858,
+    "hw_cometbft": 0.6594255961089188,
+    "hw_hotstuff": 0.6721280002158673,
+    "app": 0.8431392086966246,
+    "net_cometbft": 0.37458009067163656
+   },
+   "default": {
+    "feasible": [
+     "raft",
+     "smartbft",
+     "clique",
+     "cometbft"
+    ],
+    "first_screened": {
+     "TOPSIS": "cometbft",
+     "VIKOR": "cometbft",
+     "COPRAS": "cometbft",
+     "EDAS": "cometbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "cometbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "cometbft"
+    }
+   },
+   "provisioned": {
+    "feasible": [
+     "raft",
+     "smartbft",
+     "ibft2",
+     "qbft",
+     "clique",
+     "cometbft",
+     "hotstuff"
+    ],
+    "first_screened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   }
+  },
+  {
+   "factors": {
+    "hw_fabric": 0.8349972226680065,
+    "hw_besu": 0.6022633404072031,
+    "hw_cometbft": 0.5038929062627334,
+    "hw_hotstuff": 1.3435834938704692,
+    "app": 1.0287815326845926,
+    "net_cometbft": 0.24874389011567744
+   },
+   "default": {
+    "feasible": [
+     "clique",
+     "cometbft"
+    ],
+    "first_screened": {
+     "TOPSIS": "cometbft",
+     "VIKOR": "cometbft",
+     "COPRAS": "cometbft",
+     "EDAS": "cometbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "cometbft",
+     "VIKOR": "cometbft",
+     "COPRAS": "cometbft",
+     "EDAS": "cometbft"
+    }
+   },
+   "provisioned": {
+    "feasible": [
+     "raft",
+     "smartbft",
+     "ibft2",
+     "qbft",
+     "clique",
+     "cometbft",
+     "hotstuff"
+    ],
+    "first_screened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    }
+   }
+  }
+ ]
+}

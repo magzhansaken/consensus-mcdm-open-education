@@ -1,0 +1,35 @@
+{
+ "n_presentations": 22,
+ "n_enrolments": 32593,
+ "active_share_daily_mean": 0.20894268763493468,
+ "active_share_daily_median": 0.18912801637173632,
+ "rows_per_active_learner_day_mean": 5.865520558930656,
+ "clicks_per_active_learner_day_mean": 22.048933516880144,
+ "daily_rows_peak_to_mean_median": 3.309695552250729,
+ "daily_rows_peak_to_mean_range": [
+  2.765378758739877,
+  4.18195363073834
+ ],
+ "daily_rows_p95_to_mean_median": 2.0908039551105295,
+ "deadline_day_rows_ratio_median": 1.6933320386733435,
+ "deadline_day_rows_ratio_iqr": [
+  1.399002536194871,
+  2.0076043297966435
+ ],
+ "deadline_day_rows_ratio_median_TMA": 1.5947816614093728,
+ "deadline_day_rows_ratio_median_CMA": 1.9207205707601043,
+ "deadline_eve_rows_ratio_median": 2.040300915971943,
+ "submissions": 167044,
+ "share_submitted_on_or_day_before_deadline": 0.33114029836450276,
+ "share_submitted_on_deadline_day": 0.17641459735159598,
+ "share_submitted_within_3_days_before": 0.4270551471468595,
+ "submissions_per_enrolment": 5.125149571993987,
+ "registration_busiest_day_share_median": 0.04597959969207083,
+ "registration_busiest_day_share_range": [
+  0.029487842731505433,
+  0.0792507204610951
+ ],
+ "registration_p10_p90_span_days_median": 115.5,
+ "share_registered_before_start": 0.992749170455942,
+ "unregistration_share": 0.30902340993464855
+}

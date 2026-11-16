@@ -43,22 +43,24 @@ box(x3, yt, bw, bh, "3  Decision matrix", [
     "C9 decentralisation, C10 manageability,", "C11 cost; means with 95 % CI (Eq. 1)"], sub="Sections 3.3, 4.2")
 box(x1, yb, bw, bh, "4  Objective weights", [
     "Entropy weights (dispersion)", "CRITIC weights (contrast, conflict)",
-    "Combined: normalised geometric mean", "Weight scenarios: equal, group", "emphasis, six published scenarios"], sub="Sections 3.6, 4.3")
-box(x2, yb, bw, bh, "5  Ranking", [
-    "TOPSIS, VIKOR, COPRAS, EDAS", "Scores and ranks per method (Eq. 2)",
-    "Agreement: Spearman, Kendall, WS", "Per-seed rankings: share of seeds", "with the same first place"], sub="Sections 3.6, 4.4")
+    "Combined: normalised geometric mean", "Weight scenarios: equal, group", "emphasis, six published scenarios",
+    "24 priority orders of the criterion groups"], sub="Sections 3.6, 4.3, 4.12")
+box(x2, yb, bw, bh, "5  Screen and ranking", [
+    "Peak-load screen: at least 99 % committed", "within 30 s at the busiest hour (Eq. 18)",
+    "TOPSIS, VIKOR, COPRAS, EDAS (Eq. 2),", "with and without the screen",
+    "Agreement: Spearman, Kendall, WS", "Per-seed rankings"], sub="Sections 3.6, 3.8, 4.4, 4.7")
 box(x3, yb, bw, bh, "6  Robustness and comparison", [
-    "SMAA-2: 10 000 weights × 30 seed", "matrices → rank acceptability (Eq. 3)",
-    "Leave-one-out rank reversal, weight", "perturbations, single-weight sweeps",
-    "Six deployment ablations; published", "scenarios reproduced, weights transferred"], sub="Sections 3.7, 4.5–4.7")
+    "SMAA-2 rank acceptability (Eq. 3); rank", "reversal, weight perturbations, sweeps",
+    "Seven deployment ablations", "Validation errors, environments, workload,",
+    "ordinal scores and priorities propagated", "Published scenarios reproduced"], sub="Sections 3.7, 4.5–4.13")
 
 # output strip
 oy, oh = 0.8, yb - 0.8 - 3.0
 ax.add_patch(FancyBboxPatch((x1, oy), 3 * bw + 2 * gap, oh, boxstyle="round,pad=0.3,rounding_size=1.0", fc="#fff4e5", ec=ORANGE, lw=1.0))
 ax.text(x1 + 1.5, oy + oh / 2, "Output", ha="left", va="center", fontsize=8.0, fontweight="bold", color=ORANGE)
 ax.text(x1 + 11.5, oy + oh / 2,
-        "ranked shortlist with rank-acceptability indices; conditions that change the first place; "
-        "one table of assumptions; open code and data",
+        "conditional recommendation with rank-acceptability indices; conditions that change the first place; "
+        "assumption table; open code and data",
         ha="left", va="center", fontsize=6.3, color="#111111")
 
 # arrows: 1->2->3, 3 down to 4 (wrap), 4->5->6, 6 -> output

@@ -73,14 +73,19 @@ def fig_workload(sc, path):
     for lab, day, col, ls, lw in styles:
         ax.step(h, hourly_rate(p, day), where="mid", label=lab, color=col, lw=lw, ls=ls)
     ax.axhline(s["iot_floor_tps"], ls=":", color="grey", lw=1, label="IoT telemetry floor")
+    st = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "results", "oulad_workload_stats.json")
+    if os.path.exists(st):   # deadline day with the learner-side rates measured in OULAD (Section 3.4.2)
+        from .education import oulad_anchored
+        wo, _ = oulad_anchored(json.load(open(st)), p)
+        ax.step(h, hourly_rate(wo, "deadline"), where="mid", label="deadline day, OULAD-anchored rates", color="#7f7f7f", lw=1.0, ls=(0, (4, 1, 1, 1)))
     for lev, txt in ((s["nominal_tps"], "nominal %.1f tx/s" % s["nominal_tps"]), (s["deadline_peak_tps"], "peak %.1f tx/s" % s["deadline_peak_tps"]),
                      (s["stress_tps"], "stress %.1f tx/s" % s["stress_tps"])):
         ax.axhline(lev, color="#777777", lw=0.6, ls=(0, (1, 3)))
         ax.text(0.3, lev + 2.5, txt, fontsize=6.5, color="#444444", va="bottom")
     ax.set_xlabel("hour of day"); ax.set_ylabel("offered load (tx/s)"); ax.set_xlim(0, 23); ax.set_ylim(0, 200)
     ax.set_xticks(range(0, 24, 3))
-    ax.legend(frameon=False, fontsize=6.5, ncol=2, loc="upper right")
-    fig.tight_layout(); fig.savefig(path); fig.savefig(path.replace(".png", ".pdf")); plt.close(fig)
+    ax.legend(frameon=False, fontsize=6.5, ncol=3, loc="upper center", bbox_to_anchor=(0.5, -0.2), columnspacing=1.2)
+    fig.tight_layout(); fig.savefig(path, bbox_inches="tight"); fig.savefig(path.replace(".png", ".pdf"), bbox_inches="tight"); plt.close(fig)
 
 
 def fig_calibration(cal, path):
@@ -94,7 +99,7 @@ def fig_calibration(cal, path):
         ax.scatter([x["lat_meas"] for x in r], [x["lat_sim"] for x in r], s=18, color=col, marker=mk, label=lab)
     lim = [0, 3.5]; ax.plot(lim, lim, "k--", lw=0.8); ax.set_xlim(lim); ax.set_ylim(lim)
     ax.set_xlabel("measured latency (s)"); ax.set_ylabel("simulated latency (s)")
-    ax.set_title("(a) Fabric 3.1, batch size x load (fit)", fontsize=8); ax.legend(frameon=False, fontsize=7)
+    ax.set_title("(a) Fabric 3.1, batch size \u00d7 load (fit)", fontsize=8); ax.legend(frameon=False, fontsize=7)
     # (b) hold-out RTT
     ax = axes[1]
     for key, col, mk, lab in (("raft", PALETTE[0], "o", "Raft"), ("smartbft", PALETTE[1], "s", "SmartBFT")):
@@ -409,7 +414,7 @@ def fig_robustness(results_dir, path):
     ax.set_yticks(range(len(order))); ax.set_yticklabels([nm[i] for i in order], fontsize=7)
     ax.set_xlim(0, 1); ax.set_xlabel("rank acceptability $b^r_i$", fontsize=7.5); ax.tick_params(labelsize=7)
     ax.set_title("(a) SMAA-2, TOPSIS, uniform weights", fontsize=8)
-    ax.legend(ncol=7, fontsize=5.2, frameon=False, loc="lower center", bbox_to_anchor=(0.5, 1.07), handlelength=1.0, columnspacing=0.6)
+    ax.legend(ncol=7, fontsize=5.2, frameon=False, loc="upper center", bbox_to_anchor=(0.5, -0.26), handlelength=1.0, columnspacing=0.6)
     # (b)
     ax = fig.add_subplot(gs[0, 1])
     show = ["QBFT", "CometBFT", "Clique", "Raft", "HotStuff"]
@@ -448,4 +453,183 @@ def fig_robustness(results_dir, path):
     ax.set_ylim(0, 1.05); ax.set_xticks([0.1, 0.2, 0.3, 0.5]); ax.tick_params(labelsize=7)
     ax.set_title("(d) random weight perturbations, 200 trials", fontsize=8)
     ax.legend(fontsize=6.5, frameon=False, loc="lower left")
+    fig.savefig(path, bbox_inches="tight"); fig.savefig(path.replace(".png", ".pdf"), bbox_inches="tight"); plt.close(fig)
+
+
+def fig_feasibility(out, path):
+    """Figure: committed share against offered load for (a) documented defaults and (b) capacity-provisioned
+    block formation; (c) first-ranked alternative after the 99 % screen against the stress-hour load."""
+    import csv
+    from matplotlib.patches import Patch
+    res_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "results")
+    order = [("raft", "Raft", "#1f4e79", "o"), ("smartbft", "SmartBFT", "#c0504d", "s"), ("qbft", "IBFT 2.0 / QBFT", "#4f81bd", "^"),
+             ("clique", "Clique", "#9bbb59", "v"), ("cometbft", "CometBFT", "#8064a2", "D"), ("hotstuff", "HotStuff", "#f79646", "P")]
+    fig = plt.figure(figsize=(7.4, 4.9))
+    gs = fig.add_gridspec(2, 2, height_ratios=[1.0, 0.62], hspace=0.85, wspace=0.28)
+    stress = 185.0
+    for col, (label, title) in enumerate((("default", "(a) documented defaults"),
+                                         ("provisioned", "(b) capacity-provisioned block formation"))):
+        ax = fig.add_subplot(gs[0, col])
+        rows = list(csv.DictReader(open(os.path.join(res_dir, f"feasibility_curve_{label}.csv"))))
+        for key, lab, c, mk in order:
+            rr = sorted([r for r in rows if r["key"] == key], key=lambda r: float(r["offered"]))
+            ax.plot([float(r["offered"]) for r in rr], [100 * float(r["avail_mean"]) for r in rr], color=c, marker=mk,
+                    ms=2.4, lw=1.0, markevery=4, label=lab)
+        ax.axhline(99, color="#555555", lw=0.6, ls="--")
+        for lev in (55.6, 108.3, stress):
+            ax.axvline(lev, color="#999999", lw=0.6, ls=":")
+        ax.set_xlim(50, 300); ax.set_ylim(0, 103)
+        ax.set_xlabel("offered load (tx/s)", fontsize=7.5); ax.set_ylabel("committed within 30 s (%)", fontsize=7.5)
+        ax.set_title(title, fontsize=8); ax.tick_params(labelsize=7)
+        cap = out[label]["capacity_99"]
+        pairs = [f"{n} {cap[k]}" for k, n in (("raft", "Raft"), ("smartbft", "SmartBFT"), ("qbft", "QBFT"),
+                                               ("clique", "Clique"), ("cometbft", "CometBFT"), ("hotstuff", "HotStuff"))]
+        # capacities stated under the axis, outside the plotting area, so that no text covers a curve
+        ax.text(0.5, -0.30, "capacity at 99 % (tx/s): " + ", ".join(pairs[:3]) + ",\n" + ", ".join(pairs[3:]),
+                transform=ax.transAxes, fontsize=6.0, va="top", ha="center", linespacing=1.3, color="#333333")
+        if col == 0:
+            h, l = ax.get_legend_handles_labels()
+    fig.legend(h, l, loc="upper center", ncol=6, frameon=False, fontsize=6.5, bbox_to_anchor=(0.5, 1.0))
+    ax = fig.add_subplot(gs[1, :])
+    alts = ["qbft", "cometbft", "clique", "none"]
+    names = {"qbft": "QBFT", "cometbft": "CometBFT", "clique": "Clique", "none": "no feasible protocol"}
+    colors = {"qbft": "#4f81bd", "cometbft": "#8064a2", "clique": "#9bbb59", "none": "#dddddd"}
+    for row, label in enumerate(("provisioned", "default")):
+        b = out[f"boundary_{label}"]
+        for r in b:
+            fo = r["first_own"]
+            if fo:
+                vals = list(fo.values()); win = max(set(vals), key=vals.count)
+                agree = vals.count(win)
+            else:
+                win, agree = "none", 4
+            x = r["stress_tps"]
+            ax.add_patch(plt.Rectangle((x - 5, row - 0.4), 10, 0.8, color=colors.get(win, "#999999"), lw=0))
+            if fo and agree < 4:
+                ax.text(x, row, f"{agree}/4", ha="center", va="center", fontsize=5.5, color="white")
+    ax.axvline(stress, color="black", lw=0.8, ls="--")
+    ax.text(stress + 1.5, 1.52, "stress level of the base workload", fontsize=6, va="center")
+    ax.set_xlim(105, 265); ax.set_ylim(-0.6, 1.75)
+    ax.set_yticks([0, 1]); ax.set_yticklabels(["provisioned", "defaults"], fontsize=7)
+    ax.set_xlabel("load of the busiest (enrolment) hour (tx/s)", fontsize=7.5); ax.tick_params(labelsize=7)
+    ax.set_title("(c) first-ranked protocol after the 99 % screen, all four methods, own entropy $\\times$ CRITIC weights", fontsize=8)
+    ax.spines["left"].set_visible(False)
+    ax.legend(handles=[Patch(color=colors[a], label=names[a]) for a in alts], fontsize=6.3, frameon=False, ncol=4,
+              loc="upper center", bbox_to_anchor=(0.5, -0.42))
+    fig.savefig(path, bbox_inches="tight"); fig.savefig(path.replace(".png", ".pdf"), bbox_inches="tight"); plt.close(fig)
+
+
+def fig_workload_sensitivity(out, path):
+    """Figure: (a) one-at-a-time range of the busiest-hour load per workload parameter, with the first-ranked
+    feasible protocol at both ends; (b, c) Latin-hypercube workloads in the plane of deadline peak and busiest
+    hour, coloured by the first-ranked feasible protocol (majority of the four methods)."""
+    col = {"qbft": "#4f81bd", "cometbft": "#8064a2", "clique": "#9bbb59", "raft": "#1f4e79", "hotstuff": "#f79646",
+           "smartbft": "#c0504d", "ibft2": "#9dc3e6", "none": "#bbbbbb"}
+    lab = {"qbft": "QBFT", "cometbft": "CometBFT", "clique": "Clique", "raft": "Raft", "hotstuff": "HotStuff",
+           "smartbft": "SmartBFT", "ibft2": "IBFT 2.0", "none": "no feasible protocol"}
+    short = {"qbft": "Q", "cometbft": "C", "clique": "K", "raft": "R", "hotstuff": "H", "smartbft": "S", "ibft2": "I", "none": "\u2013"}
+
+    def win(d):
+        if not d:
+            return "none"
+        v = list(d.values()); return max(set(v), key=v.count)
+    fig = plt.figure(figsize=(7.4, 5.4))
+    gs = fig.add_gridspec(2, 2, height_ratios=[1.0, 1.05], hspace=0.55, wspace=0.3)
+    ax = fig.add_subplot(gs[0, :])
+    names = list(out["oat"])
+    base_stress = out["levels"]["base"]["stress_tps"]
+    ylabels = []
+    for i, nm in enumerate(names[::-1]):
+        d = out["oat"][nm]; lo, hi = d["low"]["levels"]["stress_tps"], d["high"]["levels"]["stress_tps"]
+        ax.plot([lo, hi], [i, i], color="#999999", lw=5, solid_capstyle="butt", zorder=1)
+        for x in (lo, hi):
+            ax.plot([x], [i], marker="|", color="black", ms=8)
+        lab_ = {s_: short[win(d[s_]["default"]["first"])] + "/" + short[win(d[s_]["provisioned"]["first"])] for s_ in ("low", "high")}
+        # labels beside the ends of the bar (left of the low end, right of the high end), on the bar's own row
+        if abs(hi - lo) >= 8:
+            ax.text(lo - 3, i, lab_["low"], ha="right", va="center", fontsize=6)
+            ax.text(hi + 3, i, lab_["high"], ha="left", va="center", fontsize=6)
+        else:
+            t = lab_["high"] if lab_["low"] == lab_["high"] else lab_["low"] + " | " + lab_["high"]
+            ax.text(max(lo, hi) + 3, i, t, ha="left", va="center", fontsize=6)
+        v = d["low"]["value"], d["high"]["value"]
+        fmt = (lambda z: f"{z:,.0f}") if max(v) >= 100 else (lambda z: f"{z:g}")
+        ylabels.append(f"{nm} [{fmt(v[0])}\u2013{fmt(v[1])}]")
+    ax.set_yticks(range(len(names))); ax.set_yticklabels(ylabels, fontsize=6.6)
+    for x, t, ha in ((110, "QBFT, defaults", "center"), (200, " CometBFT", "left"), (225, " QBFT, provisioned", "left")):
+        ax.axvline(x, color="#555555", lw=0.7, ls=":")
+        ax.text(x, len(names) - 0.25, t, fontsize=5.8, ha=ha, va="bottom")
+    ax.axvline(base_stress, color="black", lw=0.8, ls="--")
+    ax.set_xlim(60, 335); ax.set_ylim(-0.6, len(names) + 0.35)
+    ax.set_xlabel("load of the busiest hour (tx/s); labels: first-ranked feasible protocol, defaults/provisioned", fontsize=7)
+    ax.set_title("(a) one-at-a-time ranges of W1\u2013W8 (dashed: base workload; dotted: capacity at 99 %)", fontsize=8, pad=12)
+    ax.tick_params(labelsize=7)
+    rows = out["lhs"]
+    for c, label in enumerate(("default", "provisioned")):
+        ax = fig.add_subplot(gs[1, c])
+        seen = {}
+        for r in rows:
+            w = win(r[label]["first"])
+            sc_ = ax.scatter(r["levels"]["deadline_peak_tps"], r["levels"]["stress_tps"], s=9, color=col[w], lw=0, alpha=0.9)
+            seen[w] = seen.get(w, 0) + 1
+        ax.scatter([out["levels"]["base"]["deadline_peak_tps"]], [base_stress], marker="*", s=60, color="black", zorder=3)
+        ax.scatter([out["levels"]["oulad_anchored"]["deadline_peak_tps"]], [out["levels"]["oulad_anchored"]["stress_tps"]], marker="X", s=40,
+                   color="black", zorder=3)
+        for yv in (110, 200, 225):
+            ax.axhline(yv, color="#555555", lw=0.6, ls=":")
+        ax.set_xlim(0, 350); ax.set_ylim(0, 400)
+        ax.set_xlabel("deadline-day peak (tx/s)", fontsize=7); ax.set_ylabel("busiest hour (tx/s)", fontsize=7); ax.tick_params(labelsize=6.5)
+        n = len(rows)
+        ttl = "(b) documented defaults" if c == 0 else "(c) capacity-provisioned"
+        ax.set_title(ttl + f", {n} workloads", fontsize=8)
+        from matplotlib.lines import Line2D
+        hs = [Line2D([], [], marker="o", ls="", color=col[k], ms=4, label=f"{lab[k]} {100 * v / n:.0f} %") for k, v in sorted(seen.items(), key=lambda kv: -kv[1])]
+        hs += [Line2D([], [], marker="*", ls="", color="black", ms=6, label="base"), Line2D([], [], marker="X", ls="", color="black", ms=5, label="OULAD-anchored")]
+        ax.legend(handles=hs, fontsize=5.8, frameon=False, loc="upper center", bbox_to_anchor=(0.5, -0.2), ncol=3, columnspacing=0.8, handletextpad=0.3)
+    fig.savefig(path, bbox_inches="tight"); fig.savefig(path.replace(".png", ".pdf"), bbox_inches="tight"); plt.close(fig)
+
+
+def fig_priorities(out, path):
+    """Figure: protocol with the largest first-rank acceptability for each of the 24 priority orders of the criterion
+    groups and each method, (a) documented configuration (feasible set), (b) capacity-provisioned; (c) first place
+    against the weight of the security group, provisioned configuration."""
+    from matplotlib.patches import Patch
+    col = {"qbft": "#4f81bd", "cometbft": "#8064a2", "clique": "#9bbb59", "raft": "#1f4e79", "hotstuff": "#f79646", "smartbft": "#c0504d", "ibft2": "#9dc3e6"}
+    lab = {"qbft": "QBFT", "cometbft": "CometBFT", "clique": "Clique", "raft": "Raft", "hotstuff": "HotStuff", "smartbft": "SmartBFT", "ibft2": "IBFT 2.0"}
+    meth = ["TOPSIS", "VIKOR", "COPRAS", "EDAS"]
+    fig = plt.figure(figsize=(7.4, 5.9))
+    gs = fig.add_gridspec(2, 2, height_ratios=[1.0, 0.22], hspace=0.30, wspace=0.55)
+    used = set()
+    orders = list(out["default"]["orders"])
+    for c, (label, title) in enumerate((("default", "(a) documented configuration\n(feasible: Raft, Clique, CometBFT)"),
+                                        ("provisioned", "(b) capacity-provisioned\n(all seven feasible)"))):
+        ax = fig.add_subplot(gs[0, c])
+        for i, o in enumerate(orders):
+            b = out[label]["orders"][o]["b1"]
+            for j, m in enumerate(meth):
+                top = max(b[m], key=b[m].get); used.add(top)
+                ax.add_patch(plt.Rectangle((j, i), 1, 1, color=col[top], lw=0))
+                ax.text(j + 0.5, i + 0.5, f"{b[m][top]:.2f}", ha="center", va="center", fontsize=5.4,
+                        color="white" if top in ("raft", "cometbft", "qbft") else "black")
+        ax.set_xlim(0, 4); ax.set_ylim(len(orders), 0)
+        ax.set_xticks(np.arange(4) + 0.5); ax.set_xticklabels(meth, fontsize=6.5)
+        ax.set_yticks(np.arange(len(orders)) + 0.5); ax.set_yticklabels([o.replace(">", " > ") for o in orders], fontsize=5.8)
+        ax.tick_params(length=0); ax.set_title(title, fontsize=7.5)
+        for sp in ax.spines.values():
+            sp.set_visible(False)
+    ax = fig.add_subplot(gs[1, :])
+    sw = out["provisioned"]["security_sweep"]
+    for j, m in enumerate(meth):
+        for r in sw:
+            ax.add_patch(plt.Rectangle((r["security_weight"] - 0.0125, j), 0.025, 0.9, color=col[r["first"][m]], lw=0))
+    ax.axvline(out["provisioned"]["objective_group_weights"]["S"], color="black", lw=0.8, ls="--")
+    ax.text(out["provisioned"]["objective_group_weights"]["S"] + 0.01, -0.35, "objective weight", fontsize=5.8)
+    ax.set_xlim(-0.0125, 1.0125); ax.set_ylim(4, -0.6)
+    ax.set_yticks(np.arange(4) + 0.45); ax.set_yticklabels(meth, fontsize=6.3); ax.tick_params(length=0, labelsize=6.5)
+    ax.set_xlabel("weight of the security group (fault tolerance + attack resistance), other groups in their objective proportions", fontsize=6.8)
+    ax.set_title("(c) provisioned configuration: first place against the weight of security", fontsize=7.5)
+    for sp in ("left", "top", "right"):
+        ax.spines[sp].set_visible(False)
+    hs = [Patch(color=col[k], label=lab[k]) for k in ("qbft", "cometbft", "clique", "raft") if k in used or k in ("qbft", "cometbft")]
+    ax.legend(handles=hs, loc="upper center", ncol=len(hs), fontsize=6.5, frameon=False, bbox_to_anchor=(0.5, -0.52))
     fig.savefig(path, bbox_inches="tight"); fig.savefig(path.replace(".png", ".pdf"), bbox_inches="tight"); plt.close(fig)

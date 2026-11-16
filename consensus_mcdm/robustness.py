@@ -75,3 +75,23 @@ def single_weight_sweep(X, w, types, names, method="TOPSIS", grid=np.linspace(0.
             r = fn(X, wp, types)["rank"]
             out[j, gi] = names[int(np.argmax(r == 1))]
     return out
+
+
+def leader_wilcoxon(Xs, w, types, names, first, second):
+    """One-sided Wilcoxon signed-rank test that `first` outscores `second` over the seed matrices, per method,
+    with Holm-adjusted p-values (Section 4.5 of the article). For VIKOR a lower Q is better."""
+    from scipy.stats import wilcoxon
+    from .mcdm import rank_all
+    i, j = names.index(first), names.index(second)
+    raw = {}
+    for m in METHODS:
+        s = np.array([np.asarray(rank_all(X, w, types)[m]["score"])[[i, j]] for X in Xs])
+        d = s[:, 0] - s[:, 1]
+        raw[m] = {"p": float(wilcoxon(d, alternative="less" if m == "VIKOR" else "greater").pvalue),
+                  "seeds_first_better": int((d < 0).sum() if m == "VIKOR" else (d > 0).sum()), "n": int(len(d))}
+    order = sorted(raw, key=lambda m: raw[m]["p"])
+    running = 0.0
+    for r, m in enumerate(order):
+        running = max(running, min(1.0, raw[m]["p"] * (len(order) - r)))
+        raw[m]["p_holm"] = running
+    return raw

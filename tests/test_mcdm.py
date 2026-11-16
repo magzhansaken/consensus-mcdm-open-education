@@ -79,7 +79,7 @@ def test_combined_weights_sum_to_one():
 
 def test_iot45_transfer_published_order_is_stable_on_common_families():
     """The published TOPSIS order of the four common families equals a recomputation on those families alone,
-    so the comparison in Section 4.7 does not depend on how the published order is read."""
+    so the comparison in Section 4.13 does not depend on how the published order is read."""
     import json, os
     import pandas as pd
     from consensus_mcdm.iot45 import transfer
@@ -90,3 +90,15 @@ def test_iot45_transfer_published_order_is_stable_on_common_families():
     rows, agree = transfer(Xm, keys, T, IOT45_SCENARIOS)
     assert len(rows) == 3 * 6 * 4 and len(agree) == 3 * 4
     assert all(r["published_TOPSIS"] == r["recomputed4_TOPSIS"] for r in rows)
+
+
+def test_leader_wilcoxon_holm_monotone():
+    import numpy as np
+    from consensus_mcdm.robustness import leader_wilcoxon
+    rng = np.random.default_rng(0)
+    base = rng.uniform(1, 2, size=(4, 3))
+    Xs = np.array([base + rng.normal(0, 0.01, size=base.shape) for _ in range(12)])
+    Xs[:, 0, :] += 0.5                       # alternative a dominates on every benefit criterion
+    out = leader_wilcoxon(Xs, np.ones(3) / 3, np.ones(3), ["a", "b", "c", "d"], "a", "b")
+    assert all(v["p_holm"] >= v["p"] for v in out.values())
+    assert all(v["seeds_first_better"] == 12 for k, v in out.items() if k != "VIKOR")

@@ -38,6 +38,9 @@ class SimConfig:
     faults: list = field(default_factory=list)  # [(t_fail_s, node_index), ...]
     apply_app_tier: bool = True      # add application tier to protocols whose anchors lack it
     exclude_dead: bool = False       # after a detected leader failure the dead node is removed from rotation (operator action)
+    recovery_factor: float = 1.0     # multiplies every failure timer (validation-error correction, Section 4.9)
+    rtt_extra_crash: float = 0.0     # extra commit latency per second of RTT, crash-fault protocols (pipelined, no occupancy)
+    rtt_extra_bft: float = 0.0       # the same for Byzantine-fault-tolerant protocols
 
 
 @dataclass
@@ -60,6 +63,8 @@ class SimResult:
     proposer_hhi: float            # Herfindahl index of proposer shares (1 = single leader)
     availability: float            # share of tx committed within timeout
     n_committed: int
+    share_le_2s: float = float("nan")   # share of measured tx committed within 2 s
+    share_le_5s: float = float("nan")   # share of measured tx committed within 5 s
 
     def as_dict(self):
         return self.__dict__.copy()
@@ -199,7 +204,7 @@ def simulate(p: Protocol, cfg: SimConfig, arrivals: np.ndarray, seed: int = 0, t
             break
         if leader in dead:
             # leader failure detected -> view change / election, then next alive leader
-            extra = p.view_change_s * (1.0 + 0.1 * rng.standard_normal())
+            extra = p.view_change_s * cfg.recovery_factor * (1.0 + 0.1 * rng.standard_normal())
             extra = max(extra, 0.0)
             if cfg.exclude_dead:
                 removed.add(leader)
@@ -235,6 +240,9 @@ def simulate(p: Protocol, cfg: SimConfig, arrivals: np.ndarray, seed: int = 0, t
         cstart = max(cons_done, commit_free)
         cdone = cstart + s_commit
         commit_free = cdone
+        c_rtt = cfg.rtt_extra_bft if p.fault_model == "byzantine" else cfg.rtt_extra_crash
+        if c_rtt:
+            cdone = cdone + c_rtt * rtt      # latency seen by the client; the commit server is not occupied
         if cfg.apply_app_tier:
             # the portal's application logic is the same on every platform: one Fabric-calibrated
             # CPU cost per transaction per executing node (assumption A5), independent of the
@@ -296,6 +304,8 @@ def simulate(p: Protocol, cfg: SimConfig, arrivals: np.ndarray, seed: int = 0, t
         cpu_network_s_per_1k=network, cpu_util_peak_pct=busiest,
         ledger_bytes_per_tx=ledger_bytes / tx_total, proposer_hhi=hhi,
         availability=n_ok / max(n_meas, 1), n_committed=n_ok,
+        share_le_2s=float((measured & np.isfinite(lat) & (lat <= 2.0)).sum() / max(n_meas, 1)),
+        share_le_5s=float((measured & np.isfinite(lat) & (lat <= 5.0)).sum() / max(n_meas, 1)),
     )
 
 

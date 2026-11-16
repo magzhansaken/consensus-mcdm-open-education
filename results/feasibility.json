@@ -1,0 +1,3024 @@
+{
+ "target": 0.99,
+ "default": {
+  "capacity_99": {
+   "raft": 185,
+   "smartbft": 170,
+   "ibft2": 110,
+   "qbft": 110,
+   "clique": 215,
+   "cometbft": 200,
+   "hotstuff": 150
+  },
+  "capacity_95": {
+   "raft": 190,
+   "smartbft": 170,
+   "ibft2": 115,
+   "qbft": 115,
+   "clique": 215,
+   "cometbft": 200,
+   "hotstuff": 150
+  },
+  "stress": {
+   "raft": {
+    "avail_mean": 1.0,
+    "avail_min": 1.0,
+    "goodput": 180.17240740740738,
+    "p95_s": 13.903110981708954,
+    "peak_p95_s": 1.6158746151445411,
+    "nominal_lat_s": 1.5899950647137424
+   },
+   "smartbft": {
+    "avail_mean": 0.3512535604454904,
+    "avail_min": 0.28824889173529733,
+    "goodput": 64.99617283950617,
+    "p95_s": 28.83729888462061,
+    "peak_p95_s": 2.0751835740044284,
+    "nominal_lat_s": 2.03518465303769
+   },
+   "ibft2": {
+    "avail_mean": 0.4707601142537027,
+    "avail_min": 0.46167030382748897,
+    "goodput": 82.40975308641977,
+    "p95_s": 28.551086567463862,
+    "peak_p95_s": 2.3958464493173097,
+    "nominal_lat_s": 1.0896952608178387
+   },
+   "qbft": {
+    "avail_mean": 0.4707601142537027,
+    "avail_min": 0.46167030382748897,
+    "goodput": 82.40975308641977,
+    "p95_s": 28.551086567463862,
+    "peak_p95_s": 2.3958464493173097,
+    "nominal_lat_s": 1.0896952608178387
+   },
+   "clique": {
+    "avail_mean": 1.0,
+    "avail_min": 1.0,
+    "goodput": 184.7008024691358,
+    "p95_s": 2.0459748938801607,
+    "peak_p95_s": 2.0058690040835256,
+    "nominal_lat_s": 1.0800498650602235
+   },
+   "cometbft": {
+    "avail_mean": 1.0,
+    "avail_min": 1.0,
+    "goodput": 183.9114197530864,
+    "p95_s": 4.355008989079136,
+    "peak_p95_s": 3.4582611030639985,
+    "nominal_lat_s": 2.178224045832144
+   },
+   "hotstuff": {
+    "avail_mean": 0.13660523669220304,
+    "avail_min": 0.12057319550489838,
+    "goodput": 25.278024691358027,
+    "p95_s": 29.177948236231803,
+    "peak_p95_s": 0.7912157161380169,
+    "nominal_lat_s": 0.599997417607533
+   }
+  },
+  "feasible": {
+   "raft": true,
+   "smartbft": false,
+   "ibft2": false,
+   "qbft": false,
+   "clique": true,
+   "cometbft": true,
+   "hotstuff": false
+  },
+  "feasible_by_target": {
+   "0.95": [
+    "raft",
+    "clique",
+    "cometbft"
+   ],
+   "0.99": [
+    "raft",
+    "clique",
+    "cometbft"
+   ],
+   "0.999": [
+    "raft",
+    "clique",
+    "cometbft"
+   ]
+  },
+  "ranks_unscreened": {
+   "TOPSIS": {
+    "raft": 4,
+    "smartbft": 5,
+    "ibft2": 2,
+    "qbft": 1,
+    "clique": 7,
+    "cometbft": 3,
+    "hotstuff": 6
+   },
+   "VIKOR": {
+    "raft": 5,
+    "smartbft": 4,
+    "ibft2": 3,
+    "qbft": 1,
+    "clique": 6,
+    "cometbft": 2,
+    "hotstuff": 7
+   },
+   "COPRAS": {
+    "raft": 4,
+    "smartbft": 6,
+    "ibft2": 2,
+    "qbft": 1,
+    "clique": 5,
+    "cometbft": 3,
+    "hotstuff": 7
+   },
+   "EDAS": {
+    "raft": 4,
+    "smartbft": 7,
+    "ibft2": 3,
+    "qbft": 1,
+    "clique": 6,
+    "cometbft": 2,
+    "hotstuff": 5
+   }
+  },
+  "first_unscreened": {
+   "TOPSIS": "qbft",
+   "VIKOR": "qbft",
+   "COPRAS": "qbft",
+   "EDAS": "qbft"
+  },
+  "screened": {
+   "feasible": [
+    "raft",
+    "clique",
+    "cometbft"
+   ],
+   "weights_own": [
+    0.0028021373548741298,
+    0.10784027329056942,
+    0.19589757643511876,
+    0.01532961081894773,
+    0.014155188867533407,
+    0.11875478030645349,
+    0.0,
+    0.20761949454837908,
+    0.24500274521419874,
+    0.04738721826461144,
+    0.04521097489931377
+   ],
+   "ranks_own": {
+    "TOPSIS": {
+     "raft": 3,
+     "clique": 2,
+     "cometbft": 1
+    },
+    "VIKOR": {
+     "raft": 3,
+     "clique": 2,
+     "cometbft": 1
+    },
+    "COPRAS": {
+     "raft": 3,
+     "clique": 2,
+     "cometbft": 1
+    },
+    "EDAS": {
+     "raft": 3,
+     "clique": 2,
+     "cometbft": 1
+    }
+   },
+   "ranks_base": {
+    "TOPSIS": {
+     "raft": 2,
+     "clique": 3,
+     "cometbft": 1
+    },
+    "VIKOR": {
+     "raft": 3,
+     "clique": 2,
+     "cometbft": 1
+    },
+    "COPRAS": {
+     "raft": 3,
+     "clique": 2,
+     "cometbft": 1
+    },
+    "EDAS": {
+     "raft": 3,
+     "clique": 2,
+     "cometbft": 1
+    }
+   },
+   "ranks_equal": {
+    "TOPSIS": {
+     "raft": 3,
+     "clique": 2,
+     "cometbft": 1
+    },
+    "VIKOR": {
+     "raft": 3,
+     "clique": 1,
+     "cometbft": 2
+    },
+    "COPRAS": {
+     "raft": 3,
+     "clique": 2,
+     "cometbft": 1
+    },
+    "EDAS": {
+     "raft": 3,
+     "clique": 2,
+     "cometbft": 1
+    }
+   },
+   "first_own": {
+    "TOPSIS": "cometbft",
+    "VIKOR": "cometbft",
+    "COPRAS": "cometbft",
+    "EDAS": "cometbft"
+   },
+   "first_base": {
+    "TOPSIS": "cometbft",
+    "VIKOR": "cometbft",
+    "COPRAS": "cometbft",
+    "EDAS": "cometbft"
+   },
+   "scores_own": {
+    "TOPSIS": {
+     "raft": 0.40627120035201025,
+     "clique": 0.477082616001494,
+     "cometbft": 0.8334862735911662
+    },
+    "VIKOR": {
+     "raft": 1.0,
+     "clique": 0.657788809438,
+     "cometbft": 0.0
+    },
+    "COPRAS": {
+     "raft": 0.23148531641794673,
+     "clique": 0.29894665713406077,
+     "cometbft": 0.4695680264479926
+    },
+    "EDAS": {
+     "raft": 0.1698785392024887,
+     "clique": 0.3580768673228144,
+     "cometbft": 0.9202492124945578
+    }
+   },
+   "smaa_b1_uniform": {
+    "TOPSIS": {
+     "raft": 0.0851,
+     "clique": 0.1828,
+     "cometbft": 0.7321
+    },
+    "VIKOR": {
+     "raft": 0.1581,
+     "clique": 0.5476,
+     "cometbft": 0.2943
+    },
+    "COPRAS": {
+     "raft": 0.0588,
+     "clique": 0.1629,
+     "cometbft": 0.7783
+    },
+    "EDAS": {
+     "raft": 0.052,
+     "clique": 0.1513,
+     "cometbft": 0.7967
+    }
+   }
+  },
+  "weights_full": [
+   0.12006828090303195,
+   0.08061866343213796,
+   0.13238231451001475,
+   0.06605707393104863,
+   0.0679394351927281,
+   0.08596907722781294,
+   0.08446588743049806,
+   0.0920182999358677,
+   0.11577525625724337,
+   0.11578349634095172,
+   0.03892221483866484
+  ],
+  "smaa_b1_uniform_full": {},
+  "matrix": {
+   "raft": [
+    180.1724074074074,
+    1.1638927554748915,
+    1.5899950647137424,
+    0.1895713516037671,
+    31.345319293800376,
+    3509.0717900097093,
+    100.0,
+    1.0,
+    0.0,
+    4.0,
+    762.5144364329789
+   ],
+   "smartbft": [
+    64.99617283950619,
+    1.6116455243867303,
+    2.03518465303769,
+    0.27496977324121175,
+    43.58972262474787,
+    3521.1675100226566,
+    16.6830564364344,
+    3.0,
+    0.8571250736276196,
+    4.0,
+    968.1336850102838
+   ],
+   "ibft2": [
+    82.40975308641977,
+    1.3618035707936158,
+    1.0896952608178387,
+    0.18501673225889145,
+    17.692786111111033,
+    1207.9035980618464,
+    69.67756745630103,
+    3.0,
+    0.8571428571428575,
+    3.0,
+    530.556682684634
+   ],
+   "qbft": [
+    82.40975308641977,
+    1.3618035707936158,
+    1.0896952608178387,
+    0.18501673225889145,
+    17.692786111111033,
+    1207.9035980618464,
+    69.67756745630103,
+    3.0,
+    0.8571428571428575,
+    4.0,
+    530.556682684634
+   ],
+   "clique": [
+    184.7008024691358,
+    1.1065681711985578,
+    9.080049865060223,
+    0.18454251637518063,
+    28.534929444444455,
+    1205.5551003520407,
+    100.0,
+    1.0,
+    0.8571428571428575,
+    3.0,
+    530.3199541154856
+   ],
+   "cometbft": [
+    183.9114197530864,
+    2.645219882843239,
+    2.1782240458321436,
+    0.2090034178021109,
+    32.27029530337689,
+    1110.9148694564515,
+    100.0,
+    4.0,
+    0.8571418913698529,
+    3.0,
+    520.7802188412104
+   ],
+   "hotstuff": [
+    25.278024691358027,
+    0.6650267447033725,
+    0.599997417607533,
+    0.6912101176730235,
+    52.33056022865492,
+    1167.3335962961937,
+    100.0,
+    3.0,
+    0.8571427531950435,
+    0.0,
+    730.8672265066563
+   ]
+  },
+  "halfwidth": {
+   "raft": [
+    0.2599391132692512,
+    0.001330019850654175,
+    0.002873418570925293,
+    1.0361661679205625e-05,
+    0.03376486941755023,
+    0.006472618149291155,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0006524399094439178
+   ],
+   "smartbft": [
+    2.0248624440592513,
+    0.0016695670582961054,
+    0.002987708112078354,
+    1.4059677409816948e-05,
+    0.04695324586419237,
+    0.015102775681625179,
+    0.646814414113058,
+    0.0,
+    8.659269330970434e-06,
+    0.0,
+    0.0015223597887126154
+   ],
+   "ibft2": [
+    0.1776635002742207,
+    0.061183352733732835,
+    0.0011191795913577495,
+    1.3781385684823689e-05,
+    0.02993944049553972,
+    0.01534106013153059,
+    0.951842148405041,
+    0.0,
+    1.2649535087579812e-16,
+    0.0,
+    0.0015463788612581528
+   ],
+   "qbft": [
+    0.1776635002742207,
+    0.061183352733732835,
+    0.0011191795913577495,
+    1.3781385684823689e-05,
+    0.02993944049553972,
+    0.01534106013153059,
+    0.951842148405041,
+    0.0,
+    1.2649535087579812e-16,
+    0.0,
+    0.0015463788612581528
+   ],
+   "clique": [
+    0.2815781707546983,
+    0.0009610445003765379,
+    0.001121541817528884,
+    1.2860922076932526e-05,
+    0.03039667568400468,
+    0.010782573692447233,
+    0.0,
+    0.0,
+    1.2649535087579812e-16,
+    0.0,
+    0.001086883428198052
+   ],
+   "cometbft": [
+    0.24540045986915238,
+    0.002421733066045218,
+    0.002121098011072073,
+    1.4903233256694626e-05,
+    0.034229947606849484,
+    0.02059414742261613,
+    0.0,
+    0.0,
+    9.351360932089067e-07,
+    0.0,
+    0.0020758900602046645
+   ],
+   "hotstuff": [
+    0.49578454810534955,
+    0.0006362964131737314,
+    0.000446929342377338,
+    0.0010945797127898298,
+    0.03410534633552348,
+    0.1427891437701503,
+    0.0,
+    0.0,
+    2.5425515740680003e-08,
+    0.0,
+    0.01439314569203174
+   ]
+  }
+ },
+ "provisioned": {
+  "capacity_99": {
+   "raft": 200,
+   "smartbft": 195,
+   "ibft2": 225,
+   "qbft": 225,
+   "clique": 215,
+   "cometbft": 200,
+   "hotstuff": 195
+  },
+  "capacity_95": {
+   "raft": 200,
+   "smartbft": 195,
+   "ibft2": 225,
+   "qbft": 225,
+   "clique": 215,
+   "cometbft": 200,
+   "hotstuff": 200
+  },
+  "stress": {
+   "raft": {
+    "avail_mean": 1.0,
+    "avail_min": 1.0,
+    "goodput": 184.1353086419753,
+    "p95_s": 3.4975374260532046,
+    "peak_p95_s": 3.243237732699883,
+    "nominal_lat_s": 1.7808419257087826
+   },
+   "smartbft": {
+    "avail_mean": 1.0,
+    "avail_min": 1.0,
+    "goodput": 183.5241975308642,
+    "p95_s": 5.306702934623972,
+    "peak_p95_s": 4.291815664372875,
+    "nominal_lat_s": 2.289860641676805
+   },
+   "ibft2": {
+    "avail_mean": 1.0,
+    "avail_min": 1.0,
+    "goodput": 184.67746913580245,
+    "p95_s": 2.055475185756843,
+    "peak_p95_s": 2.015468205875993,
+    "nominal_lat_s": 1.0896952608178387
+   },
+   "qbft": {
+    "avail_mean": 1.0,
+    "avail_min": 1.0,
+    "goodput": 184.67746913580245,
+    "p95_s": 2.055475185756843,
+    "peak_p95_s": 2.015468205875993,
+    "nominal_lat_s": 1.0896952608178387
+   },
+   "clique": {
+    "avail_mean": 1.0,
+    "avail_min": 1.0,
+    "goodput": 184.7008024691358,
+    "p95_s": 2.0459748938801607,
+    "peak_p95_s": 2.0058690040835256,
+    "nominal_lat_s": 1.0800498650602235
+   },
+   "cometbft": {
+    "avail_mean": 1.0,
+    "avail_min": 1.0,
+    "goodput": 183.9114197530864,
+    "p95_s": 4.355008989079136,
+    "peak_p95_s": 3.4582611030639985,
+    "nominal_lat_s": 2.178224045832144
+   },
+   "hotstuff": {
+    "avail_mean": 1.0,
+    "avail_min": 1.0,
+    "goodput": 184.36969135802465,
+    "p95_s": 2.7351179237221177,
+    "peak_p95_s": 1.9714683848723806,
+    "nominal_lat_s": 1.2373959319309356
+   }
+  },
+  "feasible": {
+   "raft": true,
+   "smartbft": true,
+   "ibft2": true,
+   "qbft": true,
+   "clique": true,
+   "cometbft": true,
+   "hotstuff": true
+  },
+  "feasible_by_target": {
+   "0.95": [
+    "raft",
+    "smartbft",
+    "ibft2",
+    "qbft",
+    "clique",
+    "cometbft",
+    "hotstuff"
+   ],
+   "0.99": [
+    "raft",
+    "smartbft",
+    "ibft2",
+    "qbft",
+    "clique",
+    "cometbft",
+    "hotstuff"
+   ],
+   "0.999": [
+    "raft",
+    "smartbft",
+    "ibft2",
+    "qbft",
+    "clique",
+    "cometbft",
+    "hotstuff"
+   ]
+  },
+  "ranks_unscreened": {
+   "TOPSIS": {
+    "raft": 6,
+    "smartbft": 4,
+    "ibft2": 2,
+    "qbft": 1,
+    "clique": 7,
+    "cometbft": 3,
+    "hotstuff": 5
+   },
+   "VIKOR": {
+    "raft": 7,
+    "smartbft": 4,
+    "ibft2": 2,
+    "qbft": 1,
+    "clique": 5,
+    "cometbft": 3,
+    "hotstuff": 6
+   },
+   "COPRAS": {
+    "raft": 7,
+    "smartbft": 5,
+    "ibft2": 2,
+    "qbft": 1,
+    "clique": 6,
+    "cometbft": 3,
+    "hotstuff": 4
+   },
+   "EDAS": {
+    "raft": 6,
+    "smartbft": 5,
+    "ibft2": 2,
+    "qbft": 1,
+    "clique": 7,
+    "cometbft": 3,
+    "hotstuff": 4
+   }
+  },
+  "first_unscreened": {
+   "TOPSIS": "qbft",
+   "VIKOR": "qbft",
+   "COPRAS": "qbft",
+   "EDAS": "qbft"
+  },
+  "screened": {
+   "feasible": [
+    "raft",
+    "smartbft",
+    "ibft2",
+    "qbft",
+    "clique",
+    "cometbft",
+    "hotstuff"
+   ],
+   "weights_own": [
+    0.0005265481800344997,
+    0.09451582676488159,
+    0.15024378738488295,
+    0.0445929040845022,
+    0.027414770416240557,
+    0.1045636598391087,
+    0.06322528435412536,
+    0.1298543796939407,
+    0.1581041811725704,
+    0.18000653334626096,
+    0.04695212476345207
+   ],
+   "ranks_own": {
+    "TOPSIS": {
+     "raft": 6,
+     "smartbft": 4,
+     "ibft2": 2,
+     "qbft": 1,
+     "clique": 7,
+     "cometbft": 3,
+     "hotstuff": 5
+    },
+    "VIKOR": {
+     "raft": 7,
+     "smartbft": 4,
+     "ibft2": 2,
+     "qbft": 1,
+     "clique": 5,
+     "cometbft": 3,
+     "hotstuff": 6
+    },
+    "COPRAS": {
+     "raft": 7,
+     "smartbft": 5,
+     "ibft2": 2,
+     "qbft": 1,
+     "clique": 6,
+     "cometbft": 3,
+     "hotstuff": 4
+    },
+    "EDAS": {
+     "raft": 6,
+     "smartbft": 5,
+     "ibft2": 2,
+     "qbft": 1,
+     "clique": 7,
+     "cometbft": 3,
+     "hotstuff": 4
+    }
+   },
+   "ranks_base": {
+    "TOPSIS": {
+     "raft": 6,
+     "smartbft": 4,
+     "ibft2": 2,
+     "qbft": 1,
+     "clique": 7,
+     "cometbft": 3,
+     "hotstuff": 5
+    },
+    "VIKOR": {
+     "raft": 7,
+     "smartbft": 4,
+     "ibft2": 2,
+     "qbft": 1,
+     "clique": 5,
+     "cometbft": 3,
+     "hotstuff": 6
+    },
+    "COPRAS": {
+     "raft": 7,
+     "smartbft": 5,
+     "ibft2": 2,
+     "qbft": 1,
+     "clique": 6,
+     "cometbft": 3,
+     "hotstuff": 4
+    },
+    "EDAS": {
+     "raft": 6,
+     "smartbft": 5,
+     "ibft2": 2,
+     "qbft": 1,
+     "clique": 7,
+     "cometbft": 3,
+     "hotstuff": 4
+    }
+   },
+   "ranks_equal": {
+    "TOPSIS": {
+     "raft": 6,
+     "smartbft": 5,
+     "ibft2": 2,
+     "qbft": 1,
+     "clique": 7,
+     "cometbft": 3,
+     "hotstuff": 4
+    },
+    "VIKOR": {
+     "raft": 6,
+     "smartbft": 7,
+     "ibft2": 2,
+     "qbft": 1,
+     "clique": 4,
+     "cometbft": 3,
+     "hotstuff": 5
+    },
+    "COPRAS": {
+     "raft": 7,
+     "smartbft": 6,
+     "ibft2": 2,
+     "qbft": 1,
+     "clique": 5,
+     "cometbft": 3,
+     "hotstuff": 4
+    },
+    "EDAS": {
+     "raft": 6,
+     "smartbft": 7,
+     "ibft2": 2,
+     "qbft": 1,
+     "clique": 5,
+     "cometbft": 3,
+     "hotstuff": 4
+    }
+   },
+   "first_own": {
+    "TOPSIS": "qbft",
+    "VIKOR": "qbft",
+    "COPRAS": "qbft",
+    "EDAS": "qbft"
+   },
+   "first_base": {
+    "TOPSIS": "qbft",
+    "VIKOR": "qbft",
+    "COPRAS": "qbft",
+    "EDAS": "qbft"
+   },
+   "scores_own": {
+    "TOPSIS": {
+     "raft": 0.5890159862118334,
+     "smartbft": 0.6897119165959174,
+     "ibft2": 0.8586295252852615,
+     "qbft": 0.9078088943104655,
+     "clique": 0.44998243050478026,
+     "cometbft": 0.8047802461506608,
+     "hotstuff": 0.6382774545538494
+    },
+    "VIKOR": {
+     "raft": 0.9199017209871804,
+     "smartbft": 0.6811940987067264,
+     "ibft2": 0.05790666088983806,
+     "qbft": 0.0,
+     "clique": 0.7135091907162697,
+     "cometbft": 0.20029585648814688,
+     "hotstuff": 0.7828950174138306
+    },
+    "COPRAS": {
+     "raft": 0.1027870888604124,
+     "smartbft": 0.12772489114945323,
+     "ibft2": 0.17902700460063947,
+     "qbft": 0.18759874428379475,
+     "clique": 0.10672155424317685,
+     "cometbft": 0.15513995345156545,
+     "hotstuff": 0.14100076341095763
+    },
+    "EDAS": {
+     "raft": 0.295582384083803,
+     "smartbft": 0.43322964964840727,
+     "ibft2": 0.8976192193195164,
+     "qbft": 1.0,
+     "clique": 0.2099350003689763,
+     "cometbft": 0.7669603386187802,
+     "hotstuff": 0.6265223414671115
+    }
+   },
+   "smaa_b1_uniform": {
+    "TOPSIS": {
+     "raft": 0.0,
+     "smartbft": 0.0,
+     "ibft2": 0.0,
+     "qbft": 0.8548,
+     "clique": 0.0,
+     "cometbft": 0.1444,
+     "hotstuff": 0.0008
+    },
+    "VIKOR": {
+     "raft": 0.0,
+     "smartbft": 0.0,
+     "ibft2": 0.0,
+     "qbft": 0.9393,
+     "clique": 0.0039,
+     "cometbft": 0.0565,
+     "hotstuff": 0.0003
+    },
+    "COPRAS": {
+     "raft": 0.0,
+     "smartbft": 0.0,
+     "ibft2": 0.0,
+     "qbft": 0.9647,
+     "clique": 0.0,
+     "cometbft": 0.0351,
+     "hotstuff": 0.0002
+    },
+    "EDAS": {
+     "raft": 0.0,
+     "smartbft": 0.0,
+     "ibft2": 0.0,
+     "qbft": 0.9295,
+     "clique": 0.0,
+     "cometbft": 0.0704,
+     "hotstuff": 0.0001
+    }
+   }
+  },
+  "weights_full": [
+   0.0005265481800344997,
+   0.09451582676488159,
+   0.15024378738488295,
+   0.0445929040845022,
+   0.027414770416240557,
+   0.1045636598391087,
+   0.06322528435412536,
+   0.1298543796939407,
+   0.1581041811725704,
+   0.18000653334626096,
+   0.04695212476345207
+  ],
+  "smaa_b1_uniform_full": {
+   "TOPSIS": {
+    "raft": 0.0,
+    "smartbft": 0.0,
+    "ibft2": 0.0,
+    "qbft": 0.8605,
+    "clique": 0.0,
+    "cometbft": 0.1391,
+    "hotstuff": 0.0004
+   },
+   "VIKOR": {
+    "raft": 0.0,
+    "smartbft": 0.0,
+    "ibft2": 0.0,
+    "qbft": 0.9421,
+    "clique": 0.0035,
+    "cometbft": 0.0541,
+    "hotstuff": 0.0003
+   },
+   "COPRAS": {
+    "raft": 0.0,
+    "smartbft": 0.0,
+    "ibft2": 0.0,
+    "qbft": 0.967,
+    "clique": 0.0,
+    "cometbft": 0.033,
+    "hotstuff": 0.0
+   },
+   "EDAS": {
+    "raft": 0.0,
+    "smartbft": 0.0,
+    "ibft2": 0.0,
+    "qbft": 0.9308,
+    "clique": 0.0,
+    "cometbft": 0.0692,
+    "hotstuff": 0.0
+   }
+  },
+  "matrix": {
+   "raft": [
+    184.1353086419753,
+    2.316349437821535,
+    1.7808419257087826,
+    0.18793304802275065,
+    28.95902001757906,
+    3508.0483910780717,
+    100.0,
+    1.0,
+    0.0,
+    4.0,
+    762.4112778206696
+   ],
+   "smartbft": [
+    183.5241975308642,
+    3.315303799720162,
+    2.289860641676805,
+    0.27274676880798604,
+    41.52239895642331,
+    3518.779579182168,
+    36.98337273137362,
+    3.0,
+    0.8570559884689881,
+    4.0,
+    967.8929815815626
+   ],
+   "ibft2": [
+    184.67746913580245,
+    1.1161680215545078,
+    1.0896952608178387,
+    0.18501673225889145,
+    28.55750444444446,
+    1207.9035980618464,
+    100.0,
+    3.0,
+    0.8571428571428575,
+    3.0,
+    530.556682684634
+   ],
+   "qbft": [
+    184.67746913580245,
+    1.1161680215545078,
+    1.0896952608178387,
+    0.18501673225889145,
+    28.55750444444446,
+    1207.9035980618464,
+    100.0,
+    3.0,
+    0.8571428571428575,
+    4.0,
+    530.556682684634
+   ],
+   "clique": [
+    184.7008024691358,
+    1.1065681711985578,
+    9.080049865060223,
+    0.18454251637518063,
+    28.534929444444455,
+    1205.5551003520407,
+    100.0,
+    1.0,
+    0.8571428571428575,
+    3.0,
+    530.3199541154856
+   ],
+   "cometbft": [
+    183.9114197530864,
+    2.645219882843239,
+    2.1782240458321436,
+    0.2090034178021109,
+    32.27029530337689,
+    1110.9148694564515,
+    100.0,
+    4.0,
+    0.8571418913698529,
+    3.0,
+    520.7802188412104
+   ],
+   "hotstuff": [
+    184.3696913580247,
+    1.494421110073009,
+    1.2373959319309356,
+    0.2727491387442274,
+    32.472350831248356,
+    1112.7448950949172,
+    100.0,
+    3.0,
+    0.8571390538978766,
+    0.0,
+    520.9646854255676
+   ]
+  },
+  "halfwidth": {
+   "raft": [
+    0.23552174315022678,
+    0.004000109403495111,
+    0.0021610813102809654,
+    2.5008579160990076e-05,
+    0.031232600329573815,
+    0.015622106605698462,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0015747083458509884
+   ],
+   "smartbft": [
+    0.2434571575758083,
+    0.005562766425842088,
+    0.003355647246364011,
+    3.393399305703708e-05,
+    0.044759335323737826,
+    0.03645158207997274,
+    1.9237415026713558,
+    0.0,
+    8.433023391719875e-17,
+    0.0,
+    0.0036743194736616066
+   ],
+   "ibft2": [
+    0.2710703709732009,
+    0.000965660691283544,
+    0.0011191795913577495,
+    1.3781385684823689e-05,
+    0.030396675684004625,
+    0.01534106013153059,
+    0.0,
+    0.0,
+    1.2649535087579812e-16,
+    0.0,
+    0.0015463788612581528
+   ],
+   "qbft": [
+    0.2710703709732009,
+    0.000965660691283544,
+    0.0011191795913577495,
+    1.3781385684823689e-05,
+    0.030396675684004625,
+    0.01534106013153059,
+    0.0,
+    0.0,
+    1.2649535087579812e-16,
+    0.0,
+    0.0015463788612581528
+   ],
+   "clique": [
+    0.2815781707546983,
+    0.0009610445003765379,
+    0.001121541817528884,
+    1.2860922076932526e-05,
+    0.03039667568400468,
+    0.010782573692447233,
+    0.0,
+    0.0,
+    1.2649535087579812e-16,
+    0.0,
+    0.001086883428198052
+   ],
+   "cometbft": [
+    0.24540045986915238,
+    0.002421733066045218,
+    0.002121098011072073,
+    1.4903233256694626e-05,
+    0.034229947606849484,
+    0.02059414742261613,
+    0.0,
+    0.0,
+    9.351360932089067e-07,
+    0.0,
+    0.0020758900602046645
+   ],
+   "hotstuff": [
+    0.21003212646585612,
+    0.0015678436821636107,
+    0.0011360406408471417,
+    0.00018653575710563563,
+    0.02998666394571101,
+    0.02433379746436743,
+    0.0,
+    0.0,
+    2.933587744644395e-07,
+    0.0,
+    0.00245284678440588
+   ]
+  }
+ },
+ "boundary_default": [
+  {
+   "stress_tps": 110.0,
+   "feasible": [
+    "raft",
+    "smartbft",
+    "ibft2",
+    "qbft",
+    "clique",
+    "cometbft",
+    "hotstuff"
+   ],
+   "first_own": {
+    "TOPSIS": "qbft",
+    "VIKOR": "qbft",
+    "COPRAS": "qbft",
+    "EDAS": "qbft"
+   },
+   "first_unscreened": {
+    "TOPSIS": "qbft",
+    "VIKOR": "qbft",
+    "COPRAS": "qbft",
+    "EDAS": "qbft"
+   },
+   "avail_min": {
+    "raft": 1.0,
+    "smartbft": 1.0,
+    "ibft2": 1.0,
+    "qbft": 1.0,
+    "clique": 1.0,
+    "cometbft": 1.0,
+    "hotstuff": 1.0
+   }
+  },
+  {
+   "stress_tps": 120.0,
+   "feasible": [
+    "raft",
+    "smartbft",
+    "clique",
+    "cometbft",
+    "hotstuff"
+   ],
+   "first_own": {
+    "TOPSIS": "cometbft",
+    "VIKOR": "cometbft",
+    "COPRAS": "cometbft",
+    "EDAS": "cometbft"
+   },
+   "first_unscreened": {
+    "TOPSIS": "qbft",
+    "VIKOR": "qbft",
+    "COPRAS": "qbft",
+    "EDAS": "qbft"
+   },
+   "avail_min": {
+    "raft": 1.0,
+    "smartbft": 1.0,
+    "ibft2": 0.7436634601936316,
+    "qbft": 0.7436634601936316,
+    "clique": 1.0,
+    "cometbft": 1.0,
+    "hotstuff": 1.0
+   }
+  },
+  {
+   "stress_tps": 130.0,
+   "feasible": [
+    "raft",
+    "smartbft",
+    "clique",
+    "cometbft",
+    "hotstuff"
+   ],
+   "first_own": {
+    "TOPSIS": "cometbft",
+    "VIKOR": "cometbft",
+    "COPRAS": "cometbft",
+    "EDAS": "cometbft"
+   },
+   "first_unscreened": {
+    "TOPSIS": "qbft",
+    "VIKOR": "qbft",
+    "COPRAS": "qbft",
+    "EDAS": "qbft"
+   },
+   "avail_min": {
+    "raft": 1.0,
+    "smartbft": 1.0,
+    "ibft2": 0.6729718489624413,
+    "qbft": 0.6729718489624413,
+    "clique": 1.0,
+    "cometbft": 1.0,
+    "hotstuff": 1.0
+   }
+  },
+  {
+   "stress_tps": 140.0,
+   "feasible": [
+    "raft",
+    "smartbft",
+    "clique",
+    "cometbft",
+    "hotstuff"
+   ],
+   "first_own": {
+    "TOPSIS": "cometbft",
+    "VIKOR": "cometbft",
+    "COPRAS": "cometbft",
+    "EDAS": "cometbft"
+   },
+   "first_unscreened": {
+    "TOPSIS": "qbft",
+    "VIKOR": "qbft",
+    "COPRAS": "qbft",
+    "EDAS": "qbft"
+   },
+   "avail_min": {
+    "raft": 1.0,
+    "smartbft": 1.0,
+    "ibft2": 0.6114206683777278,
+    "qbft": 0.6114206683777278,
+    "clique": 1.0,
+    "cometbft": 1.0,
+    "hotstuff": 1.0
+   }
+  },
+  {
+   "stress_tps": 150.0,
+   "feasible": [
+    "raft",
+    "smartbft",
+    "clique",
+    "cometbft"
+   ],
+   "first_own": {
+    "TOPSIS": "cometbft",
+    "VIKOR": "cometbft",
+    "COPRAS": "cometbft",
+    "EDAS": "cometbft"
+   },
+   "first_unscreened": {
+    "TOPSIS": "qbft",
+    "VIKOR": "qbft",
+    "COPRAS": "qbft",
+    "EDAS": "qbft"
+   },
+   "avail_min": {
+    "raft": 1.0,
+    "smartbft": 1.0,
+    "ibft2": 0.5397432091435357,
+    "qbft": 0.5397432091435357,
+    "clique": 1.0,
+    "cometbft": 1.0,
+    "hotstuff": 0.9376686753669267
+   }
+  },
+  {
+   "stress_tps": 160.0,
+   "feasible": [
+    "raft",
+    "smartbft",
+    "clique",
+    "cometbft"
+   ],
+   "first_own": {
+    "TOPSIS": "cometbft",
+    "VIKOR": "cometbft",
+    "COPRAS": "cometbft",
+    "EDAS": "cometbft"
+   },
+   "first_unscreened": {
+    "TOPSIS": "qbft",
+    "VIKOR": "cometbft",
+    "COPRAS": "qbft",
+    "EDAS": "qbft"
+   },
+   "avail_min": {
+    "raft": 1.0,
+    "smartbft": 1.0,
+    "ibft2": 0.4832067706219929,
+    "qbft": 0.4832067706219929,
+    "clique": 1.0,
+    "cometbft": 1.0,
+    "hotstuff": 0.42300233186341285
+   }
+  },
+  {
+   "stress_tps": 170.0,
+   "feasible": [
+    "raft",
+    "smartbft",
+    "clique",
+    "cometbft"
+   ],
+   "first_own": {
+    "TOPSIS": "cometbft",
+    "VIKOR": "cometbft",
+    "COPRAS": "cometbft",
+    "EDAS": "cometbft"
+   },
+   "first_unscreened": {
+    "TOPSIS": "qbft",
+    "VIKOR": "qbft",
+    "COPRAS": "qbft",
+    "EDAS": "qbft"
+   },
+   "avail_min": {
+    "raft": 1.0,
+    "smartbft": 1.0,
+    "ibft2": 0.4806583647279794,
+    "qbft": 0.4806583647279794,
+    "clique": 1.0,
+    "cometbft": 1.0,
+    "hotstuff": 0.24591301331251897
+   }
+  },
+  {
+   "stress_tps": 180.0,
+   "feasible": [
+    "raft",
+    "clique",
+    "cometbft"
+   ],
+   "first_own": {
+    "TOPSIS": "cometbft",
+    "VIKOR": "cometbft",
+    "COPRAS": "cometbft",
+    "EDAS": "cometbft"
+   },
+   "first_unscreened": {
+    "TOPSIS": "qbft",
+    "VIKOR": "qbft",
+    "COPRAS": "qbft",
+    "EDAS": "qbft"
+   },
+   "avail_min": {
+    "raft": 1.0,
+    "smartbft": 0.4141894935102158,
+    "ibft2": 0.4617166994750656,
+    "qbft": 0.4617166994750656,
+    "clique": 1.0,
+    "cometbft": 1.0,
+    "hotstuff": 0.159878887406343
+   }
+  },
+  {
+   "stress_tps": 190.0,
+   "feasible": [
+    "clique",
+    "cometbft"
+   ],
+   "first_own": {
+    "TOPSIS": "cometbft",
+    "VIKOR": "cometbft",
+    "COPRAS": "cometbft",
+    "EDAS": "cometbft"
+   },
+   "first_unscreened": {
+    "TOPSIS": "qbft",
+    "VIKOR": "qbft",
+    "COPRAS": "qbft",
+    "EDAS": "qbft"
+   },
+   "avail_min": {
+    "raft": 0.8635312484753866,
+    "smartbft": 0.22104997769718596,
+    "ibft2": 0.43469154238504354,
+    "qbft": 0.43469154238504354,
+    "clique": 1.0,
+    "cometbft": 1.0,
+    "hotstuff": 0.10797471054826135
+   }
+  },
+  {
+   "stress_tps": 200.0,
+   "feasible": [
+    "clique",
+    "cometbft"
+   ],
+   "first_own": {
+    "TOPSIS": "cometbft",
+    "VIKOR": "cometbft",
+    "COPRAS": "cometbft",
+    "EDAS": "cometbft"
+   },
+   "first_unscreened": {
+    "TOPSIS": "cometbft",
+    "VIKOR": "cometbft",
+    "COPRAS": "qbft",
+    "EDAS": "cometbft"
+   },
+   "avail_min": {
+    "raft": 0.3418320821627596,
+    "smartbft": 0.12895419826176907,
+    "ibft2": 0.42391982058273386,
+    "qbft": 0.42391982058273386,
+    "clique": 1.0,
+    "cometbft": 1.0,
+    "hotstuff": 0.07063217698360473
+   }
+  },
+  {
+   "stress_tps": 210.0,
+   "feasible": [
+    "clique"
+   ],
+   "first_own": {
+    "TOPSIS": "clique",
+    "VIKOR": "clique",
+    "COPRAS": "clique",
+    "EDAS": "clique"
+   },
+   "first_unscreened": {
+    "TOPSIS": "qbft",
+    "VIKOR": "qbft",
+    "COPRAS": "qbft",
+    "EDAS": "qbft"
+   },
+   "avail_min": {
+    "raft": 0.20086504886736503,
+    "smartbft": 0.07670519519361024,
+    "ibft2": 0.4052569703988349,
+    "qbft": 0.4052569703988349,
+    "clique": 1.0,
+    "cometbft": 0.4674622298045975,
+    "hotstuff": 0.04144670633309204
+   }
+  },
+  {
+   "stress_tps": 220.0,
+   "feasible": [],
+   "first_own": {},
+   "first_unscreened": {
+    "TOPSIS": "qbft",
+    "VIKOR": "qbft",
+    "COPRAS": "qbft",
+    "EDAS": "qbft"
+   },
+   "avail_min": {
+    "raft": 0.12273412631931647,
+    "smartbft": 0.04216109162316846,
+    "ibft2": 0.3792883088927755,
+    "qbft": 0.3792883088927755,
+    "clique": 0.7344948902663763,
+    "cometbft": 0.27178127255333073,
+    "hotstuff": 0.020195807495281746
+   }
+  },
+  {
+   "stress_tps": 230.0,
+   "feasible": [],
+   "first_own": {},
+   "first_unscreened": {
+    "TOPSIS": "qbft",
+    "VIKOR": "qbft",
+    "COPRAS": "qbft",
+    "EDAS": "qbft"
+   },
+   "avail_min": {
+    "raft": 0.07308669278908948,
+    "smartbft": 0.019326192732002635,
+    "ibft2": 0.38870325408463346,
+    "qbft": 0.38870325408463346,
+    "clique": 0.8655985543373912,
+    "cometbft": 0.16285418356122588,
+    "hotstuff": 0.007469060203686992
+   }
+  },
+  {
+   "stress_tps": 240.0,
+   "feasible": [],
+   "first_own": {},
+   "first_unscreened": {
+    "TOPSIS": "qbft",
+    "VIKOR": "qbft",
+    "COPRAS": "qbft",
+    "EDAS": "qbft"
+   },
+   "avail_min": {
+    "raft": 0.04482451287725121,
+    "smartbft": 0.00286171456705028,
+    "ibft2": 0.35685541269438226,
+    "qbft": 0.35685541269438226,
+    "clique": 0.8494017700206605,
+    "cometbft": 0.11029909532894332,
+    "hotstuff": 0.0
+   }
+  },
+  {
+   "stress_tps": 250.0,
+   "feasible": [],
+   "first_own": {},
+   "first_unscreened": {
+    "TOPSIS": "clique",
+    "VIKOR": "qbft",
+    "COPRAS": "qbft",
+    "EDAS": "qbft"
+   },
+   "avail_min": {
+    "raft": 0.025290372314009768,
+    "smartbft": 0.0,
+    "ibft2": 0.3397078117008739,
+    "qbft": 0.3397078117008739,
+    "clique": 0.7938746606868877,
+    "cometbft": 0.06800082738649292,
+    "hotstuff": 0.0
+   }
+  },
+  {
+   "stress_tps": 260.0,
+   "feasible": [],
+   "first_own": {},
+   "first_unscreened": {
+    "TOPSIS": "clique",
+    "VIKOR": "qbft",
+    "COPRAS": "qbft",
+    "EDAS": "qbft"
+   },
+   "avail_min": {
+    "raft": 0.007392094664433118,
+    "smartbft": 0.0,
+    "ibft2": 0.3478988591252101,
+    "qbft": 0.3478988591252101,
+    "clique": 0.7638897755080327,
+    "cometbft": 0.03617393033695096,
+    "hotstuff": 0.0
+   }
+  }
+ ],
+ "boundary_provisioned": [
+  {
+   "stress_tps": 110.0,
+   "feasible": [
+    "raft",
+    "smartbft",
+    "ibft2",
+    "qbft",
+    "clique",
+    "cometbft",
+    "hotstuff"
+   ],
+   "first_own": {
+    "TOPSIS": "qbft",
+    "VIKOR": "qbft",
+    "COPRAS": "qbft",
+    "EDAS": "qbft"
+   },
+   "first_unscreened": {
+    "TOPSIS": "qbft",
+    "VIKOR": "qbft",
+    "COPRAS": "qbft",
+    "EDAS": "qbft"
+   },
+   "avail_min": {
+    "raft": 1.0,
+    "smartbft": 1.0,
+    "ibft2": 1.0,
+    "qbft": 1.0,
+    "clique": 1.0,
+    "cometbft": 1.0,
+    "hotstuff": 1.0
+   }
+  },
+  {
+   "stress_tps": 120.0,
+   "feasible": [
+    "raft",
+    "smartbft",
+    "ibft2",
+    "qbft",
+    "clique",
+    "cometbft",
+    "hotstuff"
+   ],
+   "first_own": {
+    "TOPSIS": "qbft",
+    "VIKOR": "qbft",
+    "COPRAS": "qbft",
+    "EDAS": "qbft"
+   },
+   "first_unscreened": {
+    "TOPSIS": "qbft",
+    "VIKOR": "qbft",
+    "COPRAS": "qbft",
+    "EDAS": "qbft"
+   },
+   "avail_min": {
+    "raft": 1.0,
+    "smartbft": 1.0,
+    "ibft2": 1.0,
+    "qbft": 1.0,
+    "clique": 1.0,
+    "cometbft": 1.0,
+    "hotstuff": 1.0
+   }
+  },
+  {
+   "stress_tps": 130.0,
+   "feasible": [
+    "raft",
+    "smartbft",
+    "ibft2",
+    "qbft",
+    "clique",
+    "cometbft",
+    "hotstuff"
+   ],
+   "first_own": {
+    "TOPSIS": "qbft",
+    "VIKOR": "qbft",
+    "COPRAS": "qbft",
+    "EDAS": "qbft"
+   },
+   "first_unscreened": {
+    "TOPSIS": "qbft",
+    "VIKOR": "qbft",
+    "COPRAS": "qbft",
+    "EDAS": "qbft"
+   },
+   "avail_min": {
+    "raft": 1.0,
+    "smartbft": 1.0,
+    "ibft2": 1.0,
+    "qbft": 1.0,
+    "clique": 1.0,
+    "cometbft": 1.0,
+    "hotstuff": 1.0
+   }
+  },
+  {
+   "stress_tps": 140.0,
+   "feasible": [
+    "raft",
+    "smartbft",
+    "ibft2",
+    "qbft",
+    "clique",
+    "cometbft",
+    "hotstuff"
+   ],
+   "first_own": {
+    "TOPSIS": "qbft",
+    "VIKOR": "qbft",
+    "COPRAS": "qbft",
+    "EDAS": "qbft"
+   },
+   "first_unscreened": {
+    "TOPSIS": "qbft",
+    "VIKOR": "qbft",
+    "COPRAS": "qbft",
+    "EDAS": "qbft"
+   },
+   "avail_min": {
+    "raft": 1.0,
+    "smartbft": 1.0,
+    "ibft2": 1.0,
+    "qbft": 1.0,
+    "clique": 1.0,
+    "cometbft": 1.0,
+    "hotstuff": 1.0
+   }
+  },
+  {
+   "stress_tps": 150.0,
+   "feasible": [
+    "raft",
+    "smartbft",
+    "ibft2",
+    "qbft",
+    "clique",
+    "cometbft",
+    "hotstuff"
+   ],
+   "first_own": {
+    "TOPSIS": "qbft",
+    "VIKOR": "qbft",
+    "COPRAS": "qbft",
+    "EDAS": "qbft"
+   },
+   "first_unscreened": {
+    "TOPSIS": "qbft",
+    "VIKOR": "qbft",
+    "COPRAS": "qbft",
+    "EDAS": "qbft"
+   },
+   "avail_min": {
+    "raft": 1.0,
+    "smartbft": 1.0,
+    "ibft2": 1.0,
+    "qbft": 1.0,
+    "clique": 1.0,
+    "cometbft": 1.0,
+    "hotstuff": 1.0
+   }
+  },
+  {
+   "stress_tps": 160.0,
+   "feasible": [
+    "raft",
+    "smartbft",
+    "ibft2",
+    "qbft",
+    "clique",
+    "cometbft",
+    "hotstuff"
+   ],
+   "first_own": {
+    "TOPSIS": "qbft",
+    "VIKOR": "qbft",
+    "COPRAS": "qbft",
+    "EDAS": "qbft"
+   },
+   "first_unscreened": {
+    "TOPSIS": "qbft",
+    "VIKOR": "qbft",
+    "COPRAS": "qbft",
+    "EDAS": "qbft"
+   },
+   "avail_min": {
+    "raft": 1.0,
+    "smartbft": 1.0,
+    "ibft2": 1.0,
+    "qbft": 1.0,
+    "clique": 1.0,
+    "cometbft": 1.0,
+    "hotstuff": 1.0
+   }
+  },
+  {
+   "stress_tps": 170.0,
+   "feasible": [
+    "raft",
+    "smartbft",
+    "ibft2",
+    "qbft",
+    "clique",
+    "cometbft",
+    "hotstuff"
+   ],
+   "first_own": {
+    "TOPSIS": "qbft",
+    "VIKOR": "qbft",
+    "COPRAS": "qbft",
+    "EDAS": "qbft"
+   },
+   "first_unscreened": {
+    "TOPSIS": "qbft",
+    "VIKOR": "qbft",
+    "COPRAS": "qbft",
+    "EDAS": "qbft"
+   },
+   "avail_min": {
+    "raft": 1.0,
+    "smartbft": 1.0,
+    "ibft2": 1.0,
+    "qbft": 1.0,
+    "clique": 1.0,
+    "cometbft": 1.0,
+    "hotstuff": 1.0
+   }
+  },
+  {
+   "stress_tps": 180.0,
+   "feasible": [
+    "raft",
+    "smartbft",
+    "ibft2",
+    "qbft",
+    "clique",
+    "cometbft",
+    "hotstuff"
+   ],
+   "first_own": {
+    "TOPSIS": "qbft",
+    "VIKOR": "qbft",
+    "COPRAS": "qbft",
+    "EDAS": "qbft"
+   },
+   "first_unscreened": {
+    "TOPSIS": "qbft",
+    "VIKOR": "qbft",
+    "COPRAS": "qbft",
+    "EDAS": "qbft"
+   },
+   "avail_min": {
+    "raft": 1.0,
+    "smartbft": 1.0,
+    "ibft2": 1.0,
+    "qbft": 1.0,
+    "clique": 1.0,
+    "cometbft": 1.0,
+    "hotstuff": 1.0
+   }
+  },
+  {
+   "stress_tps": 190.0,
+   "feasible": [
+    "raft",
+    "smartbft",
+    "ibft2",
+    "qbft",
+    "clique",
+    "cometbft",
+    "hotstuff"
+   ],
+   "first_own": {
+    "TOPSIS": "qbft",
+    "VIKOR": "qbft",
+    "COPRAS": "qbft",
+    "EDAS": "qbft"
+   },
+   "first_unscreened": {
+    "TOPSIS": "qbft",
+    "VIKOR": "qbft",
+    "COPRAS": "qbft",
+    "EDAS": "qbft"
+   },
+   "avail_min": {
+    "raft": 1.0,
+    "smartbft": 1.0,
+    "ibft2": 1.0,
+    "qbft": 1.0,
+    "clique": 1.0,
+    "cometbft": 1.0,
+    "hotstuff": 1.0
+   }
+  },
+  {
+   "stress_tps": 200.0,
+   "feasible": [
+    "raft",
+    "ibft2",
+    "qbft",
+    "clique",
+    "cometbft"
+   ],
+   "first_own": {
+    "TOPSIS": "qbft",
+    "VIKOR": "qbft",
+    "COPRAS": "qbft",
+    "EDAS": "qbft"
+   },
+   "first_unscreened": {
+    "TOPSIS": "qbft",
+    "VIKOR": "qbft",
+    "COPRAS": "qbft",
+    "EDAS": "qbft"
+   },
+   "avail_min": {
+    "raft": 1.0,
+    "smartbft": 0.711921080342133,
+    "ibft2": 1.0,
+    "qbft": 1.0,
+    "clique": 1.0,
+    "cometbft": 1.0,
+    "hotstuff": 0.9027310827614793
+   }
+  },
+  {
+   "stress_tps": 210.0,
+   "feasible": [
+    "ibft2",
+    "qbft",
+    "clique"
+   ],
+   "first_own": {
+    "TOPSIS": "qbft",
+    "VIKOR": "qbft",
+    "COPRAS": "qbft",
+    "EDAS": "qbft"
+   },
+   "first_unscreened": {
+    "TOPSIS": "qbft",
+    "VIKOR": "qbft",
+    "COPRAS": "qbft",
+    "EDAS": "qbft"
+   },
+   "avail_min": {
+    "raft": 0.4188468354652489,
+    "smartbft": 0.30770177814517125,
+    "ibft2": 1.0,
+    "qbft": 1.0,
+    "clique": 1.0,
+    "cometbft": 0.4674622298045975,
+    "hotstuff": 0.34027302556544015
+   }
+  },
+  {
+   "stress_tps": 220.0,
+   "feasible": [
+    "ibft2",
+    "qbft"
+   ],
+   "first_own": {
+    "TOPSIS": "qbft",
+    "VIKOR": "qbft",
+    "COPRAS": "qbft",
+    "EDAS": "qbft"
+   },
+   "first_unscreened": {
+    "TOPSIS": "qbft",
+    "VIKOR": "qbft",
+    "COPRAS": "qbft",
+    "EDAS": "qbft"
+   },
+   "avail_min": {
+    "raft": 0.22397386496900654,
+    "smartbft": 0.15204511505345664,
+    "ibft2": 1.0,
+    "qbft": 1.0,
+    "clique": 0.7344948902663763,
+    "cometbft": 0.27178127255333073,
+    "hotstuff": 0.21480985089629753
+   }
+  },
+  {
+   "stress_tps": 230.0,
+   "feasible": [],
+   "first_own": {},
+   "first_unscreened": {
+    "TOPSIS": "qbft",
+    "VIKOR": "qbft",
+    "COPRAS": "qbft",
+    "EDAS": "qbft"
+   },
+   "avail_min": {
+    "raft": 0.15058972875690962,
+    "smartbft": 0.0978513962712572,
+    "ibft2": 0.8424970993940957,
+    "qbft": 0.8424970993940957,
+    "clique": 0.8655985543373912,
+    "cometbft": 0.16285418356122588,
+    "hotstuff": 0.13086051748038816
+   }
+  },
+  {
+   "stress_tps": 240.0,
+   "feasible": [],
+   "first_own": {},
+   "first_unscreened": {
+    "TOPSIS": "qbft",
+    "VIKOR": "qbft",
+    "COPRAS": "qbft",
+    "EDAS": "qbft"
+   },
+   "avail_min": {
+    "raft": 0.0901100252013031,
+    "smartbft": 0.06268847313680842,
+    "ibft2": 0.8770404129656327,
+    "qbft": 0.8770404129656327,
+    "clique": 0.8494017700206605,
+    "cometbft": 0.11029909532894332,
+    "hotstuff": 0.0866916696829443
+   }
+  },
+  {
+   "stress_tps": 250.0,
+   "feasible": [],
+   "first_own": {},
+   "first_unscreened": {
+    "TOPSIS": "qbft",
+    "VIKOR": "qbft",
+    "COPRAS": "qbft",
+    "EDAS": "qbft"
+   },
+   "avail_min": {
+    "raft": 0.05920276171367875,
+    "smartbft": 0.034055819038754195,
+    "ibft2": 0.8097559896140683,
+    "qbft": 0.8097559896140683,
+    "clique": 0.7938746606868877,
+    "cometbft": 0.06800082738649292,
+    "hotstuff": 0.05388439749793462
+   }
+  },
+  {
+   "stress_tps": 260.0,
+   "feasible": [],
+   "first_own": {},
+   "first_unscreened": {
+    "TOPSIS": "qbft",
+    "VIKOR": "qbft",
+    "COPRAS": "qbft",
+    "EDAS": "qbft"
+   },
+   "avail_min": {
+    "raft": 0.029769124374933502,
+    "smartbft": 0.016024521509783656,
+    "ibft2": 0.771251207454969,
+    "qbft": 0.771251207454969,
+    "clique": 0.7638897755080327,
+    "cometbft": 0.03617393033695096,
+    "hotstuff": 0.028748618882988203
+   }
+  }
+ ],
+ "besu_block_capacity": [
+  {
+   "block_tx": 220,
+   "capacity_tps_nominal": 110.0,
+   "qbft_avail_min": 0.4651762597092213,
+   "qbft_C1": 82.50796296296296,
+   "qbft_C2": 1.3157914635031038,
+   "qbft_C5": 17.692685833333254,
+   "qbft_C7": 69.48924721717184,
+   "qbft_C11": 530.5560637258658,
+   "feasible": [
+    "raft",
+    "clique",
+    "cometbft"
+   ],
+   "first_screened": {
+    "TOPSIS": "cometbft",
+    "VIKOR": "cometbft",
+    "COPRAS": "cometbft",
+    "EDAS": "cometbft"
+   }
+  },
+  {
+   "block_tx": 275,
+   "capacity_tps_nominal": 137.5,
+   "qbft_avail_min": 0.6981676956781517,
+   "qbft_C1": 127.6774074074074,
+   "qbft_C2": 1.1162781713041696,
+   "qbft_C5": 21.032503333333228,
+   "qbft_C7": 100.0,
+   "qbft_C11": 530.5560637258658,
+   "feasible": [
+    "raft",
+    "clique",
+    "cometbft"
+   ],
+   "first_screened": {
+    "TOPSIS": "cometbft",
+    "VIKOR": "cometbft",
+    "COPRAS": "cometbft",
+    "EDAS": "cometbft"
+   }
+  },
+  {
+   "block_tx": 330,
+   "capacity_tps_nominal": 165.0,
+   "qbft_avail_min": 0.8631869071449408,
+   "qbft_C1": 156.54111111111112,
+   "qbft_C2": 1.1162781713041696,
+   "qbft_C5": 25.396902500000103,
+   "qbft_C7": 100.0,
+   "qbft_C11": 530.5560637258658,
+   "feasible": [
+    "raft",
+    "clique",
+    "cometbft"
+   ],
+   "first_screened": {
+    "TOPSIS": "cometbft",
+    "VIKOR": "cometbft",
+    "COPRAS": "cometbft",
+    "EDAS": "cometbft"
+   }
+  },
+  {
+   "block_tx": 385,
+   "capacity_tps_nominal": 192.5,
+   "qbft_avail_min": 1.0,
+   "qbft_C1": 184.68629629629632,
+   "qbft_C2": 1.1162781713041696,
+   "qbft_C5": 28.558885416666648,
+   "qbft_C7": 100.0,
+   "qbft_C11": 530.5560637258658,
+   "feasible": [
+    "raft",
+    "ibft2",
+    "qbft",
+    "clique",
+    "cometbft"
+   ],
+   "first_screened": {
+    "TOPSIS": "qbft",
+    "VIKOR": "qbft",
+    "COPRAS": "qbft",
+    "EDAS": "qbft"
+   }
+  },
+  {
+   "block_tx": 440,
+   "capacity_tps_nominal": 220.0,
+   "qbft_avail_min": 1.0,
+   "qbft_C1": 184.70074074074074,
+   "qbft_C2": 1.1162781713041696,
+   "qbft_C5": 28.558885416666687,
+   "qbft_C7": 100.0,
+   "qbft_C11": 530.5560637258658,
+   "feasible": [
+    "raft",
+    "ibft2",
+    "qbft",
+    "clique",
+    "cometbft"
+   ],
+   "first_screened": {
+    "TOPSIS": "qbft",
+    "VIKOR": "qbft",
+    "COPRAS": "qbft",
+    "EDAS": "qbft"
+   }
+  },
+  {
+   "block_tx": 550,
+   "capacity_tps_nominal": 275.0,
+   "qbft_avail_min": 1.0,
+   "qbft_C1": 184.70074074074074,
+   "qbft_C2": 1.1162781713041696,
+   "qbft_C5": 28.558885416666687,
+   "qbft_C7": 100.0,
+   "qbft_C11": 530.5560637258658,
+   "feasible": [
+    "raft",
+    "ibft2",
+    "qbft",
+    "clique",
+    "cometbft"
+   ],
+   "first_screened": {
+    "TOPSIS": "qbft",
+    "VIKOR": "qbft",
+    "COPRAS": "qbft",
+    "EDAS": "qbft"
+   }
+  }
+ ],
+ "ablations_screened": {
+  "default": {
+   "base": {
+    "feasible": [
+     "raft",
+     "clique",
+     "cometbft"
+    ],
+    "first_screened": {
+     "TOPSIS": "cometbft",
+     "VIKOR": "cometbft",
+     "COPRAS": "cometbft",
+     "EDAS": "cometbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    },
+    "avail_min": {
+     "raft": 1.0,
+     "smartbft": 0.298177653853814,
+     "ibft2": 0.4651762597092213,
+     "qbft": 0.4651762597092213,
+     "clique": 1.0,
+     "cometbft": 1.0,
+     "hotstuff": 0.12943642989068038
+    }
+   },
+   "n4": {
+    "feasible": [
+     "raft",
+     "smartbft",
+     "clique",
+     "cometbft"
+    ],
+    "first_screened": {
+     "TOPSIS": "cometbft",
+     "VIKOR": "cometbft",
+     "COPRAS": "cometbft",
+     "EDAS": "cometbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "cometbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    },
+    "avail_min": {
+     "raft": 1.0,
+     "smartbft": 1.0,
+     "ibft2": 0.4653057159928301,
+     "qbft": 0.4653057159928301,
+     "clique": 1.0,
+     "cometbft": 1.0,
+     "hotstuff": 0.12936654520041932
+    }
+   },
+   "n10": {
+    "feasible": [
+     "raft",
+     "clique",
+     "cometbft"
+    ],
+    "first_screened": {
+     "TOPSIS": "cometbft",
+     "VIKOR": "cometbft",
+     "COPRAS": "cometbft",
+     "EDAS": "cometbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "cometbft",
+     "VIKOR": "cometbft",
+     "COPRAS": "qbft",
+     "EDAS": "cometbft"
+    },
+    "avail_min": {
+     "raft": 1.0,
+     "smartbft": 0.0,
+     "ibft2": 0.46506671977693687,
+     "qbft": 0.46506671977693687,
+     "clique": 1.0,
+     "cometbft": 1.0,
+     "hotstuff": 0.1298557380322468
+    }
+   },
+   "rtt20ms": {
+    "feasible": [
+     "raft",
+     "clique",
+     "cometbft"
+    ],
+    "first_screened": {
+     "TOPSIS": "cometbft",
+     "VIKOR": "cometbft",
+     "COPRAS": "cometbft",
+     "EDAS": "cometbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "cometbft",
+     "VIKOR": "cometbft",
+     "COPRAS": "qbft",
+     "EDAS": "cometbft"
+    },
+    "avail_min": {
+     "raft": 1.0,
+     "smartbft": 0.11624749143844165,
+     "ibft2": 0.4644393547102171,
+     "qbft": 0.4644393547102171,
+     "clique": 1.0,
+     "cometbft": 1.0,
+     "hotstuff": 0.17926421404682275
+    }
+   },
+   "no_app_tier": {
+    "feasible": [
+     "raft",
+     "clique",
+     "cometbft",
+     "hotstuff"
+    ],
+    "first_screened": {
+     "TOPSIS": "cometbft",
+     "VIKOR": "cometbft",
+     "COPRAS": "cometbft",
+     "EDAS": "cometbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    },
+    "avail_min": {
+     "raft": 1.0,
+     "smartbft": 0.298177653853814,
+     "ibft2": 0.4651762597092213,
+     "qbft": 0.4651762597092213,
+     "clique": 1.0,
+     "cometbft": 1.0,
+     "hotstuff": 1.0
+    }
+   },
+   "operator_removes_dead": {
+    "feasible": [
+     "raft",
+     "clique",
+     "cometbft"
+    ],
+    "first_screened": {
+     "TOPSIS": "cometbft",
+     "VIKOR": "cometbft",
+     "COPRAS": "cometbft",
+     "EDAS": "cometbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    },
+    "avail_min": {
+     "raft": 1.0,
+     "smartbft": 0.298177653853814,
+     "ibft2": 0.4651762597092213,
+     "qbft": 0.4651762597092213,
+     "clique": 1.0,
+     "cometbft": 1.0,
+     "hotstuff": 0.12943642989068038
+    }
+   },
+   "hotstuff_Tb1s": {
+    "feasible": [
+     "raft",
+     "clique",
+     "cometbft",
+     "hotstuff"
+    ],
+    "first_screened": {
+     "TOPSIS": "cometbft",
+     "VIKOR": "cometbft",
+     "COPRAS": "cometbft",
+     "EDAS": "cometbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "cometbft",
+     "VIKOR": "cometbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    },
+    "avail_min": {
+     "raft": 1.0,
+     "smartbft": 0.298177653853814,
+     "ibft2": 0.4651762597092213,
+     "qbft": 0.4651762597092213,
+     "clique": 1.0,
+     "cometbft": 1.0,
+     "hotstuff": 1.0
+    }
+   },
+   "besu_roundchange_10s": {
+    "feasible": [
+     "raft",
+     "clique",
+     "cometbft"
+    ],
+    "first_screened": {
+     "TOPSIS": "cometbft",
+     "VIKOR": "cometbft",
+     "COPRAS": "cometbft",
+     "EDAS": "cometbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "cometbft",
+     "VIKOR": "cometbft",
+     "COPRAS": "qbft",
+     "EDAS": "cometbft"
+    },
+    "avail_min": {
+     "raft": 1.0,
+     "smartbft": 0.298177653853814,
+     "ibft2": 0.4651762597092213,
+     "qbft": 0.4651762597092213,
+     "clique": 1.0,
+     "cometbft": 1.0,
+     "hotstuff": 0.12943642989068038
+    }
+   }
+  },
+  "provisioned": {
+   "base": {
+    "feasible": [
+     "raft",
+     "smartbft",
+     "ibft2",
+     "qbft",
+     "clique",
+     "cometbft",
+     "hotstuff"
+    ],
+    "first_screened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    },
+    "avail_min": {
+     "raft": 1.0,
+     "smartbft": 1.0,
+     "ibft2": 1.0,
+     "qbft": 1.0,
+     "clique": 1.0,
+     "cometbft": 1.0,
+     "hotstuff": 1.0
+    }
+   },
+   "n4": {
+    "feasible": [
+     "raft",
+     "smartbft",
+     "ibft2",
+     "qbft",
+     "clique",
+     "cometbft",
+     "hotstuff"
+    ],
+    "first_screened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    },
+    "avail_min": {
+     "raft": 1.0,
+     "smartbft": 1.0,
+     "ibft2": 1.0,
+     "qbft": 1.0,
+     "clique": 1.0,
+     "cometbft": 1.0,
+     "hotstuff": 1.0
+    }
+   },
+   "n10": {
+    "feasible": [
+     "raft",
+     "ibft2",
+     "qbft",
+     "clique",
+     "cometbft",
+     "hotstuff"
+    ],
+    "first_screened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    },
+    "avail_min": {
+     "raft": 1.0,
+     "smartbft": 0.0,
+     "ibft2": 1.0,
+     "qbft": 1.0,
+     "clique": 1.0,
+     "cometbft": 1.0,
+     "hotstuff": 1.0
+    }
+   },
+   "rtt20ms": {
+    "feasible": [
+     "raft",
+     "smartbft",
+     "ibft2",
+     "qbft",
+     "clique",
+     "cometbft",
+     "hotstuff"
+    ],
+    "first_screened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    },
+    "avail_min": {
+     "raft": 1.0,
+     "smartbft": 1.0,
+     "ibft2": 1.0,
+     "qbft": 1.0,
+     "clique": 1.0,
+     "cometbft": 1.0,
+     "hotstuff": 1.0
+    }
+   },
+   "no_app_tier": {
+    "feasible": [
+     "raft",
+     "smartbft",
+     "ibft2",
+     "qbft",
+     "clique",
+     "cometbft",
+     "hotstuff"
+    ],
+    "first_screened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    },
+    "avail_min": {
+     "raft": 1.0,
+     "smartbft": 1.0,
+     "ibft2": 1.0,
+     "qbft": 1.0,
+     "clique": 1.0,
+     "cometbft": 1.0,
+     "hotstuff": 1.0
+    }
+   },
+   "operator_removes_dead": {
+    "feasible": [
+     "raft",
+     "smartbft",
+     "ibft2",
+     "qbft",
+     "clique",
+     "cometbft",
+     "hotstuff"
+    ],
+    "first_screened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    },
+    "avail_min": {
+     "raft": 1.0,
+     "smartbft": 1.0,
+     "ibft2": 1.0,
+     "qbft": 1.0,
+     "clique": 1.0,
+     "cometbft": 1.0,
+     "hotstuff": 1.0
+    }
+   },
+   "hotstuff_Tb1s": {
+    "feasible": [
+     "raft",
+     "smartbft",
+     "ibft2",
+     "qbft",
+     "clique",
+     "cometbft",
+     "hotstuff"
+    ],
+    "first_screened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    },
+    "avail_min": {
+     "raft": 1.0,
+     "smartbft": 1.0,
+     "ibft2": 1.0,
+     "qbft": 1.0,
+     "clique": 1.0,
+     "cometbft": 1.0,
+     "hotstuff": 1.0
+    }
+   },
+   "besu_roundchange_10s": {
+    "feasible": [
+     "raft",
+     "smartbft",
+     "ibft2",
+     "qbft",
+     "clique",
+     "cometbft",
+     "hotstuff"
+    ],
+    "first_screened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    },
+    "first_unscreened": {
+     "TOPSIS": "qbft",
+     "VIKOR": "qbft",
+     "COPRAS": "qbft",
+     "EDAS": "qbft"
+    },
+    "avail_min": {
+     "raft": 1.0,
+     "smartbft": 1.0,
+     "ibft2": 1.0,
+     "qbft": 1.0,
+     "clique": 1.0,
+     "cometbft": 1.0,
+     "hotstuff": 1.0
+    }
+   }
+  }
+ },
+ "provisioned_weight_vectors": {
+  "Equal": {
+   "TOPSIS": "qbft",
+   "VIKOR": "qbft",
+   "COPRAS": "qbft",
+   "EDAS": "qbft"
+  },
+  "Entropy": {
+   "TOPSIS": "qbft",
+   "VIKOR": "qbft",
+   "COPRAS": "qbft",
+   "EDAS": "qbft"
+  },
+  "CRITIC": {
+   "TOPSIS": "qbft",
+   "VIKOR": "qbft",
+   "COPRAS": "qbft",
+   "EDAS": "qbft"
+  },
+  "Entropy x CRITIC (base)": {
+   "TOPSIS": "qbft",
+   "VIKOR": "qbft",
+   "COPRAS": "qbft",
+   "EDAS": "qbft"
+  },
+  "IoT45 S2 performance": {
+   "TOPSIS": "qbft",
+   "VIKOR": "qbft",
+   "COPRAS": "qbft",
+   "EDAS": "qbft"
+  },
+  "IoT45 S3 resources": {
+   "TOPSIS": "qbft",
+   "VIKOR": "qbft",
+   "COPRAS": "qbft",
+   "EDAS": "qbft"
+  },
+  "IoT45 S4 security": {
+   "TOPSIS": "cometbft",
+   "VIKOR": "cometbft",
+   "COPRAS": "qbft",
+   "EDAS": "cometbft"
+  },
+  "IoT45 S5 governance": {
+   "TOPSIS": "qbft",
+   "VIKOR": "qbft",
+   "COPRAS": "qbft",
+   "EDAS": "qbft"
+  },
+  "IoT45 S6 security-high": {
+   "TOPSIS": "cometbft",
+   "VIKOR": "cometbft",
+   "COPRAS": "cometbft",
+   "EDAS": "cometbft"
+  },
+  "IoT45 S7 balanced-gov": {
+   "TOPSIS": "qbft",
+   "VIKOR": "qbft",
+   "COPRAS": "qbft",
+   "EDAS": "qbft"
+  }
+ },
+ "provisioned_single_weight_sweep_topsis": {
+  "C1 Throughput": [
+   "qbft",
+   "qbft",
+   "qbft",
+   "qbft",
+   "qbft",
+   "qbft",
+   "qbft",
+   "qbft",
+   "qbft",
+   "qbft",
+   "qbft"
+  ],
+  "C2 Latency": [
+   "qbft",
+   "qbft",
+   "qbft",
+   "qbft",
+   "qbft",
+   "qbft",
+   "qbft",
+   "qbft",
+   "qbft",
+   "qbft",
+   "qbft"
+  ],
+  "C3 Finalization": [
+   "qbft",
+   "qbft",
+   "qbft",
+   "qbft",
+   "qbft",
+   "qbft",
+   "qbft",
+   "qbft",
+   "qbft",
+   "qbft",
+   "qbft"
+  ],
+  "C4 Power": [
+   "qbft",
+   "qbft",
+   "qbft",
+   "qbft",
+   "qbft",
+   "qbft",
+   "qbft",
+   "qbft",
+   "qbft",
+   "qbft",
+   "qbft"
+  ],
+  "C5 Computing": [
+   "qbft",
+   "qbft",
+   "qbft",
+   "qbft",
+   "qbft",
+   "qbft",
+   "qbft",
+   "qbft",
+   "qbft",
+   "qbft",
+   "qbft"
+  ],
+  "C6 Storage": [
+   "qbft",
+   "qbft",
+   "qbft",
+   "qbft",
+   "qbft",
+   "qbft",
+   "qbft",
+   "qbft",
+   "qbft",
+   "qbft",
+   "qbft"
+  ],
+  "C7 Fault tolerance": [
+   "qbft",
+   "qbft",
+   "qbft",
+   "qbft",
+   "qbft",
+   "qbft",
+   "qbft",
+   "qbft",
+   "qbft",
+   "qbft",
+   "qbft"
+  ],
+  "C8 Attack resistance": [
+   "qbft",
+   "qbft",
+   "qbft",
+   "qbft",
+   "qbft",
+   "cometbft",
+   "cometbft",
+   "cometbft",
+   "cometbft",
+   "cometbft",
+   "cometbft"
+  ],
+  "C9 Decentralization": [
+   "qbft",
+   "qbft",
+   "qbft",
+   "qbft",
+   "qbft",
+   "qbft",
+   "qbft",
+   "qbft",
+   "qbft",
+   "qbft",
+   "qbft"
+  ],
+  "C10 Manageability": [
+   "ibft2",
+   "qbft",
+   "qbft",
+   "qbft",
+   "qbft",
+   "qbft",
+   "qbft",
+   "qbft",
+   "qbft",
+   "qbft",
+   "qbft"
+  ],
+  "C11 Operational cost": [
+   "qbft",
+   "qbft",
+   "qbft",
+   "qbft",
+   "qbft",
+   "qbft",
+   "qbft",
+   "qbft",
+   "qbft",
+   "qbft",
+   "qbft"
+  ]
+ },
+ "screened_weight_perturbation": {
+  "default": {
+   "TOPSIS": [
+    {
+     "delta": 0.1,
+     "top_unchanged": 1.0,
+     "mean_spearman": 1.0
+    },
+    {
+     "delta": 0.2,
+     "top_unchanged": 1.0,
+     "mean_spearman": 0.9375
+    },
+    {
+     "delta": 0.3,
+     "top_unchanged": 1.0,
+     "mean_spearman": 0.8875
+    },
+    {
+     "delta": 0.5,
+     "top_unchanged": 1.0,
+     "mean_spearman": 0.8425
+    }
+   ],
+   "VIKOR": [
+    {
+     "delta": 0.1,
+     "top_unchanged": 1.0,
+     "mean_spearman": 1.0
+    },
+    {
+     "delta": 0.2,
+     "top_unchanged": 1.0,
+     "mean_spearman": 1.0
+    },
+    {
+     "delta": 0.3,
+     "top_unchanged": 1.0,
+     "mean_spearman": 0.975
+    },
+    {
+     "delta": 0.5,
+     "top_unchanged": 0.995,
+     "mean_spearman": 0.93
+    }
+   ],
+   "COPRAS": [
+    {
+     "delta": 0.1,
+     "top_unchanged": 1.0,
+     "mean_spearman": 1.0
+    },
+    {
+     "delta": 0.2,
+     "top_unchanged": 1.0,
+     "mean_spearman": 1.0
+    },
+    {
+     "delta": 0.3,
+     "top_unchanged": 1.0,
+     "mean_spearman": 1.0
+    },
+    {
+     "delta": 0.5,
+     "top_unchanged": 1.0,
+     "mean_spearman": 0.955
+    }
+   ],
+   "EDAS": [
+    {
+     "delta": 0.1,
+     "top_unchanged": 1.0,
+     "mean_spearman": 1.0
+    },
+    {
+     "delta": 0.2,
+     "top_unchanged": 1.0,
+     "mean_spearman": 1.0
+    },
+    {
+     "delta": 0.3,
+     "top_unchanged": 1.0,
+     "mean_spearman": 0.9875
+    },
+    {
+     "delta": 0.5,
+     "top_unchanged": 1.0,
+     "mean_spearman": 0.9325
+    }
+   ]
+  },
+  "provisioned": {
+   "TOPSIS": [
+    {
+     "delta": 0.1,
+     "top_unchanged": 1.0,
+     "mean_spearman": 0.9998214285714286
+    },
+    {
+     "delta": 0.2,
+     "top_unchanged": 1.0,
+     "mean_spearman": 0.9916071428571429
+    },
+    {
+     "delta": 0.3,
+     "top_unchanged": 1.0,
+     "mean_spearman": 0.9825000000000003
+    },
+    {
+     "delta": 0.5,
+     "top_unchanged": 0.99,
+     "mean_spearman": 0.9617857142857146
+    }
+   ],
+   "VIKOR": [
+    {
+     "delta": 0.1,
+     "top_unchanged": 1.0,
+     "mean_spearman": 0.9835714285714288
+    },
+    {
+     "delta": 0.2,
+     "top_unchanged": 1.0,
+     "mean_spearman": 0.9494642857142859
+    },
+    {
+     "delta": 0.3,
+     "top_unchanged": 1.0,
+     "mean_spearman": 0.9285714285714287
+    },
+    {
+     "delta": 0.5,
+     "top_unchanged": 0.965,
+     "mean_spearman": 0.8957142857142858
+    }
+   ],
+   "COPRAS": [
+    {
+     "delta": 0.1,
+     "top_unchanged": 1.0,
+     "mean_spearman": 0.9985714285714287
+    },
+    {
+     "delta": 0.2,
+     "top_unchanged": 1.0,
+     "mean_spearman": 0.9928571428571429
+    },
+    {
+     "delta": 0.3,
+     "top_unchanged": 1.0,
+     "mean_spearman": 0.9896428571428573
+    },
+    {
+     "delta": 0.5,
+     "top_unchanged": 1.0,
+     "mean_spearman": 0.9775000000000003
+    }
+   ],
+   "EDAS": [
+    {
+     "delta": 0.1,
+     "top_unchanged": 1.0,
+     "mean_spearman": 1.0
+    },
+    {
+     "delta": 0.2,
+     "top_unchanged": 1.0,
+     "mean_spearman": 0.9960714285714286
+    },
+    {
+     "delta": 0.3,
+     "top_unchanged": 1.0,
+     "mean_spearman": 0.9914285714285715
+    },
+    {
+     "delta": 0.5,
+     "top_unchanged": 1.0,
+     "mean_spearman": 0.9791071428571431
+    }
+   ]
+  }
+ }
+}

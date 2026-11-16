@@ -2,8 +2,17 @@
 """Run the complete experiment: calibration -> decision matrices (30 seeds) -> weights -> rankings ->
 SMAA-2 -> robustness -> IoT-45 scenario transfer -> ablations -> tables and figures.
 
-Usage:  python run_all.py [--seeds 30] [--skip-calibration]
+Usage:  python run_all.py [--seeds 30] [--skip-calibration] [--skip-revision]
 Outputs: results/*.csv|json|md, figures/*.png|pdf
+
+After the main pipeline, the analyses added in the revision are run in order (each script can also be run alone):
+  run_feasibility.py   peak-load screen, provisioned configuration, boundary, Besu capacity, screened ablations (Sections 3.8, 4.7)
+  run_workload.py      OULAD-anchored workload, education-facing indicators, workload sensitivity (Sections 3.3, 3.4.2, 4.8)
+  run_validation.py    effect of the validation errors: corrections, recovery sweep, Monte Carlo, break-even (Section 4.9)
+  run_environment.py   transferability across benchmark environments (Sections 3.4.1, 4.10)
+  run_criteria.py      criterion coverage checks, ordinal scores, aggregation (Sections 3.3, 4.11)
+  run_priorities.py    institutional priority orders and security sweep (Sections 3.6, 4.12)
+Finally make_supplementary.py writes Tables S1 and S2 of the Supplementary Materials (supplementary/).
 """
 import argparse, json, os, sys, time
 import numpy as np
@@ -27,6 +36,7 @@ def main():
     ap.add_argument("--seeds", type=int, default=30)
     ap.add_argument("--skip-calibration", action="store_true")
     ap.add_argument("--n", type=int, default=7)
+    ap.add_argument("--skip-revision", action="store_true", help="run only the main pipeline")
     args = ap.parse_args()
     os.makedirs(RESULTS, exist_ok=True); os.makedirs(FIG, exist_ok=True)
     t0 = time.time()
@@ -78,6 +88,11 @@ def main():
             for i, nm in enumerate(names):
                 seed_rows.append({"seed": s, "method": mname, "alternative": nm, "rank": int(res["rank"][i])})
     report.save_rows(seed_rows, os.path.join(RESULTS, "rankings_per_seed.csv"))
+    # paired comparison of the two leaders over the seed matrices (Wilcoxon signed-rank, Holm)
+    from consensus_mcdm.robustness import leader_wilcoxon
+    # QBFT and CometBFT: the two alternatives that share the first-rank acceptability (IBFT 2.0 is dominated by QBFT)
+    wil = leader_wilcoxon(Xs, base_w, TYPES, names, names[keys.index("qbft")], names[keys.index("cometbft")])
+    json.dump(wil, open(os.path.join(RESULTS, "wilcoxon_leaders.json"), "w"), indent=1)
     print(f"[{time.time()-t0:.0f}s] rankings done")
 
     # 4. SMAA-2 (weight uncertainty: no information; and centred on base weights) x value uncertainty (seeds)
@@ -133,6 +148,18 @@ def main():
     # 9. summary
     report.fig_robustness(RESULTS, os.path.join(FIG, "fig_robustness.png"))
     report.summary_md(names, keys, Xm, hw, CRITERIA, UNITS, TYPES, W, R, smaa_out, agree, loo, pert, rep, transfer, abl, cal, sc, os.path.join(RESULTS, "SUMMARY.md"), n_seeds=args.seeds)
+    print(f"[{time.time()-t0:.0f}s] main pipeline done")
+
+    # 10. analyses added in the revision
+    if not args.skip_revision:
+        import subprocess
+        here = os.path.dirname(os.path.abspath(__file__))
+        for script in ("run_feasibility.py", "run_workload.py", "run_validation.py", "run_environment.py", "run_criteria.py", "run_priorities.py"):
+            subprocess.run([sys.executable, os.path.join(here, script)], check=True)
+            print(f"[{time.time()-t0:.0f}s] {script} done", flush=True)
+    # 11. Supplementary Materials (Tables S1 and S2; PDF only if pdflatex is installed)
+    import subprocess
+    subprocess.run([sys.executable, os.path.join(os.path.dirname(os.path.abspath(__file__)), "make_supplementary.py")], check=True)
     print(f"[{time.time()-t0:.0f}s] all done")
 
 

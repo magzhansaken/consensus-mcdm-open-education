@@ -1,0 +1,28 @@
+platform,set,role,points,mape_throughput,mape_latency,note
+"Fabric 3.1.4, Raft","batch size × load, stable points",fit,8,0.020651897563271765,0.3233301155542368,
+"Fabric 3.1.4, Raft","batch size × load, saturated points (latency >= 5 s)",fit,4,0.23494703231607014,0.21473832884011423,measured latency depends on the run length
+"Fabric 3.1.4, Raft","number of orderers (4, 7, 10)",fit (stage 2),3,0.002525633114098334,0.2896027531184969,
+"Fabric 3.1.4, Raft",injected round-trip time 0 ms,hold-out,1,0.01169671326956077,0.4346780489394115,measured / simulated latency 0.7
+"Fabric 3.1.4, Raft",injected round-trip time 50 ms,hold-out,1,0.013094470541278989,0.22001843738609095,measured / simulated latency 1.3
+"Fabric 3.1.4, Raft",injected round-trip time 100 ms,hold-out,1,0.04158775252525231,0.6588709475340536,measured / simulated latency 2.9
+"Fabric 3.1.4, Raft","crash campaign, no crash (baseline)",hold-out,1,0.004922067268252707,0.4701223252735489,
+"Fabric 3.1.4, Raft","crash campaign, 1-3 crashed orderers",hold-out,3,0.0033447433145723897,0.5961688939479075,
+"Fabric 3.1.4, SmartBFT","batch size × load, stable points",fit,7,0.014285467829948412,0.2176744871517581,
+"Fabric 3.1.4, SmartBFT","batch size × load, saturated points (latency >= 5 s)",fit,5,0.2655413652953535,0.549423272229424,measured latency depends on the run length
+"Fabric 3.1.4, SmartBFT","number of orderers (4, 7, 10)",fit (stage 2),3,0.005637983871384176,0.34576817486654354,
+"Fabric 3.1.4, SmartBFT",injected round-trip time 0 ms,hold-out,1,0.0022932993135288686,0.4124118900585677,measured / simulated latency 0.7
+"Fabric 3.1.4, SmartBFT",injected round-trip time 50 ms,hold-out,1,0.02355915379365952,0.0935031950378509,measured / simulated latency 1.1
+"Fabric 3.1.4, SmartBFT",injected round-trip time 100 ms,hold-out,1,0.2319855137395458,0.7867728787766506,measured / simulated latency 4.7
+"Fabric 3.1.4, SmartBFT","crash campaign, no crash (baseline)",hold-out,1,0.001520176893311312,0.4466430714821891,
+"Fabric 3.1.4, SmartBFT","crash campaign, 1-3 crashed orderers",hold-out,3,0.18756563053315822,0.35736126978178434,
+"Fabric 3.1.4, Raft and SmartBFT pooled","batch size × load, stable points",fit,15,0.0176808970210542,0.2740241556330801,values quoted in Section 4.1
+"Besu 25.7, QBFT",5000-transaction burst,fit,1,0.03349967106977107,0.020087985721172957,latency = median; p95 error 56%
+"Besu 25.7, IBFT 2.0",5000-transaction burst,fit,1,0.033763262068570235,0.0940016862426363,latency = median; p95 error 57%
+"Besu 25.7, Clique",5000-transaction burst,fit,1,,0.11772317334424055,"latency = median; p95 error 7%; throughput not fitted (no backlog, capacity is a lower bound)"
+CometBFT v1 (175 validators),offered 200 and 800 tx/s,fit,2,0.037220068119276396,0.12716281664897353,
+CometBFT v1 (175 validators),offered 400 tx/s,check,1,0.08608522955356947,0.5761811389968657,partially saturated run
+CometBFT v1 (175 validators),offered 1600 tx/s,hold-out,1,0.0795732773697095,0.10053280935862903,
+2-chain HotStuff,"10 nodes, unsaturated (10k-100k tx/s)",fit,3,0.030666375971214615,0.02695090733739548,
+2-chain HotStuff,"10 nodes, saturated (120k tx/s)",fit,1,0.21548415703899948,0.8288733232640005,latency not fitted
+2-chain HotStuff,20 and 50 nodes,hold-out,2,0.0015391842441521276,0.4359116918916875,
+2-chain HotStuff,"10 nodes, 1 and 3 crashed",hold-out,2,0.07375719193466199,0.6340820190586393,repeated leader timeouts not modelled

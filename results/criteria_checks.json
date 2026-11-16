@@ -1,0 +1,617 @@
+{
+ "c8_properties": [
+  "Byzantine safety, f < n/3",
+  "deterministic finality",
+  "proposer rotation",
+  "built-in equivocation evidence"
+ ],
+ "c8_table": {
+  "raft": [
+   0,
+   1,
+   0,
+   0
+  ],
+  "smartbft": [
+   1,
+   1,
+   1,
+   0
+  ],
+  "ibft2": [
+   1,
+   1,
+   1,
+   0
+  ],
+  "qbft": [
+   1,
+   1,
+   1,
+   0
+  ],
+  "clique": [
+   0,
+   0,
+   1,
+   0
+  ],
+  "cometbft": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "hotstuff": [
+   1,
+   1,
+   1,
+   0
+  ]
+ },
+ "c10_properties": [
+  "validator-set change without restart",
+  "contract- or configuration-based validator selection",
+  "metrics endpoint",
+  "maintained production release line with load-testing tooling"
+ ],
+ "c10_table": {
+  "raft": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "smartbft": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "ibft2": [
+   1,
+   0,
+   1,
+   1
+  ],
+  "qbft": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "clique": [
+   1,
+   0,
+   1,
+   1
+  ],
+  "cometbft": [
+   1,
+   0,
+   1,
+   1
+  ],
+  "hotstuff": [
+   0,
+   0,
+   0,
+   0
+  ]
+ },
+ "default": {
+  "baseline": {
+   "TOPSIS": "cometbft",
+   "VIKOR": "cometbft",
+   "COPRAS": "cometbft",
+   "EDAS": "cometbft"
+  },
+  "smaa_o_reestimated": {
+   "TOPSIS": {
+    "raft": 0.001,
+    "cometbft": 0.999
+   },
+   "VIKOR": {
+    "raft": 0.0015,
+    "cometbft": 0.9985
+   },
+   "COPRAS": {
+    "raft": 0.0005,
+    "cometbft": 0.9995
+   },
+   "EDAS": {
+    "raft": 0.0005,
+    "cometbft": 0.9995
+   }
+  },
+  "smaa_o_uniform_weights": {
+   "TOPSIS": {
+    "raft": 0.1028,
+    "clique": 0.2205,
+    "cometbft": 0.6767
+   },
+   "VIKOR": {
+    "raft": 0.1618,
+    "clique": 0.5354,
+    "cometbft": 0.3028
+   },
+   "COPRAS": {
+    "raft": 0.07,
+    "clique": 0.2076,
+    "cometbft": 0.7224
+   },
+   "EDAS": {
+    "raft": 0.0631,
+    "clique": 0.1966,
+    "cometbft": 0.7403
+   }
+  },
+  "perturb": {
+   "C8": {
+    "TOPSIS": {
+     "cometbft": 1.0
+    },
+    "VIKOR": {
+     "cometbft": 1.0
+    },
+    "COPRAS": {
+     "cometbft": 1.0
+    },
+    "EDAS": {
+     "cometbft": 1.0
+    }
+   },
+   "C10": {
+    "TOPSIS": {
+     "cometbft": 1.0
+    },
+    "VIKOR": {
+     "cometbft": 1.0
+    },
+    "COPRAS": {
+     "cometbft": 1.0
+    },
+    "EDAS": {
+     "cometbft": 1.0
+    }
+   },
+   "C8 and C10 jointly": {
+    "TOPSIS": {
+     "cometbft": 1.0
+    },
+    "VIKOR": {
+     "cometbft": 1.0
+    },
+    "COPRAS": {
+     "cometbft": 1.0
+    },
+    "EDAS": {
+     "cometbft": 1.0
+    }
+   }
+  },
+  "rules": {
+   "C8 with Byzantine safety counted twice (0-5)": {
+    "TOPSIS": "cometbft",
+    "VIKOR": "cometbft",
+    "COPRAS": "cometbft",
+    "EDAS": "cometbft"
+   },
+   "C8 = Byzantine safety only (0/1)": {
+    "TOPSIS": "cometbft",
+    "VIKOR": "cometbft",
+    "COPRAS": "cometbft",
+    "EDAS": "cometbft"
+   },
+   "C10 without the release-line property (0-3)": {
+    "TOPSIS": "cometbft",
+    "VIKOR": "cometbft",
+    "COPRAS": "cometbft",
+    "EDAS": "cometbft"
+   },
+   "C8 and C10 from the 1-10 family scores of [8]": {
+    "TOPSIS": "cometbft",
+    "VIKOR": "cometbft",
+    "COPRAS": "cometbft",
+    "EDAS": "cometbft"
+   },
+   "without C8": {
+    "TOPSIS": "cometbft",
+    "VIKOR": "cometbft",
+    "COPRAS": "cometbft",
+    "EDAS": "cometbft"
+   },
+   "without C10": {
+    "TOPSIS": "cometbft",
+    "VIKOR": "cometbft",
+    "COPRAS": "cometbft",
+    "EDAS": "cometbft"
+   },
+   "without C8 and C10 (measured only)": {
+    "TOPSIS": "cometbft",
+    "VIKOR": "cometbft",
+    "COPRAS": "cometbft",
+    "EDAS": "cometbft"
+   }
+  },
+  "leave_one_out": {
+   "C1 Throughput": {
+    "TOPSIS": "cometbft",
+    "VIKOR": "cometbft",
+    "COPRAS": "cometbft",
+    "EDAS": "cometbft"
+   },
+   "C2 Latency": {
+    "TOPSIS": "cometbft",
+    "VIKOR": "cometbft",
+    "COPRAS": "cometbft",
+    "EDAS": "cometbft"
+   },
+   "C3 Finalization": {
+    "TOPSIS": "cometbft",
+    "VIKOR": "cometbft",
+    "COPRAS": "cometbft",
+    "EDAS": "cometbft"
+   },
+   "C4 Power": {
+    "TOPSIS": "cometbft",
+    "VIKOR": "cometbft",
+    "COPRAS": "cometbft",
+    "EDAS": "cometbft"
+   },
+   "C5 Computing": {
+    "TOPSIS": "cometbft",
+    "VIKOR": "cometbft",
+    "COPRAS": "cometbft",
+    "EDAS": "cometbft"
+   },
+   "C6 Storage": {
+    "TOPSIS": "cometbft",
+    "VIKOR": "cometbft",
+    "COPRAS": "cometbft",
+    "EDAS": "cometbft"
+   },
+   "C7 Fault tolerance": {
+    "TOPSIS": "cometbft",
+    "VIKOR": "cometbft",
+    "COPRAS": "cometbft",
+    "EDAS": "cometbft"
+   },
+   "C8 Attack resistance": {
+    "TOPSIS": "cometbft",
+    "VIKOR": "cometbft",
+    "COPRAS": "cometbft",
+    "EDAS": "cometbft"
+   },
+   "C9 Decentralization": {
+    "TOPSIS": "cometbft",
+    "VIKOR": "cometbft",
+    "COPRAS": "cometbft",
+    "EDAS": "cometbft"
+   },
+   "C10 Manageability": {
+    "TOPSIS": "cometbft",
+    "VIKOR": "cometbft",
+    "COPRAS": "cometbft",
+    "EDAS": "cometbft"
+   },
+   "C11 Operational cost": {
+    "TOPSIS": "cometbft",
+    "VIKOR": "cometbft",
+    "COPRAS": "cometbft",
+    "EDAS": "cometbft"
+   }
+  },
+  "fault_proxies": {
+   "C7 = documented crash tolerance f/n": {
+    "TOPSIS": "cometbft",
+    "VIKOR": "cometbft",
+    "COPRAS": "cometbft",
+    "EDAS": "cometbft"
+   },
+   "C7 = mean of simulated share and documented tolerance": {
+    "TOPSIS": "cometbft",
+    "VIKOR": "cometbft",
+    "COPRAS": "cometbft",
+    "EDAS": "cometbft"
+   }
+  },
+  "scale": {
+   "ordinal scales 1-5 (shift +1)": {
+    "TOPSIS": "cometbft",
+    "VIKOR": "cometbft",
+    "COPRAS": "cometbft",
+    "EDAS": "cometbft"
+   },
+   "ordinal scales 0-10 (x2.5)": {
+    "TOPSIS": "cometbft",
+    "VIKOR": "cometbft",
+    "COPRAS": "cometbft",
+    "EDAS": "cometbft"
+   },
+   "ordinal scales 1-10 (2.25 v + 1)": {
+    "TOPSIS": "cometbft",
+    "VIKOR": "cometbft",
+    "COPRAS": "cometbft",
+    "EDAS": "cometbft"
+   }
+  }
+ },
+ "provisioned": {
+  "baseline": {
+   "TOPSIS": "qbft",
+   "VIKOR": "qbft",
+   "COPRAS": "qbft",
+   "EDAS": "qbft"
+  },
+  "smaa_o_reestimated": {
+   "TOPSIS": {
+    "qbft": 0.9066,
+    "cometbft": 0.0934
+   },
+   "VIKOR": {
+    "qbft": 0.9228,
+    "cometbft": 0.0772
+   },
+   "COPRAS": {
+    "qbft": 0.9788,
+    "cometbft": 0.0212
+   },
+   "EDAS": {
+    "qbft": 0.947,
+    "cometbft": 0.053
+   }
+  },
+  "smaa_o_uniform_weights": {
+   "TOPSIS": {
+    "qbft": 0.8818,
+    "cometbft": 0.1177,
+    "hotstuff": 0.0005
+   },
+   "VIKOR": {
+    "qbft": 0.9189,
+    "clique": 0.0045,
+    "cometbft": 0.0762,
+    "hotstuff": 0.0004
+   },
+   "COPRAS": {
+    "qbft": 0.9502,
+    "cometbft": 0.0495,
+    "hotstuff": 0.0003
+   },
+   "EDAS": {
+    "qbft": 0.9194,
+    "cometbft": 0.0802,
+    "hotstuff": 0.0004
+   }
+  },
+  "perturb": {
+   "C8": {
+    "TOPSIS": {
+     "smartbft": 0.0013717421124828531,
+     "ibft2": 0.2551440329218107,
+     "qbft": 0.66026520347508,
+     "cometbft": 0.08321902149062643
+    },
+    "VIKOR": {
+     "ibft2": 0.273891175125743,
+     "qbft": 0.6520347508001829,
+     "cometbft": 0.07407407407407407
+    },
+    "COPRAS": {
+     "ibft2": 0.23639689071787837,
+     "qbft": 0.7599451303155007,
+     "cometbft": 0.003657978966620942
+    },
+    "EDAS": {
+     "ibft2": 0.20987654320987653,
+     "qbft": 0.7649748513946045,
+     "cometbft": 0.02377686328303612,
+     "hotstuff": 0.0013717421124828531
+    }
+   },
+   "C10": {
+    "TOPSIS": {
+     "ibft2": 0.4444444444444444,
+     "qbft": 0.5500685871056241,
+     "cometbft": 0.0054869684499314125
+    },
+    "VIKOR": {
+     "ibft2": 0.4444444444444444,
+     "qbft": 0.5555555555555556
+    },
+    "COPRAS": {
+     "ibft2": 0.4444444444444444,
+     "qbft": 0.5555555555555556
+    },
+    "EDAS": {
+     "ibft2": 0.4444444444444444,
+     "qbft": 0.5500685871056241,
+     "cometbft": 0.0054869684499314125
+    }
+   },
+   "C8 and C10 jointly": {
+    "TOPSIS": {
+     "smartbft": 0.0015,
+     "ibft2": 0.3487,
+     "qbft": 0.5378,
+     "cometbft": 0.1075,
+     "hotstuff": 0.0045
+    },
+    "VIKOR": {
+     "ibft2": 0.3551,
+     "qbft": 0.546,
+     "cometbft": 0.0989
+    },
+    "COPRAS": {
+     "ibft2": 0.4024,
+     "qbft": 0.5877,
+     "cometbft": 0.007,
+     "hotstuff": 0.0029
+    },
+    "EDAS": {
+     "smartbft": 0.0002,
+     "ibft2": 0.3805,
+     "qbft": 0.5589,
+     "cometbft": 0.0469,
+     "hotstuff": 0.0135
+    }
+   }
+  },
+  "rules": {
+   "C8 with Byzantine safety counted twice (0-5)": {
+    "TOPSIS": "qbft",
+    "VIKOR": "qbft",
+    "COPRAS": "qbft",
+    "EDAS": "qbft"
+   },
+   "C8 = Byzantine safety only (0/1)": {
+    "TOPSIS": "qbft",
+    "VIKOR": "qbft",
+    "COPRAS": "qbft",
+    "EDAS": "qbft"
+   },
+   "C10 without the release-line property (0-3)": {
+    "TOPSIS": "qbft",
+    "VIKOR": "qbft",
+    "COPRAS": "qbft",
+    "EDAS": "qbft"
+   },
+   "C8 and C10 from the 1-10 family scores of [8]": {
+    "TOPSIS": "ibft2",
+    "VIKOR": "ibft2",
+    "COPRAS": "ibft2",
+    "EDAS": "ibft2"
+   },
+   "without C8": {
+    "TOPSIS": "qbft",
+    "VIKOR": "qbft",
+    "COPRAS": "qbft",
+    "EDAS": "qbft"
+   },
+   "without C10": {
+    "TOPSIS": "ibft2",
+    "VIKOR": "ibft2",
+    "COPRAS": "ibft2",
+    "EDAS": "ibft2"
+   },
+   "without C8 and C10 (measured only)": {
+    "TOPSIS": "ibft2",
+    "VIKOR": "ibft2",
+    "COPRAS": "ibft2",
+    "EDAS": "ibft2"
+   }
+  },
+  "leave_one_out": {
+   "C1 Throughput": {
+    "TOPSIS": "qbft",
+    "VIKOR": "qbft",
+    "COPRAS": "qbft",
+    "EDAS": "qbft"
+   },
+   "C2 Latency": {
+    "TOPSIS": "qbft",
+    "VIKOR": "qbft",
+    "COPRAS": "qbft",
+    "EDAS": "qbft"
+   },
+   "C3 Finalization": {
+    "TOPSIS": "qbft",
+    "VIKOR": "qbft",
+    "COPRAS": "qbft",
+    "EDAS": "qbft"
+   },
+   "C4 Power": {
+    "TOPSIS": "qbft",
+    "VIKOR": "qbft",
+    "COPRAS": "qbft",
+    "EDAS": "qbft"
+   },
+   "C5 Computing": {
+    "TOPSIS": "qbft",
+    "VIKOR": "qbft",
+    "COPRAS": "qbft",
+    "EDAS": "qbft"
+   },
+   "C6 Storage": {
+    "TOPSIS": "qbft",
+    "VIKOR": "qbft",
+    "COPRAS": "qbft",
+    "EDAS": "qbft"
+   },
+   "C7 Fault tolerance": {
+    "TOPSIS": "qbft",
+    "VIKOR": "qbft",
+    "COPRAS": "qbft",
+    "EDAS": "qbft"
+   },
+   "C8 Attack resistance": {
+    "TOPSIS": "qbft",
+    "VIKOR": "qbft",
+    "COPRAS": "qbft",
+    "EDAS": "qbft"
+   },
+   "C9 Decentralization": {
+    "TOPSIS": "qbft",
+    "VIKOR": "qbft",
+    "COPRAS": "qbft",
+    "EDAS": "qbft"
+   },
+   "C10 Manageability": {
+    "TOPSIS": "ibft2",
+    "VIKOR": "ibft2",
+    "COPRAS": "ibft2",
+    "EDAS": "ibft2"
+   },
+   "C11 Operational cost": {
+    "TOPSIS": "qbft",
+    "VIKOR": "qbft",
+    "COPRAS": "qbft",
+    "EDAS": "qbft"
+   }
+  },
+  "fault_proxies": {
+   "C7 = documented crash tolerance f/n": {
+    "TOPSIS": "qbft",
+    "VIKOR": "qbft",
+    "COPRAS": "qbft",
+    "EDAS": "qbft"
+   },
+   "C7 = mean of simulated share and documented tolerance": {
+    "TOPSIS": "qbft",
+    "VIKOR": "qbft",
+    "COPRAS": "qbft",
+    "EDAS": "qbft"
+   }
+  },
+  "scale": {
+   "ordinal scales 1-5 (shift +1)": {
+    "TOPSIS": "qbft",
+    "VIKOR": "qbft",
+    "COPRAS": "qbft",
+    "EDAS": "qbft"
+   },
+   "ordinal scales 0-10 (x2.5)": {
+    "TOPSIS": "qbft",
+    "VIKOR": "qbft",
+    "COPRAS": "qbft",
+    "EDAS": "qbft"
+   },
+   "ordinal scales 1-10 (2.25 v + 1)": {
+    "TOPSIS": "qbft",
+    "VIKOR": "qbft",
+    "COPRAS": "qbft",
+    "EDAS": "qbft"
+   }
+  }
+ },
+ "documented_crash_tolerance_pct": {
+  "raft": 42.857142857142854,
+  "smartbft": 28.571428571428573,
+  "ibft2": 28.571428571428573,
+  "qbft": 28.571428571428573,
+  "clique": 42.857142857142854,
+  "cometbft": 28.571428571428573,
+  "hotstuff": 28.571428571428573
+ }
+}

@@ -321,6 +321,7 @@ def run_all(verbose=True):
         "cometbft_check_400_MAPE_tps": mape([r for r in rep_c["rows"] if r["set"] == "check"], "tps_meas", "tps_sim"),
         "cometbft_check_400_MAPE_latency": mape([r for r in rep_c["rows"] if r["set"] == "check"], "lat_meas", "lat_sim"),
         "cometbft_holdout_1600_MAPE_tps": mape([r for r in rep_c["rows"] if r["set"] == "holdout"], "tps_meas", "tps_sim"),
+        "cometbft_holdout_1600_MAPE_latency": mape([r for r in rep_c["rows"] if r["set"] == "holdout"], "lat_meas", "lat_sim"),
         "hotstuff_fit_MAPE_tps": mape([r for r in rep_h["rows"] if r["set"] == "fit"], "tps_meas", "tps_sim"),
         "hotstuff_fit_MAPE_latency": mape([r for r in rep_h["rows"] if r["set"] == "fit" and r["lat_meas"] < 5], "lat_meas", "lat_sim"),
         "hotstuff_holdout_MAPE_tps": mape([r for r in rep_h["rows"] if r["set"] == "holdout"], "tps_meas", "tps_sim"),

@@ -1,11 +1,12 @@
 """Synthetic transaction workload of an IoT-enabled open-university information system.
 
 THIS PROFILE IS SYNTHETIC. It is generated from declared parameters (Table of assumptions,
-rows W1-W7), not from measured portal logs. Its purpose is to give every protocol the same
+rows W1-W8), not from measured portal logs. Its purpose is to give every protocol the same
 offered load with a realistic daily shape (two activity peaks, an evening submission peak
-and a constant IoT telemetry floor). The daily shape follows qualitative evidence on
-learner activity in open-university VLE logs (Kuzilek et al., 2017, Sci. Data 4:170171),
-but no OULAD records are used.
+and a constant IoT telemetry floor). The learner-side rates are checked against statistics of
+the Open University Learning Analytics Dataset (Kuzilek et al., 2017, Sci. Data 4:170171),
+computed by scripts/oulad_workload_stats.py; the hourly shape follows published log studies
+(row W8). No learner records enter the generator.
 
 Transaction classes written to the ledger (one ledger transaction = one anchored record):
   * learning events  : submissions, graded attempts, attendance confirmations, credential ops
@@ -37,6 +38,7 @@ class WorkloadParams:
     registration_burst_tps: float = 120.0 # W6 extra load during a 1-h enrolment window (stress day)
     registration_hour: int = 10
     tx_bytes: int = 1_000               # W7 ledger transaction size (payload + signatures)
+    hourly_exponent: float = 1.0        # W8 concentration of the hourly profile (1 = profile above; >1 sharper peaks)
 
     def to_dict(self):
         return asdict(self)
@@ -45,7 +47,8 @@ class WorkloadParams:
 def hourly_rate(p: WorkloadParams, day: str = "normal") -> np.ndarray:
     """Offered load (tx/s) for each hour of the day. day in {'normal','deadline','stress'}."""
     learn_total = p.students_active * p.events_per_student_day
-    learn = learn_total * _HOURLY / 3600.0                      # tx/s per hour
+    shape = _HOURLY if p.hourly_exponent == 1.0 else (_HOURLY ** p.hourly_exponent) / (_HOURLY ** p.hourly_exponent).sum()
+    learn = learn_total * shape / 3600.0                        # tx/s per hour
     iot = np.full(24, p.iot_devices / p.telemetry_interval_s)   # constant floor
     rate = learn + iot
     if day in ("deadline", "stress"):
