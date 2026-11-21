@@ -1,26 +1,38 @@
 {
  "TOPSIS": {
   "p": 1.862645149230957e-09,
+  "p_mannwhitney": 1.6691944102144e-11,
+  "spearman_rho": -0.7748609566184649,
   "seeds_first_better": 29,
   "n": 30,
-  "p_holm": 5.587935447692871e-09
+  "p_holm": 5.587935447692871e-09,
+  "p_mannwhitney_holm": 6.039718718324314e-11
  },
  "VIKOR": {
   "p": 8.494872599840164e-05,
+  "p_mannwhitney": 7.459020084077053e-07,
+  "spearman_rho": -0.36240266963292544,
   "seeds_first_better": 24,
   "n": 30,
-  "p_holm": 8.494872599840164e-05
+  "p_holm": 8.494872599840164e-05,
+  "p_mannwhitney_holm": 7.459020084077053e-07
  },
  "COPRAS": {
   "p": 9.313225746154785e-10,
+  "p_mannwhitney": 1.5099296795810785e-11,
+  "spearman_rho": -0.7971078976640712,
   "seeds_first_better": 30,
   "n": 30,
-  "p_holm": 3.725290298461914e-09
+  "p_holm": 3.725290298461914e-09,
+  "p_mannwhitney_holm": 6.039718718324314e-11
  },
  "EDAS": {
   "p": 1.30385160446167e-08,
+  "p_mannwhitney": 1.0771996383455876e-10,
+  "spearman_rho": -0.5167964404894326,
   "seeds_first_better": 29,
   "n": 30,
-  "p_holm": 2.60770320892334e-08
+  "p_holm": 2.60770320892334e-08,
+  "p_mannwhitney_holm": 2.154399276691175e-10
  }
 }

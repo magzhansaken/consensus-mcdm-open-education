@@ -1,7 +1,7 @@
 cff-version: 1.2.0
 message: "If you use this software, please cite the associated article."
 title: "consensus-mcdm-open-education: measurement-anchored multi-criteria selection of a blockchain consensus protocol for IoT-enabled open education"
-version: 1.1.0
+version: 1.1.1
 license: MIT
 repository-code: "https://github.com/magzhansaken/consensus-mcdm-open-education"
 authors:

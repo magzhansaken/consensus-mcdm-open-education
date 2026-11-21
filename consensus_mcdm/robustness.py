@@ -78,20 +78,30 @@ def single_weight_sweep(X, w, types, names, method="TOPSIS", grid=np.linspace(0.
 
 
 def leader_wilcoxon(Xs, w, types, names, first, second):
-    """One-sided Wilcoxon signed-rank test that `first` outscores `second` over the seed matrices, per method,
-    with Holm-adjusted p-values (Section 4.5 of the article). For VIKOR a lower Q is better."""
-    from scipy.stats import wilcoxon
+    """Compares the scores of `first` and `second` over the seed matrices, per method (Section 4.5 of the article).
+
+    The pair is the seed replicate: within replicate s every alternative is simulated with the same seed, hence the
+    same arrival sequences (common random numbers), and both scores come from the same matrix X_s. The one-sided
+    Wilcoxon signed-rank test uses this pairing; the one-sided Mann-Whitney U test, which treats the two sets of
+    scores as independent samples, is reported as a check, together with the Spearman correlation of the paired
+    scores. p-values are Holm-adjusted over the four methods. For VIKOR a lower Q is better. The tests describe the
+    seed-to-seed variability of the simulation only, not performance on a real network."""
+    from scipy.stats import wilcoxon, mannwhitneyu, spearmanr
     from .mcdm import rank_all
     i, j = names.index(first), names.index(second)
     raw = {}
     for m in METHODS:
         s = np.array([np.asarray(rank_all(X, w, types)[m]["score"])[[i, j]] for X in Xs])
         d = s[:, 0] - s[:, 1]
-        raw[m] = {"p": float(wilcoxon(d, alternative="less" if m == "VIKOR" else "greater").pvalue),
+        alt = "less" if m == "VIKOR" else "greater"
+        raw[m] = {"p": float(wilcoxon(d, alternative=alt).pvalue),
+                  "p_mannwhitney": float(mannwhitneyu(s[:, 0], s[:, 1], alternative=alt).pvalue),
+                  "spearman_rho": float(spearmanr(s[:, 0], s[:, 1]).statistic),
                   "seeds_first_better": int((d < 0).sum() if m == "VIKOR" else (d > 0).sum()), "n": int(len(d))}
-    order = sorted(raw, key=lambda m: raw[m]["p"])
-    running = 0.0
-    for r, m in enumerate(order):
-        running = max(running, min(1.0, raw[m]["p"] * (len(order) - r)))
-        raw[m]["p_holm"] = running
+    for key, out in (("p", "p_holm"), ("p_mannwhitney", "p_mannwhitney_holm")):
+        order = sorted(raw, key=lambda m: raw[m][key])
+        running = 0.0
+        for r, m in enumerate(order):
+            running = max(running, min(1.0, raw[m][key] * (len(order) - r)))
+            raw[m][out] = running
     return raw

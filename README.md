@@ -5,8 +5,10 @@ for an IoT-enabled open-education platform: a calibrated discrete-event model of
 protocols (Raft, SmartBFT, IBFT 2.0, QBFT, Clique, CometBFT, HotStuff), a non-compensatory peak-load screen,
 objective weighting, four ranking methods (TOPSIS, VIKOR, COPRAS, EDAS), SMAA-2 and a set of robustness analyses.
 
-Release `v1.1.0` accompanies the revised manuscript (first revision); `v1.0` corresponds to the version submitted
-on 28 October 2026.
+Release `v1.1.1` accompanies the second revision of the manuscript, `v1.1.0` the first revision and `v1.0` the version
+submitted on 28 October 2026. Release `v1.1.1` adds the Mann–Whitney check and the Spearman correlation to the
+comparison of the two leading protocols (`results/wilcoxon_leaders.json`) and a test of the common random numbers
+shared by all alternatives within a seed replicate; no other result changes.
 
 ## Repository layout
 
@@ -20,7 +22,7 @@ on 28 October 2026.
 | `scripts/oulad_workload_stats.py` | Recomputes the OULAD workload statistics (`results/oulad_workload_stats.json`) from the public OULAD release |
 | `make_fig_framework.py` | Schematic of the pipeline (Figure 1) |
 | `make_supplementary.py` | Tables S1 and S2 of the Supplementary Materials, written to `supplementary/` (called by `run_all.py`) |
-| `tests/` | Unit tests (`pytest`, 47 tests) |
+| `tests/` | Unit tests (`pytest`, 49 tests) |
 | `results/` | Outputs of the last full run (CSV, JSON, NPY, Markdown digest `SUMMARY.md`) |
 | `figures/` | Figures of the last full run (PNG and PDF) |
 | `supplementary/` | Supplementary Materials of the article (LaTeX source and PDF) |
@@ -56,7 +58,7 @@ pip install -r requirements.txt
 ## Running
 
 ```bash
-python -m pytest -q tests                           # 47 unit tests
+python -m pytest -q tests                           # 49 unit tests
 python run_all.py --seeds 30                        # full run: calibration, main pipeline, all revision analyses
 python run_all.py --seeds 30 --skip-calibration     # reuse results/calibrated_params.json
 python run_all.py --seeds 30 --skip-revision        # main pipeline only (version 1.0.0 outputs)
@@ -65,7 +67,7 @@ python scripts/oulad_workload_stats.py --download   # optional: recompute the OU
 
 On two CPU cores a full run takes about 1 h: the calibration about 16.5 min, the main pipeline about 1.2 min and the
 revision analyses about 40 min, most of it in the two Latin-hypercube samples (`run_workload.py`, about 17 min;
-`run_environment.py`, about 10 min). A from-scratch run of release v1.1.0 reproduces every file in `results/`
+`run_environment.py`, about 10 min). A from-scratch run of release v1.1.1 reproduces every file in `results/`
 bit for bit (the random generators are seeded).
 
 ## Where each part of the article is produced

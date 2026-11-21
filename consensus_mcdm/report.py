@@ -553,7 +553,7 @@ def fig_workload_sensitivity(out, path):
             t = lab_["high"] if lab_["low"] == lab_["high"] else lab_["low"] + " | " + lab_["high"]
             ax.text(max(lo, hi) + 3, i, t, ha="left", va="center", fontsize=6)
         v = d["low"]["value"], d["high"]["value"]
-        fmt = (lambda z: f"{z:,.0f}") if max(v) >= 100 else (lambda z: f"{z:g}")
+        fmt = (lambda z: (f"{z:,.0f}" if z >= 10000 else f"{z:.0f}")) if max(v) >= 100 else (lambda z: f"{z:g}")
         ylabels.append(f"{nm} [{fmt(v[0])}\u2013{fmt(v[1])}]")
     ax.set_yticks(range(len(names))); ax.set_yticklabels(ylabels, fontsize=6.6)
     for x, t, ha in ((110, "QBFT, defaults", "center"), (200, " CometBFT", "left"), (225, " QBFT, provisioned", "left")):

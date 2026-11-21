@@ -88,7 +88,8 @@ def main():
             for i, nm in enumerate(names):
                 seed_rows.append({"seed": s, "method": mname, "alternative": nm, "rank": int(res["rank"][i])})
     report.save_rows(seed_rows, os.path.join(RESULTS, "rankings_per_seed.csv"))
-    # paired comparison of the two leaders over the seed matrices (Wilcoxon signed-rank, Holm)
+    # comparison of the two leaders over the seed matrices: paired by replicate (common random numbers), Wilcoxon
+    # signed-rank with a Mann-Whitney check for independent samples, Holm-adjusted
     from consensus_mcdm.robustness import leader_wilcoxon
     # QBFT and CometBFT: the two alternatives that share the first-rank acceptability (IBFT 2.0 is dominated by QBFT)
     wil = leader_wilcoxon(Xs, base_w, TYPES, names, names[keys.index("qbft")], names[keys.index("cometbft")])
